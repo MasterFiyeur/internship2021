@@ -1,0 +1,40 @@
+h1{
+    font-weight: 300;
+}
+
+a{
+    color: var(--color-primary);
+    text-decoration: none;
+
+}
+
+p{
+    font-size: 15px;
+}
+/* -----Page intro----- */
+
+.intro_body{
+    background-color: var(--color-primary);
+}
+
+.container{
+    max-width: 980px;
+}
+
+.banner_title h1{
+    text-align: center;
+    color: var(--color-secondary);
+}
+
+.logo_NSU{
+    width: 100%;
+}
+
+.container img{
+    width: 100%;
+}
+
+.intro_content{
+    background-color: var(--color-secondary);
+}
+

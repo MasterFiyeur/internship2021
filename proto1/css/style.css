@@ -11,6 +11,7 @@
 
 :root{
     --color-primary: #12bbad;
+    --color-primary-dark: #0b756c;
     --color-secondary: #eeeeee;
 }
 
@@ -22,4 +23,37 @@
 
 .text-justify{
     text-align: justify;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* -----Banner----- */
+.banner{
+    background-color: var(--color-primary);
+}
+
+.banner_title h1{
+    text-align: center;
+    color: var(--color-secondary);
+}
+
+/* -----footer----- */
+footer{
+    background-color: black;
+    color: #999;
+}
+
+footer .svg{
+    filter: invert(1);
+}
+
+
+/* Equivalent of Medium breakpoint (bootstrap)*/
+@media screen and (min-width: 768px){
+    footer .svg{
+        width: 42px;
+    }
+
 }

@@ -5,7 +5,11 @@ h1{
 a{
     color: var(--color-primary);
     text-decoration: none;
+}
 
+a:hover{
+    color: var(--color-primary-dark);
+    text-decoration: underline;
 }
 
 p{
@@ -21,16 +25,7 @@ p{
     max-width: 980px;
 }
 
-.banner_title h1{
-    text-align: center;
-    color: var(--color-secondary);
-}
-
 .logo_NSU{
-    width: 100%;
-}
-
-.container img{
     width: 100%;
 }
 

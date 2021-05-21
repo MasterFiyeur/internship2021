@@ -29,6 +29,10 @@
     text-align: center;
 }
 
+.container{
+    max-width: 980px;
+}
+
 /* -----Banner----- */
 .banner{
     background-color: var(--color-primary);
@@ -49,11 +53,148 @@ footer .svg{
     filter: invert(1);
 }
 
+/* -----Navbar----- */
+.navbar{
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    padding: 20px 30px;
+    top: 0;
+    z-index: 100;
+    transition: 0.3s linear;
+}
+
+.navbar.sticky{
+    background: black;
+}
+
+.navbar .nav-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .home{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar .home img{
+    filter: invert(1);
+    width: 20px;
+}
+
+.navbar .home div{
+    padding-top: 2px;
+}
+
+.navbar .flag-right{
+    display: none;
+}
+
+.navbar .flag-mid{
+    display: inline-block;
+}
+
+.navbar .flag-mid img,
+.navbar .flag-right img{
+    width: 23px;
+    padding-bottom: 4px;
+
+}
+
+.navbar .menu-toggler{
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 100;
+    display: none;
+}
+
+.navbar .menu-toggler span{
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    position: relative;
+    transition: 0.3s linear;
+}
+
+.navbar .navbar-menu{
+    display: inline-block;
+}
+
+.navbar a.home,
+.navbar .navbar-menu a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 200;
+    margin-left: 30px;
+    transition: 0.2s linear;
+}
+
+.navbar a:hover.home ,
+.navbar .navbar-menu a:hover{
+    color: var(--color-primary-dark);
+}
+
+.navbar.sticky a:hover.home ,
+.navbar.sticky .navbar-menu a:hover{
+    color: var(--color-primary);
+}
+
+/* -----Intro page----- */
+.intro_body h1{
+    font-weight: 300;
+}
+
+.intro_body a{
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.intro_body a:hover{
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+.intro_body p{
+    font-size: 15px;
+}
+
+.intro_body{
+    background-color: var(--color-primary);
+}
+
+.intro_body .logo_NSU{
+    width: 100%;
+}
+
+.intro_body .intro_content{
+    background-color: var(--color-secondary);
+}
+
+
+/* Equivalent of Large breakpoint (bootstrap)*/
+@media screen and (min-width: 992px){
+    .navbar .flag-right{
+        display: inline-block;
+    }
+
+    .navbar .flag-mid{
+        display: none;
+    }
+}
 
 /* Equivalent of Medium breakpoint (bootstrap)*/
 @media screen and (min-width: 768px){
     footer .svg{
         width: 42px;
     }
-
 }

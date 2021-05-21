@@ -33,7 +33,7 @@
     max-width: 980px;
 }
 
-/* -----Banner----- */
+/* ----- Banner ----- */
 .banner{
     background-color: var(--color-primary);
 }
@@ -43,7 +43,7 @@
     color: var(--color-secondary);
 }
 
-/* -----footer----- */
+/* ----- Footer ----- */
 footer{
     background-color: black;
     color: #999;
@@ -51,9 +51,10 @@ footer{
 
 footer .svg{
     filter: invert(1);
+    width: 42px;
 }
 
-/* -----Navbar----- */
+/* ----- Navbar ----- */
 .navbar{
     position: fixed;
     background-color: transparent;
@@ -69,6 +70,7 @@ footer .svg{
 }
 
 .navbar .nav-container{
+    max-width: 1300px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -92,11 +94,11 @@ footer .svg{
 }
 
 .navbar .flag-right{
-    display: none;
+    display: inline-block;
 }
 
 .navbar .flag-mid{
-    display: inline-block;
+    display: none;
 }
 
 .navbar .flag-mid img,
@@ -181,20 +183,71 @@ footer .svg{
 }
 
 
-/* Equivalent of Large breakpoint (bootstrap)*/
-@media screen and (min-width: 992px){
+/* MAX : Equivalent of Large breakpoint (bootstrap)*/
+@media screen and (max-width: 992px){
+    /* ----- Navbar ----- */
     .navbar .flag-right{
-        display: inline-block;
-    }
-
-    .navbar .flag-mid{
         display: none;
     }
+    
+    .navbar .flag-mid{
+        display: inline-block;
+        z-index: 101;
+    }
+
+    .navbar a.home{
+        margin-left: 0;
+    }
+        
+    .navbar .menu-toggler{
+        display: block;
+    }
+
+    .navbar-menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: #999;
+        top:0;
+        right: -100%;
+        max-width: 200px;
+        padding: 80px 20px;
+        transition: 0.3s linear;
+    }
+
+    .navbar-menu a{
+        display: block;
+        margin: 30px 0;
+    }
+
+    .sticky .navbar-menu{
+        background-color: black;
+    }
+
+    .navbar-menu.active{
+        right: 0;
+    }
+
+    .menu-toggler.active span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 4px;
+    }
+
+    .menu-toggler.active span:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu-toggler.active span:nth-child(3){
+        transform: rotate(45deg);
+        bottom: 14px;
+    }
+
 }
 
-/* Equivalent of Medium breakpoint (bootstrap)*/
-@media screen and (min-width: 768px){
+/* MAX : Equivalent of Medium breakpoint (bootstrap)*/
+@media screen and (max-width: 768px){
+    /* ----- Footer ----- */
     footer .svg{
-        width: 42px;
+        width: auto;
     }
 }

@@ -29,7 +29,7 @@
     text-align: center;
 }
 
-.container{
+.max-width{
     max-width: 980px;
 }
 
@@ -40,9 +40,9 @@
     margin-bottom: 45px;
 }
 
-.banner_title h1{
-    text-align: center;
-    color: var(--color-secondary);
+.banner_title h2{
+    font-weight: 100;
+    color: #fff;
 }
 
 /* ----- Footer ----- */
@@ -168,7 +168,7 @@ footer .svg{
 }
 
 /* -----Intro page----- */
-.intro_body h1{
+.intro_body h2{
     font-weight: 300;
 }
 

@@ -36,6 +36,8 @@
 /* ----- Banner ----- */
 .banner{
     background-color: var(--color-primary);
+    margin-top: 100px;
+    margin-bottom: 45px;
 }
 
 .banner_title h1{
@@ -93,19 +95,9 @@ footer .svg{
     padding-top: 2px;
 }
 
-.navbar .flag-right{
-    display: inline-block;
-}
-
-.navbar .flag-mid{
-    display: none;
-}
-
-.navbar .flag-mid img,
-.navbar .flag-right img{
+.navbar a img{
     width: 23px;
     padding-bottom: 4px;
-
 }
 
 .navbar .menu-toggler{
@@ -129,7 +121,8 @@ footer .svg{
 }
 
 .navbar .navbar-menu{
-    display: inline-block;
+    display: flex;
+    align-items: flex-end;
 }
 
 .navbar a.home,
@@ -139,6 +132,29 @@ footer .svg{
     font-weight: 200;
     margin-left: 30px;
     transition: 0.2s linear;
+}
+
+.navbar .dropdown button{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.navbar .dropdown a{
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0 10px 0 10px;
+}
+
+.navbar .dropdown .dropdown-item:active{
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.navbar .dropdown:hover .dropdown-menu{
+    display: block;
 }
 
 .navbar a:hover.home ,
@@ -186,14 +202,6 @@ footer .svg{
 /* MAX : Equivalent of Large breakpoint (bootstrap)*/
 @media screen and (max-width: 992px){
     /* ----- Navbar ----- */
-    .navbar .flag-right{
-        display: none;
-    }
-    
-    .navbar .flag-mid{
-        display: inline-block;
-        z-index: 101;
-    }
 
     .navbar a.home{
         margin-left: 0;
@@ -203,21 +211,36 @@ footer .svg{
         display: block;
     }
 
-    .navbar-menu{
+    .navbar .navbar-menu{
+        align-items: flex-start;
+        flex-direction: column;
         position: fixed;
         height: 100vh;
         width: 100%;
-        background-color: #999;
+        background-color: black;
         top:0;
         right: -100%;
-        max-width: 200px;
+        max-width: 250px;
         padding: 80px 20px;
         transition: 0.3s linear;
     }
 
-    .navbar-menu a{
+    .navbar .dropdown{
+        margin: 20px 0 20px 5px;
+        max-width: 155px;
+    }
+
+    .navbar .navbar-menu a{
         display: block;
-        margin: 30px 0;
+        margin: 20px 0 20px 5px;
+    }
+
+    .navbar .dropdown a{
+        margin: 5px 0;
+    }
+
+    .navbar .navbar-menu a:hover{
+        color: var(--color-primary);
     }
 
     .sticky .navbar-menu{

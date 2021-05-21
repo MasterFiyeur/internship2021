@@ -141,7 +141,7 @@ footer .svg{
 
 .navbar a:hover.home ,
 .navbar .navbar-menu a:hover{
-    color: var(--color-primary-dark);
+    color: black;
 }
 
 .navbar.sticky a:hover.home ,

@@ -231,6 +231,70 @@ footer .svg{
     font-size: 13px;
 }
 
+/* ----- Authors ----- */
+
+.general_content .authors-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.general_content .authors-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.general_content .authors-img{
+    width: 150px;
+}
+
+.general_content .authors-desc{
+    max-width: 250px;
+}
+
+.general_content .authors-email{
+    width: 100%;
+    text-align: center;
+}
+
+.general_content.bg-green{
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.general_content .stats-number{
+    font-size: 50px;
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+}
+
+.general_content .stats-number::before{
+    width: 55px;
+    height: 2px;
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.general_content .stats-number::after{
+    width: 55px;
+    height: 2px;
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 /* MAX : Equivalent of Large breakpoint (bootstrap)*/
 @media screen and (max-width: 992px){

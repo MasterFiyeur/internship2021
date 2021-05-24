@@ -184,6 +184,10 @@ footer .svg{
     font-weight: 300;
 }
 
+.general_body h5{
+    font-weight: 300;
+}
+
 .general_body a{
     color: var(--color-primary);
     text-decoration: none;
@@ -226,6 +230,7 @@ footer .svg{
 .general_content li{
     font-size: 13px;
 }
+
 
 /* MAX : Equivalent of Large breakpoint (bootstrap)*/
 @media screen and (max-width: 992px){

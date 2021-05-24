@@ -167,37 +167,65 @@ footer .svg{
     color: var(--color-primary);
 }
 
-/* -----Intro page----- */
-.intro_body h2{
+/* ----- Universal Body ----- */
+.general_body h1{
     font-weight: 300;
 }
 
-.intro_body a{
+.general_body h2{
+    font-weight: 300;
+}
+
+.general_body h3{
+    font-weight: 300;
+}
+
+.general_body h4{
+    font-weight: 300;
+}
+
+.general_body a{
     color: var(--color-primary);
     text-decoration: none;
 }
 
-.intro_body a:hover{
+.general_body a:hover{
     color: var(--color-primary-dark);
     text-decoration: underline;
 }
 
-.intro_body p{
-    font-size: 15px;
+.general_body p{
+    font-size: 13px;
+    font-weight: 400;
 }
 
-.intro_body{
+.general_body{
     background-color: var(--color-primary);
 }
 
-.intro_body .logo_NSU{
+.general_body .logo_NSU{
     width: 100%;
 }
 
-.intro_body .intro_content{
+.general_body .general_content{
     background-color: var(--color-secondary);
 }
 
+.general_body .small-text{
+    font-size: 12px;
+}
+
+.general_content .p-separator{
+    border-left: thin solid #dee2e6;
+}
+
+.general_content p.before-list{
+    margin-bottom: 0;
+}
+
+.general_content li{
+    font-size: 13px;
+}
 
 /* MAX : Equivalent of Large breakpoint (bootstrap)*/
 @media screen and (max-width: 992px){

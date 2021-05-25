@@ -295,6 +295,140 @@ footer .svg{
     transform: translateX(-50%);
 }
 
+/* ----- Dictionnaire ----- */
+
+.general_body .dict_content{
+    background-color: var(--color-secondary);
+}
+
+.dict_content .dict_choix{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.dict_content .dict_choix a{
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    border: thin solid var(--color-primary-dark);
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.dict_content .dict_choix a:hover{
+    background-color: var(--color-primary-dark);
+}
+
+.dict_content .dict_choix a div{
+    text-align: center;
+}
+
+.dict_content #letter_search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.dict_content #letter_search span{
+    color: var(--color-primary);
+    padding: 3px;
+    cursor: pointer;
+}
+
+.dict_content #letter_search span:hover{
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.dict_content .word-search{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dict_content .input_container{
+    position: relative;
+    height: 48px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.dict_content .input_container input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    outline: none;
+    padding: 16px;
+    background: none;
+    z-index: 1;
+}
+
+.dict_content .input_container label{
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    padding: 0 4px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-size: 16px;
+    transition: 0.2s linear;
+}
+
+.dict_content .word-search .btn-search{
+    display: block;
+    width: 200px;
+    margin-top: 10px;
+    padding: 12px 32px;
+    outline: none;
+    border: none;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.dict_content .word-search .btn-search:hover{
+    background-color: var(--color-primary-dark);
+}
+
+.dict_content .word-search .btn-search:active{
+    background-color: #000;
+}
+
+.dict_content .word-search .input_container input:focus + label{
+    top: -8px;
+    left: 12px;
+    color: var(--color-primary-dark);
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.dict_content .word-search .input_container .input_search:not(:placeholder-shown).input_search:not(:focus) + label{
+    top: -8px;
+    left: 12px;
+    color: var(--color-primary-dark);
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.dict_content .input_container input:focus{
+    border: 2px solid var(--color-primary);
+}
 
 /* MAX : Equivalent of Large breakpoint (bootstrap)*/
 @media screen and (max-width: 992px){
@@ -360,6 +494,11 @@ footer .svg{
     .menu-toggler.active span:nth-child(3){
         transform: rotate(45deg);
         bottom: 14px;
+    }
+
+    /* ----- Dictionnaires ----- */
+    .dict_content .dict_choix{
+        align-items: center;
     }
 
 }

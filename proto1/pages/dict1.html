@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionnaire des Associations Verbales du Français</title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body class="general_body">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="home">
+                <img src="../img/icon/home.svg" alt="Home">
+                <div>Accueil</div>
+            </a>
+            <button class="menu-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-menu">
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button">
+                      Changer de dictionnaire
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../pages/about1.html">DAF</a></li>
+                      <li><a class="dropdown-item" href="../pages/about2.html">DINAF</a></li>
+                      <li><a class="dropdown-item" href="../pages/about3.html">DINAFN</a></li>
+                      <li><a class="dropdown-item" href="../pages/about4.html">DAF-2019</a></li>
+                      <li><a class="dropdown-item" href="../pages/about5.html">ФАС1-сокр</a></li>
+                      <li><a class="dropdown-item" href="../pages/about6.html">ФАС2-сокр</a></li>
+                    </ul>
+                </div>
+                <a href="./about1.html">Le projet</a>
+                <a href="./authors.html">Auteurs</a>
+                <a href="#">Dictionnaires</a>
+                <a href="./help1.html">Aide</a>
+                <a href="#">
+                    <img src="../img/icon/ru.svg" alt="Language flag">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Banner-->
+    <div class="banner container px-5">
+        <div class="row">
+            <div class="banner_title col-md-6 px-3 my-lg-0 my-3 center">
+                <h2>Dictionnaires des associations verbales du Français</h2>
+            </div>
+            <div class="col-md-6 px-3 my-lg-0 my-3 center">
+                <a href="https://english.nsu.ru/">
+                    <img class="logo_NSU" src="../img/banner/NSU_logo_English_Green.png" alt="NSU logo">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Content-->
+    <div class="py-3 dict_content">
+        <div class="container">
+            <div class="row">
+                <h3 class="text-center">Dictionnaires</h3>
+                <div class="col-lg-3 py-3">
+                    <div class="dict_choix">
+                        <a href="#">
+                            <div>
+                                Dictionnaire direct
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div>
+                                Dictionnaire inverse
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div>
+                                Questionnaires individuels
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 py-3">
+                    <div class="container">
+                        <div class="row">
+                            <h5 class="text-center mb-3">Recherche et affichage</h5>
+                            <div class="col-lg-6 px-4 mt-3">
+                                <div class="text-center mb-2">Recherche par première lettre :</div>
+                                <div id="letter_search"></div>
+                            </div>
+                            <div class="col-lg-6 px-4 mt-3">
+                                <div class="text-center mb-2">Recherche par stimulus :</div>
+                                <div class="word-search">
+                                    <div class="input_container">
+                                        <input type="text" class="input_search" placeholder=" ">
+                                        <label for="">Stimulus</label>
+                                    </div>
+                                    <button class="btn-search">Rechercher</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer class="py-4">
+        <div class="max-width container">
+            <div class="row">
+                <div class="col-4 center">
+                    <a href="#">
+                        <img class="svg" src="../img/icon/facebook.svg" alt="facebook">
+                    </a>
+                </div>
+                <div class="col-4 center">
+                    <a href="#">
+                        <img class="svg" src="../img/icon/vk.svg" alt="vk">
+                    </a>
+                </div>
+                <div class="col-4 center">
+                    <a href="#">
+                        <img class="svg" src="../img/icon/linkedin.svg" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 mt-3 text-center">
+                @2019
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript">
+        loadAlphabet();
+    </script>
+</body>
+</html>

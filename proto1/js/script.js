@@ -12,3 +12,13 @@ $(document).ready(function(){
         $(".navbar-menu").toggleClass("active");
     });
 });
+
+function loadAlphabet(){
+    let alphabet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    for (let index = 0; index < alphabet.length; index++) {
+        let letter = alphabet[index];
+        let span = document.createElement("span");
+        span.innerText = letter;
+        $("#letter_search").append(span);
+    }
+}

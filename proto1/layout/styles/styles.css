@@ -1,3 +1,8 @@
+/* ----- Variable ----- */
+:root{
+    --text-primary-color : #474747;
+}
+
 /* ----- Universal class ----- */
 .text-center{
     text-align: center;
@@ -29,4 +34,14 @@
 .authors .title{
     margin-top: 16px;
     margin-bottom: 8px;
+}
+
+@media screen and (max-width: 978px){
+    /* ----- Navbar ----- */
+    #header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }

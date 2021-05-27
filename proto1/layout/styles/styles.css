@@ -134,6 +134,41 @@
 
 }
 
+/* ----- Search page ----- */
+
+.mode_choice .mode{
+    text-align: center;
+}
+
+.mode_choice .mode div{
+    border: thin solid black;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.mode_choice .mode.active div{
+    background-color: #97A9BD;
+    color: #fff;
+}
+
+.mode_choice .mode div:hover{
+    color: #fff;
+    background-color: #282E39;
+}
+
+.search_content form{
+    margin-bottom: 20px;
+}
+
+.search_by{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
 @media screen and (max-width: 978px){
     /* ----- Navbar ----- */
     #header{
@@ -145,6 +180,11 @@
 }
 
 @media screen and (max-width: 750px){
+    /* ----- Search page ----- */
+    .letter_container span{
+        padding: 10px;
+    }
+
     .img-dictionary{
         width: 90%;
     }

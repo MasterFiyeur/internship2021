@@ -168,6 +168,137 @@
     flex-wrap: wrap;
 }
 
+    /* RadioButton search method */
+.search_by input{
+    display: none;
+}
+
+.search_by label{
+    cursor: pointer;
+    padding: 5px;
+    border: thin solid black;
+}
+
+.search_by input:checked + label{
+    background-color: #97A9BD;
+    color: #fff;
+}
+
+.search_by label:hover{
+    color: #fff;
+    background-color: #282E39;
+}
+
+    /* Alphabet direct */
+#alpha_search{
+    display: block;
+}
+
+#alpha_search .letter_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.letter_container span{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.letter_container span:hover{
+    background-color: #97A9BD;
+    color: #fff;
+}
+
+.method_hidden{
+    display: none!important;
+}
+    /* Word direct */
+#word_search{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#word_search .input_container{
+    position: relative;
+    height: 48px;
+    min-width: 200px;
+    margin-top: 10px;
+}
+
+#word_search .input_container input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    border: 1px solid #97A9BD;
+    border-radius: 8px;
+    outline: none;
+    padding: 16px;
+    background: none;
+    z-index: 1;
+}
+
+#word_search .input_container label{
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    padding: 0 4px;
+    background-color: #fff;
+    color: #97A9BD;
+    font-size: 16px;
+    transition: 0.2s linear;
+}
+
+#word_search .btn-search{
+    display: block;
+    min-width: 200px;
+    margin-top: 10px;
+    padding: 12px 32px;
+    outline: none;
+    border: none;
+    background-color: #97A9BD;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+#word_search .btn-search:hover{
+    background-color: #282E39;
+}
+
+#word_search .btn-search:active{
+    background-color: #000;
+}
+
+#word_search .input_container input:focus + label{
+    top: -8px;
+    left: 12px;
+    color: #282E39;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+#word_search .input_container .input_search:not(:placeholder-shown).input_search:not(:focus) + label{
+    top: -8px;
+    left: 12px;
+    color: #282E39;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+#word_search .input_container input:focus{
+    border: 2px solid #282E39;
+}
 
 @media screen and (max-width: 978px){
     /* ----- Navbar ----- */

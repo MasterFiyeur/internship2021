@@ -95,7 +95,29 @@ Licence URI: https://www.os-templates.com/template-terms
                 </div>
             </div>
             <div class="three_quarter search_content">
-                <div>2 methods</div>
+                <form action="">
+                    <div class="search_by">
+                        <input type="radio" id="alphabet" name="search" value="alphabet" checked>
+                        <label class="search_label" for="alphabet" onclick="toggleSearch('alpha_search');">В алфавитном порядке</label>
+                        <input type="radio" id="word" name="search" value="word">
+                        <label class="search_label" for="word" onclick="toggleSearch('word_search');">По отдельному стимулу</label>
+                        <input type="radio" id="quest" name="search" value="quest">
+                        <label class="search_label" for="quest" onclick="toggleSearch('quest_search');">По отдельному стимулу</label>
+                    </div>
+                </form>
+                <div class="search_method">
+                    <div id="alpha_search">
+                        <div class="letter_container">
+                        </div>
+                    </div>
+                    <div id="word_search" class="method_hidden">
+                        <div class="input_container">
+                            <input type="text" class="input_search" placeholder=" ">
+                            <label for="">стимул</label>
+                        </div>
+                        <button class="btn-search">Rechercher</button>
+                    </div>
+                </div>
             </div>
                 <!-- / main body -->
                 <div class="clear"></div>

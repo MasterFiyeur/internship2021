@@ -76,12 +76,12 @@ Licence URI: https://www.os-templates.com/template-terms
             <!-- ################################################################################################ -->
             <div class="one_quarter first">
                 <div class="mode_choice">
-                    <a class="mode active" href="?mode=direct">
+                    <a class="mode" href="./search.html?mode=direct">
                         <div>
                             Прямой словарь
                         </div>
                     </a>
-                    <a class="mode" href="./search2.html?mode=reverse">
+                    <a class="mode active" href="?mode=reverse">
                         <div>
                             Обратный словарь
                         </div>
@@ -101,6 +101,10 @@ Licence URI: https://www.os-templates.com/template-terms
                         <label class="search_label" for="alphabet" onclick="toggleSearch('alpha_search');">В алфавитном порядке</label>
                         <input type="radio" id="word" name="search" value="word">
                         <label class="search_label" for="word" onclick="toggleSearch('word_search');">По отдельному стимулу</label>
+                        <input type="radio" id="stimulus" name="search" value="stimulus">
+                        <label class="search_label" for="stimulus" onclick="toggleSearch('stimulus_search');">По количеству стимулов</label>
+                        <input type="radio" id="reaction" name="search" value="reaction">
+                        <label class="search_label" for="reaction" onclick="toggleSearch('reaction_search');">По количеству реакций</label>
                     </div>
                 </form>
                 <div class="search_method">
@@ -111,7 +115,7 @@ Licence URI: https://www.os-templates.com/template-terms
                     <div id="word_search" class="method_hidden">
                         <div class="input_container">
                             <input type="text" class="input_search" placeholder=" ">
-                            <label for="">стимул</label>
+                            <label for="">реакций</label>
                         </div>
                         <button class="btn-search">Rechercher</button>
                     </div>
@@ -147,7 +151,7 @@ Licence URI: https://www.os-templates.com/template-terms
     <script src="../layout/scripts/jquery.backtotop.js"></script>
     <script src="../layout/scripts/jquery.mobilemenu.js"></script>
     <script src="../layout/scripts/script.js"></script>
-    <script>letterGen();</script>
+    <script>letterExtendGen();</script>
 </body>
 
 </html>

@@ -6,6 +6,14 @@ function letterGen(){
     }
 }
 
+function letterExtendGen(){
+    const alphabet = "?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    for (let index = 0; index < alphabet.length; index++) {
+        let letter = alphabet[index];
+        $('#alpha_search .letter_container').append("<span>"+letter+"</span>");
+    }
+}
+
 function toggleSearch(element_id){
     const elements = $(".search_method").children();
     for (let index = 0; index < elements.length; index++) {

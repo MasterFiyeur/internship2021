@@ -76,7 +76,7 @@ Licence URI: https://www.os-templates.com/template-terms
             <!-- ################################################################################################ -->
             <div class="one_quarter first">
                 <div class="mode_choice">
-                    <a class="mode active" href="?mode=direct">
+                    <a class="mode" href="./search.html?mode=direct">
                         <div>
                             Прямой словарь
                         </div>
@@ -86,10 +86,9 @@ Licence URI: https://www.os-templates.com/template-terms
                             Обратный словарь
                         </div>
                     </a>
-                    <a class="mode" href="./search3.html?mode=quest">
+                    <a class="mode active" href="?mode=quest">
                         <div>
                             Индивидуальные анкеты
-                            
                         </div>
                     </a>
                 </div>
@@ -97,23 +96,119 @@ Licence URI: https://www.os-templates.com/template-terms
             <div class="three_quarter search_content">
                 <form action="">
                     <div class="search_by">
-                        <input type="radio" id="alphabet" name="search" value="alphabet" checked>
-                        <label class="search_label" for="alphabet" onclick="toggleSearch('alpha_search');">В алфавитном порядке</label>
-                        <input type="radio" id="word" name="search" value="word">
-                        <label class="search_label" for="word" onclick="toggleSearch('word_search');">По отдельному стимулу</label>
+                        <input type="radio" id="tous" name="search" value="tous" checked>
+                        <label class="search_label" for="tous" onclick="toggleSearch('all_search');">Со всеми</label>
+                        <input type="radio" id="filtered" name="search" value="filtered">
+                        <label class="search_label" for="filtered" onclick="toggleSearch('filtered_search');">Фильтр по критериям</label>
                     </div>
                 </form>
                 <div class="search_method">
-                    <div id="alpha_search">
+                    <div id="all_search">
                         <div class="letter_container">
                         </div>
                     </div>
-                    <div id="word_search" class="method_hidden">
+                    <div id="filtered_search" class="method_hidden">
                         <div class="input_container">
-                            <input type="text" class="input_search" placeholder=" ">
-                            <label for="">стимул</label>
                         </div>
-                        <button class="btn-search">Rechercher</button>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="result-indiv-quest">
+                        Put there informations about the person (name, age, language ...)
+                        <div class="table">
+                            <div class="res-column">
+                                <div>ID</div>
+                                <div>Stimulus</div>
+                                <div>Réponse</div>
+                                <div>Fréquence</div>
+                            </div>
+                            <div class="res-tab">
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                                <div class="res-column">
+                                    <div>1</div>
+                                    <div>crainte</div>
+                                    <div>peur</div>
+                                    <div>424 (84.80%)</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,7 +242,7 @@ Licence URI: https://www.os-templates.com/template-terms
     <script src="../layout/scripts/jquery.backtotop.js"></script>
     <script src="../layout/scripts/jquery.mobilemenu.js"></script>
     <script src="../layout/scripts/script.js"></script>
-    <script>letterGen();</script>
+    <script>letterExtendGen();</script>
 </body>
 
 </html>

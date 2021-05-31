@@ -307,6 +307,107 @@
 }
 
 
+.result .result-table table tr td{
+    word-break: break-word;
+    text-align: justify;
+}
+
+
+.result .result-table tr td{
+    cursor: pointer;
+}
+
+.result .result-table tr:nth-child(2n){
+    background-color: #e4e4e4;
+}
+
+.result .result-table tr:hover{
+    background-color: #c4c4c4;
+}
+
+.result table .differents-countries{
+    width: 20%;
+}
+
+.res-countries.result-table tr td{
+    cursor:default;
+}
+
+.result .result-table td button{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    border: thin solid black;
+}
+
+.result .res-legend tr td{
+    border: thin solid black;
+}
+
+/* Color of country */
+.canada{
+    color: #863B52;
+}
+
+.suisse{
+    color: #006952;
+}
+
+.suisse-canada{
+    color: #CBC3F9;
+}
+
+.belgique{
+    color: #000;
+}
+
+.belgique-canada{
+    color: #EB5EF1;
+}
+
+.belgique-suisse{
+    color: #FF0F0F;
+}
+
+.belgique-suisse-canada{
+    color: #515D10;
+}
+
+.france{
+    color: #00A8F2;
+}
+
+.france-canada{
+    color: #EC7F23;
+}
+
+.france-suisse{
+    color: #939393;
+}
+
+.france-suisse-canada{
+    color: #F7BACB;
+}
+
+.france-belgique{
+    color: #00CA29;
+}
+
+.france-belgique-canada{
+    color: #CBD39C;
+}
+
+.france-belgique-suisse{
+    color: #9BDDCC;
+}
+
+
+.france-belgique-suisse-canada{
+    color: #51488A;
+}
+
 /* Questionnaire search */
 
 .result-indiv-quest{
@@ -363,7 +464,7 @@
 
 .res-tab .res-column:nth-child(2n){
     background-color: var(--primary-color-light);
-    color: #000;
+    color: #fff;
 }
 
 .res-tab .res-column:nth-child(2n+1){
@@ -402,6 +503,15 @@
 
     .img-dictionary{
         width: 90%;
+    }
+
+    /* Reaction search */
+
+    .result .result-table table,
+    .result .result-table tr,
+    .result .result-table td,
+    .result .result-table th{
+        display: block;
     }
 
     /* Questionnaire page */

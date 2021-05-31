@@ -301,10 +301,48 @@
     border: 2px solid var(--primary-color);
 }
 
+/* Reaction search */
+.result{
+    margin-top: 10px;
+}
+
+
 /* Questionnaire search */
 
 .result-indiv-quest{
     margin: 20px 0;
+    border: thin solid var(--primary-color);
+    background: rgb(151,169,189);
+    background: radial-gradient(circle,rgba(255,255,255,1)  11%, rgba(151,169,189,1) 100%);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.result-indiv-quest .indiv-info{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.result-indiv-quest .indiv-info .line{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-indiv-quest .indiv-info .line div{
+    margin-top: 5px;
+    text-align: center;
+    color: #000;
+}
+
+.result-indiv-quest .indiv-info img{
+    height: 50px;
 }
 
 .result-indiv-quest .table{
@@ -325,6 +363,16 @@
 
 .res-tab .res-column:nth-child(2n){
     background-color: var(--primary-color-light);
+    color: #000;
+}
+
+.res-tab .res-column:nth-child(2n+1){
+    background-color: #fff;
+    color: #000;
+}
+
+.result-indiv-quest .table .res-column.legend{
+    background-color: #fff;
     color: #000;
 }
 
@@ -354,5 +402,14 @@
 
     .img-dictionary{
         width: 90%;
+    }
+
+    /* Questionnaire page */
+    .result-indiv-quest .indiv-info{
+        flex-direction: column;
+    }
+
+    .result-indiv-quest .indiv-info .line{
+        width: 100%;
     }
 }

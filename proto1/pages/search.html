@@ -113,9 +113,9 @@ Licence URI: https://www.os-templates.com/template-terms
                                         <div>Age :</div>
                                         <div>
                                             <label for="">De </label>
-                                            <input type="number" name="agemin" id="agemin">
+                                            <input type="number" name="agemin" id="agemin" value="18">
                                             <label for="">à  </label>
-                                            <input type="number" name="agemax" id="agemax">
+                                            <input type="number" name="agemax" id="agemax" value="25">
                                         </div>
                                     </div>
                                     <div class="input-container">
@@ -215,8 +215,8 @@ Licence URI: https://www.os-templates.com/template-terms
                                     </div>
                                     <div class="input-container">
                                         <div>Sexe :</div>
-                                        <div>
-                                            <input type="radio" name="sexe" id="tous" value="tous">
+                                        <div class="no-input">
+                                            <input type="radio" name="sexe" id="tous" value="tous" checked>
                                             <label for="tous">Sans importance</label>
                                             <input type="radio" name="sexe" id="femme" value="femme">
                                             <label for="femme">Femme</label>
@@ -262,18 +262,21 @@ Licence URI: https://www.os-templates.com/template-terms
                             </div>
                             <div class="input-container">
                                 <div>Formation :</div>
-                                <div>
-                                    <input type="checkbox" name="education" id="lycee" value="lycee">
+                                <div class="no-input">
+                                    <input type="checkbox" name="education" id="lycee" value="lycee" checked>
                                     <label for="lycee">Lycéen</label>
                                     <input type="checkbox" name="education" id="etudiant" value="etudiant">
                                     <label for="etudiant">Étudiant</label>
-                                    <input type="checkbox" name="education" id="doctorant" value="doctorant">
+                                    <input type="checkbox" name="education" id="doctorant" value="doctorant" checked>
                                     <label for="doctorant">Doctorant</label>
                                     <input type="checkbox" name="education" id="docteur" value="docteur_science">
                                     <label for="docteur">Docteur en sciences</label>
-                                    <input type="checkbox" name="education" id="hdr" value="hdr">
+                                    <input type="checkbox" name="education" id="hdr" value="hdr" checked>
                                     <label for="hdr">HDR</label>
                                 </div>
+                            </div>
+                            <div class="input-container">
+                                <input type="submit" value="Filter">
                             </div>
                         </form>
                     </div>

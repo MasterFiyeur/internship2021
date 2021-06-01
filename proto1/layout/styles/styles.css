@@ -342,6 +342,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 10px 0;
 }
 
@@ -350,16 +351,57 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #filter-form .input-container.age input{
     margin: 0 8px;
-    width: 55px;
+    width: 58px;
 }
 
 #filter-form .input-container select,
 #filter-form .input-container input{
     width: 90%;
+    height: 40px;
+    border: thin solid var(--primary-color-light);
+    border-radius: 8px;
+
+}
+
+#filter-form .input-container input{
+    padding-left: 8px;
+}
+
+#filter-form .input-container input:focus{
+    border: 2px solid var(--primary-color-light);
+}
+
+#filter-form .no-input input{
+    display: none;
+}
+
+#filter-form .no-input label{
+    padding: 5px 10px;
+    cursor: pointer;
+    border: thin solid #000;
+}
+
+#filter-form .no-input input:checked + label{
+    background-color: var(--primary-color-light);
+    color: #fff;
+}
+
+#filter-form .no-input label:hover{
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+#filter-form .input-container input[type=submit]{
+    cursor: pointer;
+    width: auto;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 20px;
 }
 
 .form-hidden{

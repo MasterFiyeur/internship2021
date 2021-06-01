@@ -25,3 +25,7 @@ function toggleSearch(element_id){
         }
     }
 }
+
+function toggleFilter(){
+    $("#filter-form").toggleClass("form-hidden");
+}

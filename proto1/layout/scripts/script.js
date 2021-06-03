@@ -35,6 +35,7 @@ function toggleFilter(){
 }
 
 /* Print result of direct dictionary in an element with a 'result' class*/
+/* Be careful if is dic direct of invert */
 function printResDirect(letter){
     console.log("Research : "+letter);
     $('.result').empty();
@@ -68,5 +69,31 @@ function printResDirect(letter){
     ];
     for (let index = 0; index < data.length; index++) {
         $('<tr><td>'+data[index].id+'</td><td>'+data[index].stimulus+'</td><td>'+data[index].reactions+'</td></tr>').appendTo(".result div table tbody");
+    }
+}
+
+function showMethod(){
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    const searchby = $(".search_by");
+    const show = "search_by";
+    const hide = "search_by method_hidden";
+    if(!url.searchParams.has("dic") || url.searchParams.get("dic")=="dir"){
+        letterGen();
+        searchby[0].classList.value = show;
+        searchby[1].classList.value = hide;
+        searchby[2].classList.value = hide;
+        document.getElementsByClassName("search_by")[0].scrollIntoView();
+    }else if(url.searchParams.get("dic")=="inv"){
+        letterExtendGen();
+        searchby[0].classList.value = hide;
+        searchby[1].classList.value = show;
+        searchby[2].classList.value = hide;
+        document.getElementsByClassName("search_by")[1].scrollIntoView();
+    }else{
+        searchby[0].classList.value = hide;
+        searchby[1].classList.value = hide;
+        searchby[2].classList.value = show;
+        document.getElementsByClassName("search_by")[2].scrollIntoView();
     }
 }

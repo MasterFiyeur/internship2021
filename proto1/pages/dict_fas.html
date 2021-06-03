@@ -76,20 +76,20 @@ Licence URI: https://www.os-templates.com/template-terms
           <ul>
             <li><a href="#about">О словаре</a></li>
             <li><a href="#stim">Стимулы</a></li>
-            <li><a href="#dict_direct">Прямой словарь</a>
+            <li><a href="./dict_fas.html?dic=dir">Прямой словарь</a>
               <ul>
                 <li><a href="#">В алфавитном порядке</a></li>
                 <li><a href="#">По отдельному стимулу</a></li>
               </ul>
             </li>
-            <li><a href="#dict_inv">Обратный словарь</a>
+            <li><a href="./dict_fas.html?dic=inv">Обратный словарь</a>
               <ul>
                 <li><a href="#">В алфавитном порядке</a></li>
                 <li><a href="#">По количеству стимулов</a></li>
                 <li><a href="#">По количеству реакций</a></li>
               </ul>
             </li>
-            <li><a href="#indiv_quest">Анкеты</a></li>
+            <li><a href="./dict_fas.html?dic=que">Анкеты</a></li>
             <li><a href="#result">Результат</a></li>
           </ul>
         </nav>
@@ -258,14 +258,14 @@ Licence URI: https://www.os-templates.com/template-terms
         </div>
         <!-- ################################################################################################ -->
         <div id="dict_direct">
-          <h2><a href="./search.html">Прямой словарь</a></h2>
+          <h2><a href="./dict_fas.html?dic=dir">Прямой словарь</a></h2>
           <ul>
             <li>В алфавитном порядке</li>
             <li>По отдельному стимулу</li>
           </ul>
         </div>
         <div id="dict_inv">
-          <h2><a href="./search.html">Обратный словарь</a></h2>
+          <h2><a href="./dict_fas.html?dic=inv">Обратный словарь</a></h2>
           <ul>
             <li>В алфавитном порядке</li>
             <li>По количеству стимулов</li>
@@ -273,20 +273,37 @@ Licence URI: https://www.os-templates.com/template-terms
           </ul>
         </div>
         <div id="indiv_quest">
-          <h2><a href="./search.html">Анкеты</a></h2>
+          <h2><a href="./dict_fas.html?dic=que">Анкеты</a></h2>
           <ul>
             <li>Индивидуальные анкеты</li>
           </ul>
         </div>
         <div id="result">
           <h2>Результат (Прямой словарь)</h2>
-          <div class="search_by">
+          <div class="search_by method_hidden">
             <input type="radio" id="alphabet" name="search" value="alphabet" checked>
             <label class="search_label" for="alphabet" onclick="toggleSearch('alpha_search');">В алфавитном
               порядке</label>
             <input type="radio" id="word" name="search" value="word">
             <label class="search_label" for="word" onclick="toggleSearch('word_search');">По отдельному стимулу</label>
           </div>
+          <div class="search_by method_hidden">
+            <input type="radio" id="alphabet2" name="search2" value="alphabet" checked>
+            <label class="search_label" for="alphabet2" onclick="toggleSearch('alpha_search');">В алфавитном порядке</label>
+            <input type="radio" id="word2" name="search2" value="word">
+            <label class="search_label" for="word2" onclick="toggleSearch('word_search');">По отдельному стимулу</label>
+            <input type="radio" id="stimulus2" name="search2" value="stimulus">
+            <label class="search_label" for="stimulus2" onclick="toggleSearch('stimulus_search');">По количеству стимулов</label>
+            <input type="radio" id="reaction2" name="search2" value="reaction">
+            <label class="search_label" for="reaction2" onclick="toggleSearch('reaction_search');">По количеству реакций</label>
+        </div>
+        <div class="search_by method_hidden">
+            <input type="radio" id="tous" name="search3" value="tous" checked>
+            <label class="search_label" for="tous" onclick="toggleSearch('all_search');">Со всеми</label>
+            <input type="radio" id="filtered" name="search3" value="filtered">
+            <label class="search_label" for="filtered" onclick="toggleSearch('filtered_search');">Фильтр по критериям</label>
+        </div>
+          <!-- Filter -->
           <div class="filter-section">
             <div class="icon-container">
               <span onclick="toggleFilter()"><i class="fas fa-sliders-h"></i> Filter</span>
@@ -464,6 +481,7 @@ Licence URI: https://www.os-templates.com/template-terms
               </form>
             </div>
           </div>
+          <!--Hide/show the good method thanks to url arguments-->
           <div class="search_method">
             <div id="alpha_search">
               <div class="letter_container">
@@ -510,7 +528,10 @@ Licence URI: https://www.os-templates.com/template-terms
   <script src="../layout/scripts/jquery.backtotop.js"></script>
   <script src="../layout/scripts/jquery.mobilemenu.js"></script>
   <script src="../layout/scripts/script.js"></script>
-  <script>letterGen();</script>
+  <script>
+    /* Show the good method */
+    showMethod();
+  </script>
 </body>
 
 </html>

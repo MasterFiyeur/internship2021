@@ -303,11 +303,15 @@ Licence URI: https://www.os-templates.com/template-terms
               реакций</label>
           </div>
           <div class="search_by method_hidden">
-            <input type="radio" id="tous" name="search3" value="tous" checked>
-            <label class="search_label" for="tous" onclick="toggleSearch('all_search');">Со всеми</label>
-            <input type="radio" id="filtered" name="search3" value="filtered">
-            <label class="search_label" for="filtered" onclick="toggleSearch('filtered_search');">Фильтр по
-              критериям</label>
+            <div class="search_nav">
+              <div><span>first</span></div>
+              <div><span><i class="fas fa-angle-double-left"></i></span></div>
+              <div><span><i class="fas fa-angle-left"></i></span></div>
+              <div>1/12800</div>
+              <div><span><i class="fas fa-angle-right"></i></span></div>
+              <div><span><i class="fas fa-angle-double-right"></i></span></div>
+              <div><span>last</span></div>
+            </div>
           </div>
           <!-- Filter -->
           <div class="filter-section">
@@ -501,9 +505,20 @@ Licence URI: https://www.os-templates.com/template-terms
               <button class="btn-search"
                 onclick="printRes(document.getElementById('input_searchDirect').value)">Rechercher</button>
             </div>
+            <div id="stimulus_search" class="method_hidden">
+              <button class="btn-search"
+                onclick="printByStimulus();">
+                сортировать
+              </button>
+            </div>
+            <div id="reaction_search" class="method_hidden">
+              <button class="btn-search"
+               onclick="printByReact();">
+                сортировать
+              </button>
+            </div>
           </div>
           <div class="result">
-          </div>
         </div>
         <!-- / main body -->
         <div class="clear"></div>

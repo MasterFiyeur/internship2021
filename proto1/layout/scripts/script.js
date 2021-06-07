@@ -119,6 +119,18 @@ function printRes(letter){
     }
 }
 
+/* Sort by Stimulus (invert dic) */
+function printByStimulus(){
+    console.log("Sort by Stimulus");
+    printRes("a");
+}
+
+/* Sort by Reaction (invert dic) */
+function printByReact(){
+    console.log("Sort by Reaction");
+    printRes("a");
+}
+
 /* Show method thanks to the url parameters */
 function showMethod(){
     let url_string = window.location.href;
@@ -148,6 +160,7 @@ function showMethod(){
         searchby[0].classList.value = hide;
         searchby[1].classList.value = hide;
         searchby[2].classList.value = show;
+        $(".filter-section").addClass("method_hidden");
         document.getElementsByClassName("search_by")[2].scrollIntoView();
     }else{
         letterGen();

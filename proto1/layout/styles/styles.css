@@ -186,6 +186,29 @@
     background-color: var(--primary-color);
 }
 
+.search_by .search_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.search_by .search_nav div{
+    padding: 5px;
+    margin: 3px;
+    border-radius: 8px;
+    color: var(--primary-color);
+}
+
+.search_by .search_nav div span{
+    cursor: pointer;
+}
+
+.search_by .search_nav div:not(:nth-child(4)):hover{
+    background-color: var(--primary-color-light);
+}
+
     /* Alphabet direct */
 #alpha_search{
     display: block;
@@ -252,6 +275,8 @@
     transition: 0.2s linear;
 }
 
+#stimulus_search .btn-search,
+#reaction_search .btn-search,
 #word_search .btn-search{
     display: block;
     min-width: 200px;
@@ -267,10 +292,14 @@
     transition: 0.3s linear;
 }
 
+#stimulus_search .btn-search:hover,
+#reaction_search .btn-search:hover,
 #word_search .btn-search:hover{
     background-color: var(--primary-color);
 }
 
+#stimulus_search .btn-search:active,
+#reaction_search .btn-search:active,
 #word_search .btn-search:active{
     background-color: #000;
 }
@@ -295,6 +324,13 @@
 
 #word_search .input_container input:focus{
     border: 2px solid var(--primary-color);
+}
+
+#stimulus_search,
+#reaction_search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Filter section */

@@ -304,13 +304,13 @@ Licence URI: https://www.os-templates.com/template-terms
           </div>
           <div class="search_by method_hidden">
             <div class="search_nav">
-              <div><span>first</span></div>
-              <div><span><i class="fas fa-angle-double-left"></i></span></div>
-              <div><span><i class="fas fa-angle-left"></i></span></div>
+              <div onclick="printQuestionnaire('first')"><span>first</span></div>
+              <div onclick="printQuestionnaire('less10')"><span><i class="fas fa-angle-double-left"></i></span></div>
+              <div onclick="printQuestionnaire('less')"><span><i class="fas fa-angle-left"></i></span></div>
               <div>1/12800</div>
-              <div><span><i class="fas fa-angle-right"></i></span></div>
-              <div><span><i class="fas fa-angle-double-right"></i></span></div>
-              <div><span>last</span></div>
+              <div onclick="printQuestionnaire('add')"><span><i class="fas fa-angle-right"></i></span></div>
+              <div onclick="printQuestionnaire('add10')"><span><i class="fas fa-angle-double-right"></i></span></div>
+              <div onclick="printQuestionnaire('last')"><span>last</span></div>
               <input type="hidden" id="quest-number-current" value="1">
               <input type="hidden" id="quest-number-max" value="1">
             </div>

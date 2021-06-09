@@ -131,6 +131,12 @@ function printByReact(){
     printRes("a");
 }
 
+/* Sort by Frequency (invert dic) */
+function printByFreq(){
+    console.log("Sort by Frequence");
+    printRes("a");
+}
+
 /* Initialize the first questionnaire and the maximum of questionnaires */
 function initQuestionnaires(){
     /* Var initializing */
@@ -216,6 +222,7 @@ function printQuestionnaire(diff){
 
 /* Show method thanks to the url parameters */
 function showMethod(){
+    /* Maybe initialize inv method with array according to the used dictionary */
     let url_string = window.location.href;
     let url = new URL(url_string);
     const searchby = $(".search_by");
@@ -223,34 +230,50 @@ function showMethod(){
     const hide = "search_by method_hidden";
     if(url.searchParams.has("dic") && url.searchParams.get("dic")=="inv"){
         letterExtendGen();
-        searchby[0].classList.value = hide;
-        searchby[1].classList.value = show;
-        searchby[2].classList.value = hide;
+        for (let index = 0; index < searchby.length; index++) {
+            if(index==1){searchby[index].classList.value = show;}
+            else{searchby[index].classList.value = hide;}
+        }
         document.getElementsByClassName("search_by")[1].scrollIntoView();
         if(url.searchParams.has("met")){
-            if(url.searchParams.get("met")=="2"){
+            if(url.searchParams.get("met")=="2" && $('.search_by')[1].children.length>2){
                 $('.search_by')[1].children[2].checked = true;
                 toggleSearch('word_search');
-            }else if(url.searchParams.get("met")=="3"){
+            }else if(url.searchParams.get("met")=="3" && $('.search_by')[1].children.length>4){
                 $('.search_by')[1].children[4].checked = true;
                 toggleSearch('stimulus_search');
-            }else if(url.searchParams.get("met")=="4"){
+            }else if(url.searchParams.get("met")=="4" && $('.search_by')[1].children.length>6){
                 $('.search_by')[1].children[6].checked = true;
-                toggleSearch('reaction_search');
+                switch ($('#dictionary').val()) {
+                    case "fas":
+                        toggleSearch('reaction_search');                        
+                        break;
+                    case "sanf":
+                        toggleSearch('freq_search');
+                        break;
+                    default:
+                        console.error("Dictionary not recognized !");
+                        break;
+                }
             }
         }
-    }else if(url.searchParams.has("dic") && url.searchParams.get("dic")=="que"){
+    }else if(url.searchParams.has("dic") 
+    && url.searchParams.get("dic")=="que" 
+    /* List of dic where there is a questionnaire */
+    && ["fas"].includes($('#dictionary').val())){
         initQuestionnaires();
-        searchby[0].classList.value = hide;
-        searchby[1].classList.value = hide;
-        searchby[2].classList.value = show;
+        for (let index = 0; index < searchby.length; index++) {
+            if(index==2){searchby[index].classList.value = show;}
+            else{searchby[index].classList.value = hide;}
+        }
         $(".filter-section").addClass("method_hidden");
         document.getElementsByClassName("search_by")[2].scrollIntoView();
     }else{
         letterGen();
-        searchby[0].classList.value = show;
-        searchby[1].classList.value = hide;
-        searchby[2].classList.value = hide;
+        for (let index = 0; index < searchby.length; index++) {
+            if(index==0){searchby[index].classList.value = show;}
+            else{searchby[index].classList.value = hide;}
+        }
         if(url.searchParams.has("dic")){
             document.getElementsByClassName("search_by")[0].scrollIntoView();
         }

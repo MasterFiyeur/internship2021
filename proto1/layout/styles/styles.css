@@ -275,6 +275,7 @@
     transition: 0.2s linear;
 }
 
+#freq_search .btn-search,
 #stimulus_search .btn-search,
 #reaction_search .btn-search,
 #word_search .btn-search{
@@ -291,13 +292,14 @@
     cursor: pointer;
     transition: 0.3s linear;
 }
-
+#freq_search .btn-search:hover,
 #stimulus_search .btn-search:hover,
 #reaction_search .btn-search:hover,
 #word_search .btn-search:hover{
     background-color: var(--primary-color);
 }
 
+#freq_search .btn-search:active,
 #stimulus_search .btn-search:active,
 #reaction_search .btn-search:active,
 #word_search .btn-search:active{
@@ -326,6 +328,7 @@
     border: 2px solid var(--primary-color);
 }
 
+#freq_search,
 #stimulus_search,
 #reaction_search{
     display: flex;

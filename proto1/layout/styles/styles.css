@@ -620,11 +620,20 @@
 
     /* Reaction search */
 
-    .result .result-table table,
-    .result .result-table tr,
-    .result .result-table td,
-    .result .result-table th{
+    .result table,
+    .result tr,
+    .result td,
+    .result th{
         display: block;
+    }
+
+    
+    .result table thead{
+        width: 100%;
+    }
+
+    .result table .differents-countries{
+        width: auto;
     }
 
     /* Questionnaire page */

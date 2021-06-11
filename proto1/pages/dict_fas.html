@@ -509,16 +509,26 @@ Licence URI: https://www.os-templates.com/template-terms
                 onclick="printRes(document.getElementById('input_searchDirect').value)">Rechercher</button>
             </div>
             <div id="stimulus_search" class="method_hidden">
-              <button class="btn-search"
-                onclick="printByStimulus();">
-                сортировать
-              </button>
+              <div class="letter_container">
+                <span onclick="printByStimulus();">All</span>
+                <span onclick="printByStimulus();">350-200</span>
+                <span onclick="printByStimulus();">199-150</span>
+                <span onclick="printByStimulus();">149-100</span>
+                <span onclick="printByStimulus();">99-50</span>
+                <span onclick="printByStimulus();">49-1</span>
+              </div>
             </div>
             <div id="reaction_search" class="method_hidden">
-              <button class="btn-search"
-               onclick="printByReact();">
-                сортировать
-              </button>
+              <div class="letter_container">
+                <span onclick="printByReact();">All</span>
+                <span onclick="printByReact();">3000-2000</span>
+                <span onclick="printByReact();">1999-1500</span>
+                <span onclick="printByReact();">1499-1000</span>
+                <span onclick="printByReact();">999-750</span>
+                <span onclick="printByReact();">749-500</span>
+                <span onclick="printByReact();">499-250</span>
+                <span onclick="printByReact();">249-1</span>
+              </div>
             </div>
           </div>
           <div class="result"></div>

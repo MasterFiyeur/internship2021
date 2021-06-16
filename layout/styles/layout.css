@@ -422,6 +422,7 @@ input:focus, textarea:focus, *:required:focus{border-color:rgb(4, 102, 255) !imp
 #breadcrumb li:last-child a{color:rgb(8, 150, 255);}
 
 .container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
+.container .sidebar nav a.sdb_section:hover{color: #474747;}
 .container .sidebar nav a:hover{color:#97A9BD;}
 
 .pagination a, .pagination strong{border-color:#D7D7D7;}

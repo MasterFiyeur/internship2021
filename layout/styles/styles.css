@@ -1,7 +1,7 @@
 /* ----- Variable ----- */
 :root{
-    --primary-color : #282E39;
-    --primary-color-light : #97A9BD;
+    --primary-color : rgb(3, 50, 200);
+    --primary-color-light : rgb(8, 150, 255);;
 }
 
 /* ----- Universal class ----- */
@@ -464,7 +464,7 @@
 }
 
 .result .result-table tr:hover{
-    background-color: #c4c4c4;
+    background-color: rgb(240, 240, 255);
 }
 
 .result table .differents-countries{
@@ -556,7 +556,7 @@
     margin: 20px 0;
     border: thin solid var(--primary-color);
     background: rgb(151,169,189);
-    background: radial-gradient(circle,rgba(255,255,255,1)  11%, rgba(151,169,189,1) 100%);
+    background: radial-gradient(circle,rgba(255,255,255,1)  80%, rgb(8, 150, 255) 100%);
     padding: 5px;
     border-radius: 8px;
 }
@@ -589,7 +589,7 @@
 }
 
 .result-indiv-quest tr:nth-child(2n){
-    background-color: var(--primary-color-light);
+    background-color: rgb(150, 200, 255);
     color: #000;
 }
 

@@ -176,7 +176,7 @@ function initQuestionnaires(){
     let max = 2;
     let sex = "female";
     let firstQuest = {
-        sex: sex=="female"?"../images/female.png":"../images/male.png",
+        sex: sex=="female"?"../../images/female.png":"../../images/male.png",
         age: 18,
         from: "Orléans",
         language: "Français",
@@ -233,7 +233,7 @@ function printQuestionnaire(diff){
 
     /* Data recuperation */
     var data ={
-        sex: "male"=="female"?"../images/female.png":"../images/male.png",
+        sex: "male"=="female"?"../../images/female.png":"../../images/male.png",
         age: 22,
         from: "Paris",
         language: "Français",

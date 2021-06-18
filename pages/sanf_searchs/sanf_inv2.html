@@ -11,7 +11,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 
 <head>
-  <title>dictaverf | Pages | FAS</title>
+  <title>dictaverf | Pages | SANF</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -59,9 +59,9 @@ Licence URI: https://www.os-templates.com/template-terms
       <!-- ################################################################################################ -->
       <ul>
         <li><a href="../../index.html">Главная</a></li>
-        <li><a href="../dict_fas.html">ФАС</a></li>
-        <li><a>Прямой словарь</a></li>
-        <li><a>По отдельному стимулу</a></li>
+        <li><a href="../dict_sanf.html">САНФ</a></li>
+        <li><a>Обратный словарь</a></li>
+        <li><a>По количеству стимулов</a></li>
       </ul>
       <!-- ################################################################################################ -->
     </div>
@@ -77,25 +77,20 @@ Licence URI: https://www.os-templates.com/template-terms
         <!-- ################################################################################################ -->
         <nav class="sdb_holder">
           <ul>
-            <li><a href="../dict_fas.html#about">О словаре</a></li>
-            <li><a href="../dict_fas.html#stim">Стимулы</a></li>
+            <li><a href="../dict_sanf.html#about">О словаре</a></li>
+            <li><a href="../dict_sanf.html#stim">Стимулы</a></li>
             <li><a class="sdb_section">Прямой словарь</a>
               <ul>
-                <li><a href="./fas_dir0.html">В алфавитном порядке</a></li>
-                <li><a href="">По отдельному стимулу</a></li>
+                <li><a href="./sanf_dir0.html">В алфавитном порядке</a></li>
+                <li><a href="./sanf_dir1.html">По отдельному стимулу</a></li>
               </ul>
             </li>
             <li><a class="sdb_section">Обратный словарь</a>
               <ul>
-                <li><a href="./fas_inv0.html">В алфавитном порядке</a></li>
-                <li><a href="./fas_inv1.html">По отдельному стимулу</a></li>
-                <li><a href="./fas_inv2.html">По количеству стимулов</a></li>
-                <li><a href="./fas_inv3.html">По количеству реакций</a></li>
-              </ul>
-            </li>
-            <li><a class="sdb_section">Анкеты</a>
-              <ul>
-                <li><a href="./fas_que.html">Индивидуальные анкеты</a></li>
+                <li><a href="./sanf_inv0.html">В алфавитном порядке</a></li>
+                <li><a href="./sanf_inv1.html">По отдельному стимулу</a></li>
+                <li><a href="">По количеству стимулов</a></li>
+                <li><a href="./sanf_inv3.html">По количеству реакций</a></li>
               </ul>
             </li>
           </ul>
@@ -289,17 +284,14 @@ Licence URI: https://www.os-templates.com/template-terms
             </div>
           </div>
           <!--Hide/show the good method thanks to url arguments-->
-          <div id="word_search">
-            <div class="input_container">
-              <input type="text" class="input_search" id="input_searchDirect" placeholder=" ">
-              <label for="">стимул</label>
-            </div>
-            <button class="btn-search"
-              onclick="printRes(document.getElementById('input_searchDirect').value)">Rechercher</button>
+          <div id="stimulus_search">
+            <button class="btn-search" onclick="printByStimulus();">
+                сортировать
+            </button>
           </div>
           <div class="result"></div>
-          <input type="hidden" id="dictionary" value="fas">
-          <input type="hidden" id="method" value="dir">
+          <input type="hidden" id="dictionary" value="sanf">
+          <input type="hidden" id="method" value="inv">
         </div>
         <!-- / main body -->
         <div class="clear"></div>
@@ -331,10 +323,6 @@ Licence URI: https://www.os-templates.com/template-terms
   <script src="../../layout/scripts/jquery.backtotop.js"></script>
   <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
   <script src="../../layout/scripts/search.js"></script>
-  <script>
-    /* Generate letters */
-    letterGen();
-  </script>
 </body>
 
 </html>

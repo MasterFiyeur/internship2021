@@ -186,7 +186,7 @@
     background-color: var(--primary-color);
 }
 
-.search_by .search_nav{
+.search_nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,18 +194,18 @@
     flex-wrap: wrap;
 }
 
-.search_by .search_nav div{
+.search_nav div{
     padding: 5px;
     margin: 3px;
     border-radius: 8px;
     color: var(--primary-color);
 }
 
-.search_by .search_nav div span{
+.search_nav div span{
     cursor: pointer;
 }
 
-.search_by .search_nav div:not(:nth-child(4)):hover{
+.search_nav div:not(:nth-child(4)):hover{
     background-color: var(--primary-color-light);
 }
 

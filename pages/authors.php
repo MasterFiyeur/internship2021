@@ -15,13 +15,6 @@ Licence URI: https://www.os-templates.com/template-terms
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <style type="text/css">
-/* DEMO ONLY */
-.container .demo{text-align:center;}
-.container .demo div{padding:8px 0;}
-.container .demo div:nth-child(odd){color:#FFFFFF; background:#CCCCCC;}
-.container .demo div:nth-child(even){color:#FFFFFF; background:#979797;}
-@media screen and (max-width:900px){.container .demo div{margin-bottom:0;}}
-/* DEMO ONLY */
 </style>
 </head>
 <body id="top">
@@ -32,25 +25,25 @@ Licence URI: https://www.os-templates.com/template-terms
   <header id="header" class="hoc clear">
     <div id="logo" class="fl_left"> 
       <!-- ################################################################################################ -->
-      <h1 class="logoname"><a href="../index.html">Французские <span>а</span>ссоциативные <span>С</span>ловари</a></h1>
+      <h1 class="logoname"><a href="../index.php">Французские <span>а</span>ссоциативные <span>С</span>ловари</a></h1>
       <!-- ################################################################################################ -->
     </div>
     <nav id="mainav" class="fl_right"> 
       <!-- ################################################################################################ -->
       <ul class="clear">
-        <li><a href="about.html">О проекте</a></li>
-        <li><a href="authors.html#">Авторы</a></li>
+        <li><a href="about.php">О проекте</a></li>
+        <li><a href="authors.php#">Авторы</a></li>
         <li><a class="drop" href="#">Словари</a>
           <ul>
-            <li><a href="dict_fas.html">Французский Ассоциативный Словарь (ФАС)</a></li>
-            <li><a href="dict_sanf.html">Словарь ассоциативных норм франкофонии (САНФ)</a></li>
-            <li><a href="dict_sanfn.html">Словарь ассоциативных норм франкофонии нормализованый (САНФН)</a></li>
-            <li><a href="dict_fasn.html">Словарь французских ассоциаций 2019 (ФАСН-2019)</a></li>
-            <li><a href="dict_fas1_red.html">Словарь французских ассоциаций 2012+2019 (ФАС1-сокращенный)</a></li>
-            <li><a href="dict_fas2_red.html">Словарь французских ассоциаций 2012+2019 (ФАС2-сокращенный)</a></li>
+            <li><a href="dict_fas.php">Французский Ассоциативный Словарь (ФАС)</a></li>
+            <li><a href="dict_sanf.php">Словарь ассоциативных норм франкофонии (САНФ)</a></li>
+            <li><a href="dict_sanfn.php">Словарь ассоциативных норм франкофонии нормализованый (САНФН)</a></li>
+            <li><a href="dict_fasn.php">Словарь французских ассоциаций 2019 (ФАСН-2019)</a></li>
+            <li><a href="dict_fas1_red.php">Словарь французских ассоциаций 2012+2019 (ФАС1-сокращенный)</a></li>
+            <li><a href="dict_fas2_red.php">Словарь французских ассоциаций 2012+2019 (ФАС2-сокращенный)</a></li>
           </ul>
         </li>
-        <li><a href="help.html">Помощь</a></li>
+        <li><a href="help.php">Помощь</a></li>
         <li><a href="#">Fr</a></li>
       </ul>
       <!-- ################################################################################################ -->
@@ -64,7 +57,7 @@ Licence URI: https://www.os-templates.com/template-terms
   <div id="breadcrumb" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul>
-      <li><a href="../index.html">Главная</a></li>
+      <li><a href="../index.php">Главная</a></li>
       <li><a href="#">Авторы</a></li>
     </ul>
     <!-- ################################################################################################ -->

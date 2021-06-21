@@ -25,26 +25,26 @@ Licence URI: https://www.os-templates.com/template-terms
     <header id="header" class="hoc clear">
       <div id="logo" class="fl_left">
         <!-- ################################################################################################ -->
-        <h1 class="logoname"><a href="../../index.html">Французские <span>а</span>ссоциативные <span>С</span>ловари</a>
+        <h1 class="logoname"><a href="../../index.php">Французские <span>а</span>ссоциативные <span>С</span>ловари</a>
         </h1>
         <!-- ################################################################################################ -->
       </div>
       <nav id="mainav" class="fl_right">
         <!-- ################################################################################################ -->
         <ul class="clear">
-          <li><a href="../about.html">О проекте</a></li>
-          <li><a href="../authors.html#">Авторы</a></li>
+          <li><a href="../about.php">О проекте</a></li>
+          <li><a href="../authors.php#">Авторы</a></li>
           <li><a class="drop" href="#">Словари</a>
             <ul>
-              <li><a href="../dict_fas.html">Французский Ассоциативный Словарь (ФАС)</a></li>
-              <li><a href="../dict_sanf.html">Словарь ассоциативных норм франкофонии (САНФ)</a></li>
-              <li><a href="../dict_sanfn.html">Словарь ассоциативных норм франкофонии нормализованый (САНФН)</a></li>
-              <li><a href="../dict_fasn.html">Словарь французских ассоциаций 2019 (ФАСН-2019)</a></li>
-              <li><a href="../dict_fas1_red.html">Словарь французских ассоциаций 2012+2019 (ФАС1-сокращенный)</a></li>
-              <li><a href="../dict_fas2_red.html">Словарь французских ассоциаций 2012+2019 (ФАС2-сокращенный)</a></li>
+              <li><a href="../dict_fas.php">Французский Ассоциативный Словарь (ФАС)</a></li>
+              <li><a href="../dict_sanf.php">Словарь ассоциативных норм франкофонии (САНФ)</a></li>
+              <li><a href="../dict_sanfn.php">Словарь ассоциативных норм франкофонии нормализованый (САНФН)</a></li>
+              <li><a href="../dict_fasn.php">Словарь французских ассоциаций 2019 (ФАСН-2019)</a></li>
+              <li><a href="../dict_fas1_red.php">Словарь французских ассоциаций 2012+2019 (ФАС1-сокращенный)</a></li>
+              <li><a href="../dict_fas2_red.php">Словарь французских ассоциаций 2012+2019 (ФАС2-сокращенный)</a></li>
             </ul>
           </li>
-          <li><a href="../help.html">Помощь</a></li>
+          <li><a href="../help.php">Помощь</a></li>
           <li><a href="#">Fr</a></li>
         </ul>
         <!-- ################################################################################################ -->
@@ -58,8 +58,8 @@ Licence URI: https://www.os-templates.com/template-terms
     <div id="breadcrumb" class="hoc clear">
       <!-- ################################################################################################ -->
       <ul>
-        <li><a href="../../index.html">Главная</a></li>
-        <li><a href="../dict_fas.html">ФАС</a></li>
+        <li><a href="../../index.php">Главная</a></li>
+        <li><a href="../dict_fas.php">ФАС</a></li>
         <li><a>Анкеты</a></li>
         <li><a>Индивидуальные анкеты</a></li>
       </ul>
@@ -77,20 +77,20 @@ Licence URI: https://www.os-templates.com/template-terms
         <!-- ################################################################################################ -->
         <nav class="sdb_holder">
           <ul>
-            <li><a href="../dict_fas.html#about">О словаре</a></li>
-            <li><a href="../dict_fas.html#stim">Стимулы</a></li>
+            <li><a href="../dict_fas.php#about">О словаре</a></li>
+            <li><a href="../dict_fas.php#stim">Стимулы</a></li>
             <li><a class="sdb_section">Прямой словарь</a>
               <ul>
-                <li><a href="./fas_dir0.html">В алфавитном порядке</a></li>
-                <li><a href="./fas_dir1.html">По отдельному стимулу</a></li>
+                <li><a href="./fas_dir0.php">В алфавитном порядке</a></li>
+                <li><a href="./fas_dir1.php">По отдельному стимулу</a></li>
               </ul>
             </li>
             <li><a class="sdb_section">Обратный словарь</a>
               <ul>
-                <li><a href="./fas_inv0.html">В алфавитном порядке</a></li>
-                <li><a href="./fas_inv1.html">По отдельному стимулу</a></li>
-                <li><a href="./fas_inv2.html">По количеству стимулов</a></li>
-                <li><a href="./fas_inv3.html">По количеству реакций</a></li>
+                <li><a href="./fas_inv0.php">В алфавитном порядке</a></li>
+                <li><a href="./fas_inv1.php">По отдельному стимулу</a></li>
+                <li><a href="./fas_inv2.php">По количеству стимулов</a></li>
+                <li><a href="./fas_inv3.php">По количеству реакций</a></li>
               </ul>
             </li>
             <li><a class="sdb_section">Анкеты</a>

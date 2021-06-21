@@ -24,25 +24,25 @@ Licence URI: https://www.os-templates.com/template-terms
   <header id="header" class="hoc clear">
     <div id="logo" class="fl_left"> 
       <!-- ################################################################################################ -->
-      <h1 class="logoname"><a href="index.html">Французские <span>а</span>ссоциативные <span>С</span>ловари</a></h1>
+      <h1 class="logoname"><a href="index.php">Французские <span>а</span>ссоциативные <span>С</span>ловари</a></h1>
       <!-- ################################################################################################ -->
     </div>
     <nav id="mainav" class="fl_right"> 
       <!-- ################################################################################################ -->
       <ul class="clear">
-        <li><a href="pages/about.html">О проекте</a></li>
-        <li><a href="pages/authors.html#">Авторы</a></li>
+        <li><a href="pages/about.php">О проекте</a></li>
+        <li><a href="pages/authors.php#">Авторы</a></li>
         <li><a class="drop" href="#">Словари</a>
           <ul>
-            <li><a href="pages/dict_fas.html">Французский Ассоциативный Словарь (ФАС)</a></li>
-            <li><a href="pages/dict_sanf.html">Словарь ассоциативных норм франкофонии (САНФ)</a></li>
-            <li><a href="pages/dict_sanfn.html">Словарь ассоциативных норм франкофонии нормализованый (САНФН)</a></li>
-            <li><a href="pages/dict_fasn.html">Словарь французских ассоциаций 2019 (ФАСН-2019)</a></li>
-            <li><a href="pages/dict_fas1_red.html">Словарь французских ассоциаций 2012+2019 (ФАС1-сокращенный)</a></li>
-            <li><a href="pages/dict_fas2_red.html">Словарь французских ассоциаций 2012+2019 (ФАС2-сокращенный)</a></li>
+            <li><a href="pages/dict_fas.php">Французский Ассоциативный Словарь (ФАС)</a></li>
+            <li><a href="pages/dict_sanf.php">Словарь ассоциативных норм франкофонии (САНФ)</a></li>
+            <li><a href="pages/dict_sanfn.php">Словарь ассоциативных норм франкофонии нормализованый (САНФН)</a></li>
+            <li><a href="pages/dict_fasn.php">Словарь французских ассоциаций 2019 (ФАСН-2019)</a></li>
+            <li><a href="pages/dict_fas1_red.php">Словарь французских ассоциаций 2012+2019 (ФАС1-сокращенный)</a></li>
+            <li><a href="pages/dict_fas2_red.php">Словарь французских ассоциаций 2012+2019 (ФАС2-сокращенный)</a></li>
           </ul>
         </li>
-        <li><a href="pages/help.html">Помощь</a></li>
+        <li><a href="pages/help.php">Помощь</a></li>
         <li><a href="#">Fr</a></li>
       </ul>
       <!-- ################################################################################################ -->
@@ -91,10 +91,10 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <section class="group shout">
       <figure class="one_half first"><img src="images/dictionary.jpg" alt="Dictionary">
-        <figcaption class="heading"><a href="./pages/about.html">Словари</a></figcaption>
+        <figcaption class="heading"><a href="./pages/about.php">Словари</a></figcaption>
       </figure>
       <figure class="one_half"><img src="images/authors.jpg" alt="Authors">
-        <figcaption class="heading"><a href="./pages/authors.html">Авторы</a></figcaption>
+        <figcaption class="heading"><a href="./pages/authors.php">Авторы</a></figcaption>
       </figure>
     </section>
     <!-- ################################################################################################ -->

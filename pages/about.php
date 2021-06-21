@@ -25,29 +25,29 @@ Licence URI: https://www.os-templates.com/template-terms
         <header id="header" class="hoc clear">
             <div id="logo" class="fl_left">
                 <!-- ################################################################################################ -->
-                <h1 class="logoname"><a href="../index.html">Французские <span>а</span>ссоциативные
+                <h1 class="logoname"><a href="../index.php">Французские <span>а</span>ссоциативные
                         <span>С</span>ловари</a></h1>
                 <!-- ################################################################################################ -->
             </div>
             <nav id="mainav" class="fl_right">
                 <!-- ################################################################################################ -->
                 <ul class="clear">
-                    <li><a href="about.html">О проекте</a></li>
-                    <li><a href="authors.html#">Авторы</a></li>
+                    <li><a href="about.php">О проекте</a></li>
+                    <li><a href="authors.php#">Авторы</a></li>
                     <li><a class="drop" href="#">Словари</a>
                         <ul>
-                            <li><a href="dict_fas.html">Французский Ассоциативный Словарь (ФАС)</a></li>
-                            <li><a href="dict_sanf.html">Словарь ассоциативных норм франкофонии (САНФ)</a></li>
-                            <li><a href="dict_sanfn.html">Словарь ассоциативных норм франкофонии нормализованый
+                            <li><a href="dict_fas.php">Французский Ассоциативный Словарь (ФАС)</a></li>
+                            <li><a href="dict_sanf.php">Словарь ассоциативных норм франкофонии (САНФ)</a></li>
+                            <li><a href="dict_sanfn.php">Словарь ассоциативных норм франкофонии нормализованый
                                     (САНФН)</a></li>
-                            <li><a href="dict_fasn.html">Словарь французских ассоциаций 2019 (ФАСН-2019)</a></li>
-                            <li><a href="dict_fas1_red.html">Словарь французских ассоциаций 2012+2019
+                            <li><a href="dict_fasn.php">Словарь французских ассоциаций 2019 (ФАСН-2019)</a></li>
+                            <li><a href="dict_fas1_red.php">Словарь французских ассоциаций 2012+2019
                                     (ФАС1-сокращенный)</a></li>
-                            <li><a href="dict_fas2_red.html">Словарь французских ассоциаций 2012+2019
+                            <li><a href="dict_fas2_red.php">Словарь французских ассоциаций 2012+2019
                                     (ФАС2-сокращенный)</a></li>
                         </ul>
                     </li>
-                    <li><a href="help.html">Помощь</a></li>
+                    <li><a href="help.php">Помощь</a></li>
                     <li><a href="#">Fr</a></li>
                 </ul>
                 <!-- ################################################################################################ -->
@@ -61,7 +61,7 @@ Licence URI: https://www.os-templates.com/template-terms
         <div id="breadcrumb" class="hoc clear">
             <!-- ################################################################################################ -->
             <ul>
-                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../index.php">Главная</a></li>
                 <li><a href="#">Словари</a></li>
             </ul>
             <!-- ################################################################################################ -->
@@ -94,19 +94,19 @@ Licence URI: https://www.os-templates.com/template-terms
                 <!-- ################################################################################################ -->
                 <h1>Французский Ассоциативный Словарь</h1>
                 <div id="dict1">
-                    <h2><a href="./dict_fas.html">Французский Ассоциативный Словарь (ФАС)</a></h2>
+                    <h2><a href="./dict_fas.php">Французский Ассоциативный Словарь (ФАС)</a></h2>
                     <p>Данный словарь основан на ответах на вопросы анкет, заполненных в 2008-2010 годах. Исправлены
                         только орфография и пунктуация. Этот словарь позволяет нам изучать синтагматические связи между
                         стимулом и реакцией.</p>
                 </div>
                 <div id="dict2">
-                    <h2><a href="./dict_sanf.html">Словарь ассоциативных норм франкофонии (САНФ)</a></h2>
+                    <h2><a href="./dict_sanf.php">Словарь ассоциативных норм франкофонии (САНФ)</a></h2>
                     <p>Данный словарь основан на ответах на анкеты, заполненные в 2013-2015 годах. Исправлены только
                         орфография и пунктуация. Этот словарь позволяет нам изучать синтагматические связи между
                         стимулом и реакцией.</p>
                 </div>
                 <div id="dict3">
-                    <h2><a href="./dict_sanfn.html">Словарь ассоциативных норм франкофонии нормализованый
+                    <h2><a href="./dict_sanfn.php">Словарь ассоциативных норм франкофонии нормализованый
                             (САНФН)</a></h2>
                     <p>Данный словарь основан на ответах на вопросы анкет, заполненных в 2013-2015 годах. Помимо
                         исправления орфографии и пунктуации, ответы были унифицированы: ответы, выраженные в разных
@@ -116,7 +116,7 @@ Licence URI: https://www.os-templates.com/template-terms
                         ними, что особенно важно при составлении обратного словаря.</p>
                 </div>
                 <div id="dict4">
-                    <h2><a href="./dict_fasn.html">Словарь французских ассоциаций 2019 (ФАСН-2019)</a></h2>
+                    <h2><a href="./dict_fasn.php">Словарь французских ассоциаций 2019 (ФАСН-2019)</a></h2>
                     <p>Данный словарь составлен на основе ответов на анкеты, заполненные в 2018 году. Помимо исправления
                         орфографии и пунктуации, ответы были унифицированы: ответы, выраженные в разных формах (мужской
                         - женский род прилагательного, отглагольные формы), объединены под одним заголовочным словом,
@@ -125,7 +125,7 @@ Licence URI: https://www.os-templates.com/template-terms
                         при составлении обратного словаря.</p>
                 </div>
                 <div id="dict5">
-                    <h2><a href="./dict_fas1_red.html">Словарь французских ассоциаций 2012+2019
+                    <h2><a href="./dict_fas1_red.php">Словарь французских ассоциаций 2012+2019
                             (ФАС1-сокращенный)</a></h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, vero vitae perspiciatis quod quos
                         fugit numquam doloremque fuga aperiam dolore, recusandae dolorum quidem modi laboriosam expedita
@@ -134,7 +134,7 @@ Licence URI: https://www.os-templates.com/template-terms
                         similique, cumque itaque atque maiores explicabo nulla nisi distinctio.</p>
                 </div>
                 <div id="dict6">
-                    <h2><a href="./dict_fas2_red.html">Словарь французских ассоциаций 2012+2019
+                    <h2><a href="./dict_fas2_red.php">Словарь французских ассоциаций 2012+2019
                             (ФАС2-сокращенный)</a></h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sit expedita ab cum. Sequi totam
                         hic blanditiis assumenda, itaque, atque autem, id eaque ullam harum quos delectus quibusdam

@@ -11,14 +11,14 @@
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script 
-  <?php echo $isPages?'src="../layout/scripts/jquery.min.js"':'src="./layout/scripts/jquery.min.js"' ?>
+  <?php echo 'src="'.$BASE_PATH.'layout/scripts/jquery.min.js"'; ?>
   >
 </script>
 <script 
-  <?php echo $isPages?'src="../layout/scripts/jquery.backtotop.js"':'src="./layout/scripts/jquery.backtotop.js"' ?>
+  <?php echo 'src="'.$BASE_PATH.'layout/scripts/jquery.backtotop.js"'; ?>
   >
 </script>
 <script 
-  <?php echo $isPages?'src="../layout/scripts/jquery.mobilemenu.js"':'src="./layout/scripts/jquery.mobilemenu.js"' ?>
+  <?php echo 'src="'.$BASE_PATH.'layout/scripts/jquery.mobilemenu.js"'; ?>
   >
 </script>

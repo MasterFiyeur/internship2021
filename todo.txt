@@ -1,0 +1,3 @@
+- Filter in php file
+- Make one page for each dictionary search and adapt the content
+- FR/RU language by using file with array of every content needed

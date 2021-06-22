@@ -24,21 +24,21 @@
             <li><a href="#stim">Стимулы</a></li>
             <li><a class="sdb_section">Прямой словарь</a>
               <ul>
-                <li><a href="./fas_searchs/fas_dir0.php">В алфавитном порядке</a></li>
-                <li><a href="./fas_searchs/fas_dir1.php">По отдельному стимулу</a></li>
+                <li><a href="./search/fas.php?method=dir&num=0">В алфавитном порядке</a></li>
+                <li><a href="./search/fas.php?method=dir&num=1">По отдельному стимулу</a></li>
               </ul>
             </li>
             <li><a class="sdb_section">Обратный словарь</a>
               <ul>
-                <li><a href="./fas_searchs/fas_inv0.php">В алфавитном порядке</a></li>
-                <li><a href="./fas_searchs/fas_inv1.php">По отдельному стимулу</a></li>
-                <li><a href="./fas_searchs/fas_inv2.php">По количеству стимулов</a></li>
-                <li><a href="./fas_searchs/fas_inv3.php">По количеству реакций</a></li>
+                <li><a href="./search/fas.php?method=inv&num=0">В алфавитном порядке</a></li>
+                <li><a href="./search/fas.php?method=inv&num=1">По отдельному стимулу</a></li>
+                <li><a href="./search/fas.php?method=inv&num=2">По количеству стимулов</a></li>
+                <li><a href="./search/fas.php?method=inv&num=3">По количеству реакций</a></li>
               </ul>
             </li>
             <li><a class="sdb_section">Анкеты</a>
               <ul>
-                <li><a href="./fas_searchs/fas_que.php">Индивидуальные анкеты</a></li>
+                <li><a href="./search/fas.php?method=que&num=0">Индивидуальные анкеты</a></li>
               </ul>
             </li>
           </ul>

@@ -122,7 +122,7 @@ function printResDirectSanf(letter){
 function printRes(letter){
     let url_string = window.location.href;
     let url = new URL(url_string);
-    if($('#method').val()=="inv"){
+    if(url.searchParams.get("method")=="inv"){
         printResInvertFas(letter);
     }else{
         switch ($('#dictionary').val()) {

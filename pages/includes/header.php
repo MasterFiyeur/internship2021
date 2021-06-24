@@ -1,4 +1,6 @@
-<?php include "config.php" ?>
+<?php 
+include "config.php";
+?>
 <!--
 Template Name: Chillaid
 Author: <a href="https://www.os-templates.com/">OS Templates</a>
@@ -9,7 +11,7 @@ Licence URI: https://www.os-templates.com/template-terms
 -->
 <html lang="">
 <head>
-    <title>Chillaid</title>
+    <title>Dictaverf</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link 

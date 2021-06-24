@@ -23,7 +23,15 @@
           </ul>
         </li>
         <li><a <?php echo 'href="'.$BASE_PATH.'pages/help.php"'; ?>>Помощь</a></li>
-        <li><a href="?lang=fr">Fr</a></li>
+        <li>
+        <?php
+          if($_SESSION["lang"]=="fr"){
+            echo "<a href='?lang=ru'>RU</a>";
+          }else{
+            echo "<a href='?lang=fr'>Fr</a>";
+          }
+        ?>
+        </li>
       </ul>
     </nav>
   </header>

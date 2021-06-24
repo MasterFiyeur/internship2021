@@ -206,25 +206,25 @@
           <h2>Прямой словарь</h2>
           <p>Этот метод используется для поиска реакции на стимул.</p>
           <ul>
-            <li><a href="./fas_searchs/fas_dir0.php">В алфавитном порядке</a></li>
-            <li><a href="./fas_searchs/fas_dir1.php">По отдельному стимулу</a></li>
+            <li><a href="./search/fas.php?method=dir&num=0">В алфавитном порядке</a></li>
+            <li><a href="./search/fas.php?method=dir&num=1">По отдельному стимулу</a></li>
           </ul>
         </div>
         <div id="dict_inv">
           <h2>Обратный словарь</h2>
           <p>Этот метод позволяет находить стимулы по реакции.</p>
           <ul>
-            <li><a href="./fas_searchs/fas_inv0.php">В алфавитном порядке</a></li>
-            <li><a href="./fas_searchs/fas_inv1.php">По отдельному стимулу</a></li>
-            <li><a href="./fas_searchs/fas_inv2.php">По количеству стимулов</a></li>
-            <li><a href="./fas_searchs/fas_inv3.php">По количеству реакций</a></li>
+            <li><a href="./search/fas.php?method=inv&num=0">В алфавитном порядке</a></li>
+            <li><a href="./search/fas.php?method=inv&num=1">По отдельному стимулу</a></li>
+            <li><a href="./search/fas.php?method=inv&num=2">По количеству стимулов</a></li>
+            <li><a href="./search/fas.php?method=inv&num=3">По количеству реакций</a></li>
           </ul>
         </div>
         <div id="indiv_quest">
           <h2>Анкеты</h2>
           <p>Этот метод позволяет просматривать различные анкеты, заполненные людьми.</p>
           <ul>
-            <li><a href="./fas_searchs/fas_que.php">Индивидуальные анкеты</a></li>
+            <li><a href="./search/fas.php?method=que&num=0">Индивидуальные анкеты</a></li>
           </ul>
         </div>
         <!-- / main body -->

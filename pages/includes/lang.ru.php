@@ -54,7 +54,13 @@ $lang["about"]["fas2_red"]["description"] = "Lorem ipsum dolor sit amet consecte
 											iure dicta consequatur modi quibusdam, excepturi tenetur iusto fuga minus ex. Cupiditate,
 											molestias. Tempore temporibus suscipit recusandae! Ab, tempora!";
 
-
+/* Authors */
+$lang["authors"]["authors1"]["name"] = "Дебренн Мишель";
+$lang["authors"]["authors1"]["description"] = "Руковолитель<br>д.ф.н., профессор кафедры французского языка факультета иностранных языков НГУ";
+$lang["authors"]["authors2"]["name"] = "Уфимцева Наталья Владимировна";
+$lang["authors"]["authors2"]["description"] = "д.ф.н., профессор Института Языкознания РАН";
+$lang["authors"]["authors3"]["name"] = "Романенко Алексей Анатольевич";
+$lang["authors"]["authors3"]["description"] = "Автор системы. Техническое сопровождение<br>к.т.н., зав. отделом компьютерной техники ФИТ НГУ";
 
 /* Others */
 $lang["path"]["home"] = "ГЛАВНАЯ";

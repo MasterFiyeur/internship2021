@@ -8,8 +8,8 @@
 	<div class="bgded overlay" style="background-image:url('../images/associativnoe-myshlenie.jpg');">
 		<div id="breadcrumb" class="hoc clear">
 			<ul>
-				<li><a href="../index.php">Главная</a></li>
-				<li><a href="#">ФАС2-сокращенный</a></li>
+				<li><a href="../index.php"><?php echo $lang["path"]["home"]; ?></a></li>
+				<li><a href="#"><?php echo $lang["dict"]["fas1_red"]; ?></a></li>
 			</ul>
 		</div>
 	</div>
@@ -20,37 +20,40 @@
 			<div class="sidebar one_quarter first">
 				<nav class="sdb_holder">
 					<ul>
-						<li><a href="#about">О словаре</a></li>
-						<li><a href="#stim">Стимулы</a></li>
-						<li><a href="#dict_direct">Прямой словарь</a>
+						<li><a href="#about"><?php echo $lang["dict"]["about_title"]; ?></a></li>
+						<li><a href="#stim"><?php echo $lang["dict"]["stim_title"]; ?></a></li>
+						<li><a class="sdb_section"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a>
 							<ul>
-								<li><a href="#">В алфавитном порядке</a></li>
-								<li><a href="#">По отдельному стимулу</a></li>
+								<li><a href="./search/fas1_red.php?method=dir&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
+								<li><a href="./search/fas1_red.php?method=dir&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
 							</ul>
 						</li>
-						<li><a href="#dict_inv">Обратный словарь</a>
+						<li><a class="sdb_section"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a>
 							<ul>
-								<li><a href="#">В алфавитном порядку реакций</a></li>
-								<li><a href="#">По количеству стимулов</a></li>
-								<li><a href="#">По количеству реакций</a></li>
-								<li><a href="#">По отдельному слову</a></li>
+								<li><a href="./search/fas1_red.php?method=inv&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
+								<li><a href="./search/fas1_red.php?method=inv&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
+								<li><a href="./search/fas1_red.php?method=inv&num=2"><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>
+								<li><a href="./search/fas1_red.php?method=inv&num=3"><?php echo $lang["dict"]["search_method"]["react"]; ?></a></li>
 							</ul>
 						</li>
-						<li><a href="#indiv_quest">Анкеты</a></li>
+						<li><a class="sdb_section"><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a>
+							<ul>
+								<li><a href="./search/fas1_red.php?method=que&num=0"><?php echo $lang["dict"]["search_method"]["questionnaires"]; ?></a></li>
+							</ul>
+						</li>
 					</ul>
 				</nav>
 			</div>
 			<!-- ################################################################################################ -->
 			<div class="content three_quarter">
-				<h1>Французский Ассоциативный Словарь</h1>
+				<h1><?php echo $lang["pages"]["title"]; ?></h1>
 				<div id=about>
-					<h2>О словаре</h2>
-					<p>Словарь французских ассоциаций 2012+2019 (ФАС2-сокращенный)</p>
-					<p>Этот словарь основан на ответах на опросники ...</p>
+					<h2><?php echo $lang["dict"]["about_title"]; ?></h2>
+					<?php echo $lang["fas1_red"]["about"]; ?>
 				</div>
 				<div id="stim">
-					<h2>Стимулы</h2>
-					<p>Участникам эксперимента были предоставлены следующие стимулы:</p>
+					<h2><?php echo $lang["dict"]["stim_title"]; ?></h2>
+					<?php echo $lang["fas1_red"]["stim"]; ?>
 					<p>abandonner, absence, accepter, accompagner, accord, accorder, acheter, acte, action, adresser, affaire,
 						affirmer, âge, agir, aide, aider, aimer, air, ajouter, aller, amener, ami, amour, ancien, animal, année,
 						annoncer, apparaitre, appartenir, appel, appeler, apporter, apprendre, appuyer, argent, arme, armée,
@@ -102,25 +105,28 @@
 						vivre, voie, voir, voisin, voiture, voix, volonté, vouloir, voyage, vrai, vue</p>
 				</div>
 				<div id="dict_direct">
-					<h2><a href="./search.php">Прямой словарь</a></h2>
+					<h2><?php echo $lang["dict"]["search_direct"]["title"]; ?></h2>
+					<p><?php echo $lang["dict"]["search_direct"]["description"]; ?></p>
 					<ul>
-						<li>В алфавитном порядке</li>
-						<li>По отдельному стимулу</li>
+						<li><a href="./search/fas1_red.php?method=dir&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
+						<li><a href="./search/fas1_red.php?method=dir&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
 					</ul>
 				</div>
 				<div id="dict_inv">
-					<h2><a href="./search.php">Обратный словарь</a></h2>
+					<h2><?php echo $lang["dict"]["search_invert"]["title"]; ?></h2>
+					<p><?php echo $lang["dict"]["search_invert"]["description"]; ?></p>
 					<ul>
-						<li>В алфавитном порядку реакций</li>
-						<li>По количеству стимулов</li>
-						<li>По количеству реакций</li>
-						<li>По отдельному слову</li>
+						<li><a href="./search/fas1_red.php?method=inv&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
+						<li><a href="./search/fas1_red.php?method=inv&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
+						<li><a href="./search/fas1_red.php?method=inv&num=2"><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>
+						<li><a href="./search/fas1_red.php?method=inv&num=3"><?php echo $lang["dict"]["search_method"]["react"]; ?></a></li>
 					</ul>
 				</div>
 				<div id="indiv_quest">
-					<h2><a href="./search.php">Анкеты</a></h2>
+					<h2><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></h2>
+					<p><?php echo $lang["dict"]["search_questionnaire"]["description"]; ?></p>
 					<ul>
-						<li>Индивидуальные анкеты.</li>
+						<li><a href="./search/fas1_red.php?method=que&num=0"><?php echo $lang["dict"]["search_method"]["questionnaires"]; ?></a></li>
 					</ul>
 				</div>
 				<!-- / main body -->
@@ -132,27 +138,27 @@
 			<div class="counter-card">
 				<span><i class="fas fa-users"></i></span>
 				<div class="number">3500</div>
-				<div class="desc">Общее число участников веб-сайта</div>
+				<div class="desc"><?php echo $lang["dict"]["card"][0]; ?></div>
 			</div>
 			<div class="counter-card">
 				<span><i class="fas fa-history"></i></span>
 				<div class="number">25 лет</div>
-				<div class="desc">Средний возраст участников веб-сайта</div>
+				<div class="desc"><?php echo $lang["dict"]["card"][1]; ?></div>
 			</div>
 			<div class="counter-card">
 				<span><i class="fas fa-venus-mars"></i></span>
 				<div class="number">45%/55%</div>
-				<div class="desc">% Мужчина/% женщина<br />&nbsp;</div>
+				<div class="desc"><?php echo $lang["dict"]["card"][2]; ?><br />&nbsp;</div>
 			</div>
 			<div class="counter-card">
 				<span><i class="fas fa-pencil-alt"></i></span>
 				<div class="number">65432</div>
-				<div class="desc">Количество слов, введенных авторами</div>
+				<div class="desc"><?php echo $lang["dict"]["card"][3]; ?></div>
 			</div>
 			<div class="counter-card">
 				<span><i class="fas fa-book"></i></span>
 				<div class="number">1500</div>
-				<div class="desc">Количество отдельных слов в словаре</div>
+				<div class="desc"><?php echo $lang["dict"]["card"][4]; ?></div>
 			</div>
 		</section>
 	</div>

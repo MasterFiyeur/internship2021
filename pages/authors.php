@@ -7,19 +7,19 @@
 <!-- ################################################################################################ -->
 <div class="bgded overlay" style="background-image:url('../images/associativnoe-myshlenie.jpg');">
   <div id="breadcrumb" class="hoc clear"> 
-    <ul>
-      <li><a href="../index.php">Главная</a></li>
-      <li><a href="#">Авторы</a></li>
-    </ul>
+	<ul>
+	  <li><a href="../index.php">Главная</a></li>
+	  <li><a href="#">Авторы</a></li>
+	</ul>
   </div>
 </div>
 <!-- ################################################################################################ -->
 <div class="wrapper row3">
-  <main class="hoc container clear"> 
-    <!-- main body -->
-    <div class="content"> 
-      <div class="authors_container group btmspace-50">
-        <div class="authors">
+  	<main class="hoc container clear"> 
+	<!-- main body -->
+	<div class="content"> 
+	  <div class="authors_container group btmspace-50">
+		<div class="authors">
 					<img class="borderedbox inspace-5" src="../images/Debrenn.png" alt="Debrenn">
 					<div class="title text-center"><b>Дебренн Мишель</b></div>
 					<div class="text-center">
@@ -29,14 +29,14 @@
 					</div>
 					<a href="mailto:micheledebrenne@gmail.com">micheledebrenne@gmail.com</a>
 				</div>
-        <div class="authors">
+		<div class="authors">
 					<img class="borderedbox inspace-5" src="../images/Ufimtseva.png" alt="Ufimtseva">
 					<div class="title text-center"><b>Уфимцева Наталья Владимировна</b></div>
 					<div class="text-center">
 						д.ф.н., профессор Института Языкознания РАН<br>
 					</div>
 				</div>
-        <div class="authors">
+		<div class="authors">
 					<img class="borderedbox inspace-5" src="../images/Romanenko.png" alt="Romanenko">
 					<div class="title text-center"><b>Романенко Алексей Анатольевич</b></div>
 					<div class="text-center">
@@ -44,10 +44,10 @@
 					</div>
 					<a href="mailto:arom@nsu.ru">arom@nsu.ru</a>
 				</div>
-      </div>
-    </div>
-    <!-- / main body -->
-    <div class="clear"></div>
+	  </div>
+	</div>
+	<!-- / main body -->
+	<div class="clear"></div>
   </main>
 </div>
 <!-- ################################################################################################ -->

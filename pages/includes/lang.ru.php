@@ -186,6 +186,78 @@ $lang["sanfn"]["about"] = "<p>САНФH - электронный словарь 
 								https://sites.google.com/site/kevokcemot/home</a></p>";
 $lang["sanfn"]["stim"] = "<p>Все анкеты содержали следующие 100 стимулов:</p>";
 
+/* Help page */
+$lang["help"]["intro"] = "<p>У вас есть возможность отфильтровать данные, нажав на фильтр для прямого и обратного словарей.</p>";
+$lang["help"]["fas"]["direct"] = "<p>Если вводить только одну букву, Вы увидите все стимулы, начинающие с этой буквы (валфавитном
+									порядке).<br/>В поле ответа фигурируют все реакции, данные на этот стимул, в обратном порядке частотности.
+									<br/>Цифры в скобках указывают :
+									<ol><li>общее количество ответов, данных на данный стимул,</li>
+										<li>количество разных реакций,</li>
+										<li>количество отказов,</li>
+										<li>количество единичных реакций.</li></ol></p>";
+$lang["help"]["fas"]["invert"] = "<p>В обратном словаре представлены реакции, полученные в ходе эксперимента, и стимулы,
+									вызвавшие их в порядке убывающей частотности. Выберите, в каком порядке Вы хотите располагать реакции :
+									<ul><li>В алфавитном порядке : Все реакции, начинающиеся с выбранного символа</li>
+										<li>По отдельному стимулу : Все реакции, включая записанную символьную строку</li>
+										<li>По количеству стимулов : Все реакции отсортированы по количеству стимулов, в
+											ответ на которые было дано то или иное слово.</li>
+										<li>По количеству реакций : Все реакции отсортированы по номеру реакции</li></ul>
+									Цифры в скобках указывают :<ol>
+										<li>частотность реакции</li>
+										<li>количество стимулов, на которые данное слово было дано в качестве реакции.</li></ol></p>";
+$lang["help"]["fas"]["questionnaire"] = "<p>В данной таблице представлены ответы отдельного респондента на анкету, состоящей из 100
+										стимулов, случайно взятых из списка. Частотность ответа – количество таких же ответов на
+										этот же стимул среди всех остальных респондентов. В среднем на каждый стимул ответили 500
+										человек.</p>";
+$lang["help"]["sanf"]["direct"] = "<p>Если вводить только одну букву, Вы увидите все стимулы, начинающие с этой буквы (в
+									алфавитном порядке)<br/>
+									В поле ответа фигурируют все реакции, данные на этот стимул, в обратном порядке частотности
+									(указана цифрой сразу после реакции). В первом столбце - все реакции, независимо от
+									географического происхождения В остальных столбцах, реакции распределены в зависимости от
+									географического происхождения (Франция, Бельгия, Швейцария, Канада). Цветом обозначен факт
+									совпадения данной реакции в двух или нескольких зон.<br/>
+									В скобках указаны:<ol><li>общее количество ответов, данных на данный стимул,</li>
+										<li>количество разных реакций [в квардратных скобках дан процент разных ответов от их общего
+											количества: тем меньше процент, тем больше единообразие в ответах респондентов],</li>
+										<li>количество отказов,</li>
+										<li>количество единичных реакций.</li></ol>
+									В колонке стимулов есть возможность нажать кнопку для отображения кривой, показывающей общее количество реакций и по странам (пока не реализовано).</p>";
+$lang["help"]["sanf"]["invert"] = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt odit repellat a voluptas,
+									molestiae doloribus minima enim architecto, error ex culpa fugiat adipisci veritatis aut
+									esse accusantium maxime harum doloremque.</p>";
+$lang["help"]["sanfn"]["direct"] = "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum sequi officia fugiat
+									facere aliquid adipisci fuga porro omnis voluptas deleniti error laborum officiis impedit
+									eum harum, maiores quo expedita animi?</p>";
+$lang["help"]["sanfn"]["invert"] = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt odit repellat a voluptas,
+									molestiae doloribus minima enim architecto, error ex culpa fugiat adipisci veritatis aut
+									esse accusantium maxime harum doloremque.</p>";
+$lang["help"]["fasn"]["direct"] = "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum sequi officia fugiat
+									facere aliquid adipisci fuga porro omnis voluptas deleniti error laborum officiis impedit
+									eum harum, maiores quo expedita animi?</p>";
+$lang["help"]["fasn"]["invert"] = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt odit repellat a voluptas,
+									molestiae doloribus minima enim architecto, error ex culpa fugiat adipisci veritatis aut
+									esse accusantium maxime harum doloremque.</p>";
+$lang["help"]["fasn"]["questionnaire"] = "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque nemo distinctio
+											excepturi laboriosam similique explicabo commodi laudantium repellendus temporibus! Hic
+											nesciunt eos nihil nulla exercitationem odit officia obcaecati ratione.</p>";
+$lang["help"]["fas1_red"]["direct"] = "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum sequi officia fugiat
+										facere aliquid adipisci fuga porro omnis voluptas deleniti error laborum officiis impedit
+										eum harum, maiores quo expedita animi?</p>";
+$lang["help"]["fas1_red"]["invert"] = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt odit repellat a voluptas,
+										molestiae doloribus minima enim architecto, error ex culpa fugiat adipisci veritatis aut
+										esse accusantium maxime harum doloremque.</p>";
+$lang["help"]["fas1_red"]["questionnaire"] = "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque nemo distinctio
+												excepturi laboriosam similique explicabo commodi laudantium repellendus temporibus! Hic
+												nesciunt eos nihil nulla exercitationem odit officia obcaecati ratione.</p>";
+$lang["help"]["fas2_red"]["direct"] = "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum sequi officia fugiat
+										facere aliquid adipisci fuga porro omnis voluptas deleniti error laborum officiis impedit
+										eum harum, maiores quo expedita animi?</p>";
+$lang["help"]["fas2_red"]["invert"] = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt odit repellat a voluptas,
+										molestiae doloribus minima enim architecto, error ex culpa fugiat adipisci veritatis aut
+										esse accusantium maxime harum doloremque.</p>";
+$lang["help"]["fas2_red"]["questionnaire"] = "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque nemo distinctio
+												excepturi laboriosam similique explicabo commodi laudantium repellendus temporibus! Hic
+												nesciunt eos nihil nulla exercitationem odit officia obcaecati ratione.</p>";
 
 /* Others */
 $lang["path"]["home"] = "ГЛАВНАЯ";

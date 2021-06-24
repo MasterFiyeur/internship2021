@@ -8,8 +8,8 @@
 	<div class="bgded overlay" style="background-image:url('../images/associativnoe-myshlenie.jpg');">
 		<div id="breadcrumb" class="hoc clear">
 			<ul>
-				<li><a href="../index.php">Главная</a></li>
-				<li><a href="#">Помощь</a></li>
+				<li><a href="../index.php"><?php echo $lang["path"]["home"]; ?></a></li>
+				<li><a href="#"><?php echo $lang["navbar"]["help"]; ?></a></li>
 			</ul>
 		</div>
 	</div>
@@ -20,45 +20,44 @@
 			<div class="sidebar one_quarter first">
 				<nav class="sdb_holder">
 					<ul>
-						<li><a href="#filter">Фильтр</a></li>
-						<li><a href="#fas">ФАС</a>
+						<li><a href="#fas"><?php echo $lang["dict"]["fas"]; ?></a>
 							<ul>
-								<li><a href="#fas_direct">Прямой Словарь</a></li>
-								<li><a href="#fas_invert">Обратный Словарь</a></li>
-								<li><a href="#fas_questionnaire">Анкеты</a></li>
+								<li><a href="#fas_direct"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a></li>
+								<li><a href="#fas_invert"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a></li>
+								<li><a href="#fas_questionnaire"><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a></li>
 							</ul>
 						</li>
-						<li><a href="#sanf">САНФ</a>
+						<li><a href="#sanf"><?php echo $lang["dict"]["sanf"]; ?></a>
 							<ul>
-								<li><a href="#sanf_direct">Прямой Словарь</a></li>
-								<li><a href="#sanf_invert">Обратный Словарь</a></li>
+								<li><a href="#sanf_direct"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a></li>
+								<li><a href="#sanf_invert"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a></li>
 							</ul>
 						</li>
-						<li><a href="#sanfn">САНФН</a>
+						<li><a href="#sanfn"><?php echo $lang["dict"]["sanfn"]; ?></a>
 							<ul>
-								<li><a href="#sanfn_direct">Прямой Словарь</a></li>
-								<li><a href="#sanfn_invert">Обратный Словарь</a></li>
+								<li><a href="#sanfn_direct"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a></li>
+								<li><a href="#sanfn_invert"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a></li>
 							</ul>
 						</li>
-						<li><a href="#fasn">ФАСН-2019</a>
+						<li><a href="#fasn"><?php echo $lang["dict"]["fasn"]; ?></a>
 							<ul>
-								<li><a href="#fasn_direct">Прямой Словарь</a></li>
-								<li><a href="#fasn_invert">Обратный Словарь</a></li>
-								<li><a href="#fasn_questionnaire">Анкеты</a></li>
+								<li><a href="#fasn_direct"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a></li>
+								<li><a href="#fasn_invert"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a></li>
+								<li><a href="#fasn_questionnaire"><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a></li>
 							</ul>
 						</li>
-						<li><a href="#fas1">ФАС1-сокращенный</a>
+						<li><a href="#fas1"><?php echo $lang["dict"]["fas1_red"]; ?></a>
 							<ul>
-								<li><a href="#fas1_direct">Прямой Словарь</a></li>
-								<li><a href="#fas1_invert">Обратный Словарь</a></li>
-								<li><a href="#fas1_questionnaire">Анкеты</a></li>
+								<li><a href="#fas1_direct"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a></li>
+								<li><a href="#fas1_invert"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a></li>
+								<li><a href="#fas1_questionnaire"><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a></li>
 							</ul>
 						</li>
-						<li><a href="#fas2">ФАС2-сокращенный</a>
+						<li><a href="#fas2"><?php echo $lang["dict"]["fas2_red"]; ?></a>
 							<ul>
-								<li><a href="#fas2_direct">Прямой Словарь</a></li>
-								<li><a href="#fas2_invert">Обратный Словарь</a></li>
-								<li><a href="#fas2_questionnaire">Анкеты</a></li>
+								<li><a href="#fas2_direct"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a></li>
+								<li><a href="#fas2_invert"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a></li>
+								<li><a href="#fas2_questionnaire"><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -66,190 +65,88 @@
 			</div>
 			<!-- ################################################################################################ -->
 			<div class="content three_quarter">
-				<h1>Французский Ассоциативный Словарь</h1>
-				<div id="filter">
-					<h2><b>Фильтр</b></h2>
-					<p>У вас есть возможность отфильтровать данные, нажав на фильтр для прямого и обратного словарей.</p>
-				</div>
+				<h1><?php echo $lang["pages"]["title"]; ?></h1>
+				<?php echo $lang["help"]["intro"]; ?>
 				<div id="fas">
-					<h2><b>Французский Ассоциативный Словарь (ФАС)</b></h2>
+					<h2><b><?php echo $lang["navbar"]["fas"]; ?></b></h2>
 					<div id="fas_direct">
-						<h3>Прямой Словарь</h3>
-						<p>
-							Если вводить только одну букву, Вы увидите все стимулы, начинающие с этой буквы (валфавитном
-							порядке).<br/>
-							В поле ответа фигурируют все реакции, данные на этот стимул, в обратном порядке частотности.
-							<br/>Цифры в скобках указывают :
-							<ol>
-								<li>общее количество ответов, данных на данный стимул,</li>
-								<li>количество разных реакций,</li>
-								<li>количество отказов,</li>
-								<li>количество единичных реакций.</li>
-							</ol>
-						</p>
+						<h3><?php echo $lang["dict"]["search_direct"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fas"]["direct"]; ?>
 					</div>
 					<div id="fas_invert">
-						<h3>Обратный Словарь</h3>
-						<p>
-							В обратном словаре представлены реакции, полученные в ходе эксперимента, и стимулы,
-							вызвавшие их в порядке убывающей частотности.
-							Выберите, в каком порядке Вы хотите располагать реакции :
-							<ul>
-								<li>В алфавитном порядке : Все реакции, начинающиеся с выбранного символа</li>
-								<li>По отдельному стимулу : Все реакции, включая записанную символьную строку</li>
-								<li>По количеству стимулов : Все реакции отсортированы по количеству стимулов, в
-									ответ на которые было дано то или иное слово.</li>
-								<li>По количеству реакций : Все реакции отсортированы по номеру реакции</li>
-							</ul>
-							Цифры в скобках указывают :
-							<ol>
-								<li>частотность реакции</li>
-								<li>количество стимулов, на которые данное слово было дано в качестве реакции.</li>
-							</ol>
-						</p>
+						<h3><?php echo $lang["dict"]["search_invert"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fas"]["invert"]; ?>
 					</div>
 					<div id="fas_questionnaire">
-						<h3>Анкеты</h3>
-						<p>
-							В данной таблице представлены ответы отдельного респондента на анкету, состоящей из 100
-							стимулов, случайно взятых из списка. Частотность ответа – количество таких же ответов на
-							этот же стимул среди всех остальных респондентов. В среднем на каждый стимул ответили 500
-							человек.
-						</p>
+						<h3><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fas"]["questionnaire"]; ?>
 					</div>
 				</div>
 				<div id="sanf">
-					<h2><b>Словарь ассоциативных норм франкофонии (САНФ)</b></h2>
+					<h2><b><?php echo $lang["navbar"]["sanf"]; ?></b></h2>
 					<div id="sanf_direct">
-						<h3>Прямой Словарь</h3>
-						<p>
-							Если вводить только одну букву, Вы увидите все стимулы, начинающие с этой буквы (в
-							алфавитном порядке)
-							<br/>
-							В поле ответа фигурируют все реакции, данные на этот стимул, в обратном порядке частотности
-							(указана цифрой сразу после реакции). В первом столбце - все реакции, независимо от
-							географического происхождения В остальных столбцах, реакции распределены в зависимости от
-							географического происхождения (Франция, Бельгия, Швейцария, Канада). Цветом обозначен факт
-							совпадения данной реакции в двух или нескольких зон.
-							<br/>
-							В скобках указаны:
-							<ol>
-								<li>общее количество ответов, данных на данный стимул,</li>
-								<li>количество разных реакций [в квардратных скобках дан процент разных ответов от их общего
-									количества: тем меньше процент, тем больше единообразие в ответах респондентов],</li>
-								<li>количество отказов,</li>
-								<li>количество единичных реакций.</li>
-							</ol>
-							В колонке стимулов есть возможность нажать кнопку для отображения кривой, показывающей общее количество реакций и по странам (пока не реализовано).
-						</p>
+						<h3><?php echo $lang["dict"]["search_direct"]["title"]; ?></h3>
+						<?php echo $lang["help"]["sanf"]["direct"]; ?>
 					</div>
 					<div id="sanf_invert">
-						<h3>Обратный Словарь</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt odit repellat a voluptas,
-							molestiae doloribus minima enim architecto, error ex culpa fugiat adipisci veritatis aut
-							esse accusantium maxime harum doloremque.
-						</p>
+						<h3><?php echo $lang["dict"]["search_invert"]["title"]; ?></h3>
+						<?php echo $lang["help"]["sanf"]["invert"]; ?>
 					</div>
 				</div>
 				<div id="sanfn">
-					<h2><b>Словарь ассоциативных норм франкофонии нормализованый (САНФН)</b></h2>
+					<h2><b><?php echo $lang["navbar"]["sanfn"]; ?></b></h2>
 					<div id="sanfn_direct">
-						<h3>Прямой Словарь</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum sequi officia fugiat
-							facere aliquid adipisci fuga porro omnis voluptas deleniti error laborum officiis impedit
-							eum harum, maiores quo expedita animi?
-						</p>
+						<h3><?php echo $lang["dict"]["search_direct"]["title"]; ?></h3>
+						<?php echo $lang["help"]["sanfn"]["direct"]; ?>
 					</div>
 					<div id="sanfn_invert">
-						<h3>Обратный Словарь</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt odit repellat a voluptas,
-							molestiae doloribus minima enim architecto, error ex culpa fugiat adipisci veritatis aut
-							esse accusantium maxime harum doloremque.
-						</p>
+						<h3><?php echo $lang["dict"]["search_invert"]["title"]; ?></h3>
+						<?php echo $lang["help"]["sanfn"]["invert"]; ?>
 					</div>
 				</div>
 				<div id="fasn">
-					<h2><b>Словарь французских ассоциаций 2019 (ФАСН-2019)</b></h2>
+					<h2><b><?php echo $lang["navbar"]["fasn"]; ?></b></h2>
 					<div id="fasn_direct">
-						<h3>Прямой Словарь</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum sequi officia fugiat
-							facere aliquid adipisci fuga porro omnis voluptas deleniti error laborum officiis impedit
-							eum harum, maiores quo expedita animi?
-						</p>
+						<h3><?php echo $lang["dict"]["search_direct"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fasn"]["direct"]; ?>
 					</div>
 					<div id="fasn_invert">
-						<h3>Обратный Словарь</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt odit repellat a voluptas,
-							molestiae doloribus minima enim architecto, error ex culpa fugiat adipisci veritatis aut
-							esse accusantium maxime harum doloremque.
-						</p>
+						<h3><?php echo $lang["dict"]["search_invert"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fasn"]["invert"]; ?>
 					</div>
 					<div id="fasn_questionnaire">
-						<h3>Анкеты</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque nemo distinctio
-							excepturi laboriosam similique explicabo commodi laudantium repellendus temporibus! Hic
-							nesciunt eos nihil nulla exercitationem odit officia obcaecati ratione.
-						</p>
+						<h3><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fasn"]["questionnaire"]; ?>
 					</div>
 				</div>
 				<div id="fas1">
-					<h2><b>Словарь французских ассоциаций 2012+2019 (ФАС1-сокращенный)</b></h2>
+					<h2><b><?php echo $lang["navbar"]["fas1_red"]; ?></b></h2>
 					<div id="fas1_direct">
-						<h3>Прямой Словарь</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum sequi officia fugiat
-							facere aliquid adipisci fuga porro omnis voluptas deleniti error laborum officiis impedit
-							eum harum, maiores quo expedita animi?
-						</p>
+						<h3><?php echo $lang["dict"]["search_direct"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fas1_red"]["direct"]; ?>
 					</div>
 					<div id="fas1_invert">
-						<h3>Обратный Словарь</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt odit repellat a voluptas,
-							molestiae doloribus minima enim architecto, error ex culpa fugiat adipisci veritatis aut
-							esse accusantium maxime harum doloremque.
-						</p>
+						<h3><?php echo $lang["dict"]["search_invert"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fas1_red"]["invert"]; ?>
 					</div>
 					<div id="fas1_questionnaire">
-						<h3>Анкеты</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque nemo distinctio
-							excepturi laboriosam similique explicabo commodi laudantium repellendus temporibus! Hic
-							nesciunt eos nihil nulla exercitationem odit officia obcaecati ratione.
-						</p>
+						<h3><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fas1_red"]["questionnaire"]; ?>
 					</div>
 				</div>
 				<div id="fas2">
-					<h2><b>Словарь французских ассоциаций 2012+2019 (ФАС2-сокращенный)</b></h2>
+					<h2><b><?php echo $lang["navbar"]["fas2_red"]; ?></b></h2>
 					<div id="fas2_direct">
-						<h3>Прямой Словарь</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum sequi officia fugiat
-							facere aliquid adipisci fuga porro omnis voluptas deleniti error laborum officiis impedit
-							eum harum, maiores quo expedita animi?
-						</p>
+						<h3><?php echo $lang["dict"]["search_direct"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fas2_red"]["direct"]; ?>
 					</div>
 					<div id="fas2_invert">
-						<h3>Обратный Словарь</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt odit repellat a voluptas,
-							molestiae doloribus minima enim architecto, error ex culpa fugiat adipisci veritatis aut
-							esse accusantium maxime harum doloremque.
-						</p>
+						<h3><?php echo $lang["dict"]["search_invert"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fas2_red"]["invert"]; ?>
 					</div>
 					<div id="fas2_questionnaire">
-						<h3>Анкеты</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque nemo distinctio
-							excepturi laboriosam similique explicabo commodi laudantium repellendus temporibus! Hic
-							nesciunt eos nihil nulla exercitationem odit officia obcaecati ratione.
-						</p>
+						<h3><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></h3>
+						<?php echo $lang["help"]["fas2_red"]["questionnaire"]; ?>
 					</div>
 				</div>
 				<!-- / main body -->

@@ -1,2 +1,2 @@
 - Search file for sanf dic
-- FR/RU language by using file with array of every content needed
+- Translate RU language and put it in lang.fr.php

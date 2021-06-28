@@ -239,6 +239,30 @@ $lang["help"]["fas2_red"]["questionnaire"] = "<p>Lorem ipsum dolor sit amet cons
 												excepturi laboriosam similique explicabo commodi laudantium repellendus temporibus! Hic
 												nesciunt eos nihil nulla exercitationem odit officia obcaecati ratione.</p>";
 
+/* Search page */
+$lang["search"]["search"] = "Recherche";
+$lang["search"]["all"] = "Tous";
+$lang["search"]["first"] = "Premier";
+$lang["search"]["last"] = "Dernier";
+$lang["filter"]["title"] = "Filtre";
+$lang["filter"]["age"] = "Age";
+$lang["filter"]["from"] = "De";
+$lang["filter"]["to"] = "à";
+$lang["filter"]["region"] = "Région";
+$lang["filter"]["city"] = "Ville";
+$lang["filter"]["specialization"] = "Domaine de spécialisation";
+$lang["filter"]["sex"]["title"] = "Sexe";
+$lang["filter"]["sex"]["man"] = "Homme";
+$lang["filter"]["sex"]["woman"] = "Femme";
+$lang["filter"]["language"] = "Langue maternelle";
+$lang["filter"]["education"]["title"] = "Formation";
+$lang["filter"]["education"]["highSchool"] = "Lycéen";
+$lang["filter"]["education"]["student"] = "Étudiant";
+$lang["filter"]["education"]["PhD"] = "Doctorant";
+$lang["filter"]["education"]["sciencePhD"] = "Docteur en sciences";
+$lang["filter"]["education"]["researchDirector"] = "HDR";
+$lang["filter"]["noImportant"] = "Sans importance";
+
 /* Others */
 $lang["path"]["home"] = "ACCUEIL";
 $lang["pages"]["title"] = "Dictionnaires associatifs français";

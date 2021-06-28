@@ -7,58 +7,58 @@
 	<div class="bgded overlay" style="background-image:url('../../images/associativnoe-myshlenie.jpg');">
 		<div id="breadcrumb" class="hoc clear">
 			<ul>
-				<li><a href="../../index.php">Главная</a></li>
-				<li><a href="../dict_fas.php">ФАС</a></li>
+				<li><a href="../../index.php"><?php echo $lang["path"]["home"]; ?></a></li>
+				<li><a href="../dict_fas.php"><?php echo $lang["dict"]["fas"]; ?></a></li>
 				<?php
 					/* Path depending of the search method used */
 					if(isset($_GET["method"]) && isset($_GET["num"])){
 						switch ($_GET["method"]) {
 							case 'inv':
 								?> 
-								<li><a>Обратный словарь</a></li>
+								<li><a><?php echo $lang["dict"]["search_invert"]["title"]; ?></a></li>
 								<?php
 								switch ($_GET["num"]) {
 									case '1':
 										?>
-										<li><a>По отдельному стимулу</a></li>
+										<li><a><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
 										<?php
 										break;
 									case '2':
 										?>
-										<li><a>По количеству стимулов</a></li>							
+										<li><a><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>							
 										<?php
 										break;
 									case '3':
 										?>
-										<li><a>По количеству реакций</a></li>							
+										<li><a><?php echo $lang["dict"]["search_method"]["react"]; ?></a></li>							
 										<?php
 										break;
 									default:
 										?>
-										<li><a>В алфавитном порядке</a></li>							
+										<li><a><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>							
 										<?php
 										break;
 								}
 								break;
 							case 'que':
 								?>
-								<li><a>Анкеты</a></li>
-								<li><a>Индивидуальные анкеты</a></li>
+								<li><a><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a></li>
+								<li><a><?php echo $lang["dict"]["search_method"]["questionnaires"]; ?></a></li>
 								<?php
 								break;
 							default:
 								?> 
-								<li><a>Прямой словарь</a></li>
+								<li><a><?php echo $lang["dict"]["search_direct"]["title"]; ?></a></li>
 								<?php
 								switch ($_GET["num"]) {
 									case '1':
 										?>
-										<li><a>По отдельному стимулу</a></li>							
+										<li><a><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>							
 										<?php
 										break;
 									default:
 										?>
-										<li><a>В алфавитном порядке</a></li>							
+										<li><a><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>							
 										<?php
 										break;
 								}
@@ -66,8 +66,8 @@
 						}
 					}else{
 					?>
-						<li><a>Прямой словарь</a></li>
-						<li><a>В алфавитном порядке</a></li>
+						<li><a><?php echo $lang["dict"]["search_direct"]["title"]; ?></a></li>
+						<li><a><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
 					<?php
 					}
 				?>
@@ -81,25 +81,25 @@
 			<div class="sidebar one_quarter first">
 				<nav class="sdb_holder">
 					<ul>
-						<li><a href="../dict_fas.php#about">О словаре</a></li>
-						<li><a href="../dict_fas.php#stim">Стимулы</a></li>
-						<li><a class="sdb_section">Прямой словарь</a>
+						<li><a href="../dict_fas.php#about"><?php echo $lang["dict"]["about_title"]; ?></a></li>
+						<li><a href="../dict_fas.php#stim"><?php echo $lang["dict"]["stim_title"]; ?></a></li>
+						<li><a class="sdb_section"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a>
 							<ul>
-								<li><a href="?method=dir&num=0">В алфавитном порядке</a></li>
-								<li><a href="?method=dir&num=1">По отдельному стимулу</a></li>
+								<li><a href="?method=dir&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
+								<li><a href="?method=dir&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
 							</ul>
 						</li>
-						<li><a class="sdb_section">Обратный словарь</a>
+						<li><a class="sdb_section"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a>
 							<ul>
-								<li><a href="?method=inv&num=0">В алфавитном порядке</a></li>
-								<li><a href="?method=inv&num=1">По отдельному стимулу</a></li>
-								<li><a href="?method=inv&num=2">По количеству стимулов</a></li>
-								<li><a href="?method=inv&num=3">По количеству реакций</a></li>
+								<li><a href="?method=inv&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
+								<li><a href="?method=inv&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
+								<li><a href="?method=inv&num=2"><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>
+								<li><a href="?method=inv&num=3"><?php echo $lang["dict"]["search_method"]["react"]; ?></a></li>
 							</ul>
 						</li>
-						<li><a class="sdb_section">Анкеты</a>
+						<li><a class="sdb_section"><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a>
 							<ul>
-								<li><a href="?method=que&num=0">Индивидуальные анкеты</a></li>
+								<li><a href="?method=que&num=0"><?php echo $lang["dict"]["search_method"]["questionnaires"]; ?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -107,9 +107,9 @@
 			</div>
 			<!-- ################################################################################################ -->
 			<div class="content three_quarter">
-				<h1>Французский Ассоциативный Словарь</h1>
+				<h1><?php echo $lang["pages"]["title"]; ?></h1>
 				<div id="result">
-					<h2>Поиск</h2>
+					<h2><?php echo $lang["search"]["search"]; ?></h2>
 					<!-- Filter -->
 					<?php
 						/* Show filter for direct or invert search */
@@ -128,10 +128,10 @@
 											<div id="word_search">
 												<div class="input_container">
 												<input type="text" class="input_search" id="input_searchDirect" placeholder=" ">
-												<label for="">стимул</label>
+												<label for=""><?php echo $lang["dict"]["stim_title"]; ?></label>
 												</div>
 												<button class="btn-search"
-												onclick="printRes(document.getElementById('input_searchDirect').value)">Rechercher</button>
+												onclick="printRes(document.getElementById('input_searchDirect').value)"><?php echo $lang["search"]["search"]; ?></button>
 											</div>
 											<?php 
 											break;
@@ -139,7 +139,7 @@
 											?>
 											<div id="stimulus_search">
 												<div class="letter_container">
-												<span onclick="printByStimulus();">All</span>
+												<span onclick="printByStimulus();"><?php echo $lang["search"]["all"]; ?></span>
 												<span onclick="printByStimulus();">350-200</span>
 												<span onclick="printByStimulus();">199-150</span>
 												<span onclick="printByStimulus();">149-100</span>
@@ -153,7 +153,7 @@
 											?>
 											<div id="reaction_search">
 												<div class="letter_container">
-												<span onclick="printByReact();">All</span>
+												<span onclick="printByReact();"><?php echo $lang["search"]["all"]; ?></span>
 												<span onclick="printByReact();">3000-2000</span>
 												<span onclick="printByReact();">1999-1500</span>
 												<span onclick="printByReact();">1499-1000</span>
@@ -178,13 +178,13 @@
 								case 'que':
 									?>
 									<div class="search_nav">
-										<div onclick="printQuestionnaire('first')"><span>first</span></div>
+										<div onclick="printQuestionnaire('first')"><span><?php echo $lang["search"]["first"]; ?></span></div>
 										<div onclick="printQuestionnaire('less10')"><span><i class="fas fa-angle-double-left"></i></span></div>
 										<div onclick="printQuestionnaire('less')"><span><i class="fas fa-angle-left"></i></span></div>
 										<div>1/12800</div>
 										<div onclick="printQuestionnaire('add')"><span><i class="fas fa-angle-right"></i></span></div>
 										<div onclick="printQuestionnaire('add10')"><span><i class="fas fa-angle-double-right"></i></span></div>
-										<div onclick="printQuestionnaire('last')"><span>last</span></div>
+										<div onclick="printQuestionnaire('last')"><span><?php echo $lang["search"]["last"]; ?></span></div>
 										<input type="hidden" id="quest-number-current" value="1">
 										<input type="hidden" id="quest-number-max" value="1">
 									</div>
@@ -197,10 +197,10 @@
 											<div id="word_search">
 												<div class="input_container">
 												<input type="text" class="input_search" id="input_searchDirect" placeholder=" ">
-												<label for="">стимул</label>
+												<label for=""><?php echo $lang["dict"]["stim_title"]; ?></label>
 												</div>
 												<button class="btn-search"
-												onclick="printRes(document.getElementById('input_searchDirect').value)">Rechercher</button>
+												onclick="printRes(document.getElementById('input_searchDirect').value)"><?php echo $lang["search"]["search"]; ?></button>
 											</div>
 											<?php
 											break;

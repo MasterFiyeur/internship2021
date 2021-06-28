@@ -258,6 +258,30 @@ $lang["help"]["fas2_red"]["questionnaire"] = "<p>Lorem ipsum dolor sit amet cons
 												excepturi laboriosam similique explicabo commodi laudantium repellendus temporibus! Hic
 												nesciunt eos nihil nulla exercitationem odit officia obcaecati ratione.</p>";
 
+/* Search page */
+$lang["search"]["search"] = "Поиск";
+$lang["search"]["all"] = "Все";
+$lang["search"]["first"] = "Первый";
+$lang["search"]["last"] = "Последний";
+$lang["filter"]["title"] = "Фильтр";
+$lang["filter"]["age"] = "Возраст";
+$lang["filter"]["from"] = "От";
+$lang["filter"]["to"] = "до";
+$lang["filter"]["region"] = "Регион";
+$lang["filter"]["city"] = "Город";
+$lang["filter"]["specialization"] = "Область специализации";
+$lang["filter"]["sex"]["title"] = "Секс";
+$lang["filter"]["sex"]["man"] = "Мужчина";
+$lang["filter"]["sex"]["woman"] = "Женщина";
+$lang["filter"]["language"] = "Родной язык";
+$lang["filter"]["education"]["title"] = "Обучение";
+$lang["filter"]["education"]["highSchool"] = "Учащийся старших классов";
+$lang["filter"]["education"]["student"] = "Студент";
+$lang["filter"]["education"]["PhD"] = "Докторант";
+$lang["filter"]["education"]["sciencePhD"] = "Доктор наук";
+$lang["filter"]["education"]["researchDirector"] = "АPИ";
+$lang["filter"]["noImportant"] = "Не важно";
+
 /* Others */
 $lang["path"]["home"] = "ГЛАВНАЯ";
 $lang["pages"]["title"] = "Французский Ассоциативный Словарь";

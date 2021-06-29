@@ -1,24 +1,24 @@
 <div class="filter-section">
 	<div class="icon-container">
-		<span onclick="toggleFilter()"><i class="fas fa-sliders-h"></i> Filter</span>
+		<span onclick="toggleFilter()"><i class="fas fa-sliders-h"></i> <?php echo $lang["filter"]["title"]; ?></span>
 	</div>
 	<div>
 		<form action="" class="form-hidden" id="filter-form">
 			<div class="input-group">
 				<div>
 					<div class="input-container age">
-						<div>Age :</div>
+						<div><?php echo $lang["filter"]["age"]; ?> :</div>
 						<div>
-							<label for="">De </label>
+							<label for=""><?php echo $lang["filter"]["from"]; ?></label>
 							<input type="number" name="agemin" id="agemin" value="18">
-							<label for="">à </label>
+							<label for=""><?php echo $lang["filter"]["to"]; ?></label>
 							<input type="number" name="agemax" id="agemax" value="25">
 						</div>
 					</div>
 					<div class="input-container">
-						<label for="region">Région :</label>
+						<label for="region"><?php echo $lang["filter"]["region"]; ?> :</label>
 						<select name="region" id="region">
-							<option value="" selected> Sans importance </option>
+							<option value="" selected><?php echo $lang["filter"]["noImportant"]; ?></option>
 							<option value="1"> Alsace </option>
 							<option value="2"> Aquitaine </option>
 							<option value="3"> Auvergne </option>
@@ -52,15 +52,15 @@
 						</select>
 					</div>
 					<div class="input-container">
-						<label for="city">Ville :</label>
+						<label for="city"><?php echo $lang["filter"]["city"]; ?> :</label>
 						<input type="text" name="city" id="city">
 					</div>
 				</div>
 				<div>
 					<div class="input-container">
-						<label for="specialization">Domaine de spécialisation :</label>
+						<label for="specialization"><?php echo $lang["filter"]["specialization"]; ?></label>
 						<select name="specialization" id="specialization">
-							<option value="" selected> Sans importance </option>
+							<option value="" selected><?php echo $lang["filter"]["noImportant"]; ?></option>
 							<option value="aucun"> Aucun </option>
 							<option value="autre"> Autre </option>
 							<option value="droit"> Droit </option>
@@ -111,20 +111,20 @@
 						</select>
 					</div>
 					<div class="input-container">
-						<div>Sexe :</div>
+						<div><?php echo $lang["filter"]["sex"]["title"]; ?> :</div>
 						<div class="no-input">
 							<input type="radio" name="sexe" id="tous" value="tous" checked>
-							<label for="tous">Sans importance</label>
+							<label for="tous"><?php echo $lang["filter"]["noImportant"]; ?></label>
 							<input type="radio" name="sexe" id="femme" value="femme">
-							<label for="femme">Femme</label>
+							<label for="femme"><?php echo $lang["filter"]["sex"]["woman"]; ?></label>
 							<input type="radio" name="sexe" id="homme" value="homme">
-							<label for="homme">Homme</label>
+							<label for="homme"><?php echo $lang["filter"]["sex"]["man"]; ?></label>
 						</div>
 					</div>
 					<div class="input-container">
-						<label for="language">Langue maternelle :</label>
+						<label for="language"><?php echo $lang["filter"]["language"]; ?> :</label>
 						<select name="language" id="language">
-							<option value="" selected> Sans importance </option>
+							<option value="" selected><?php echo $lang["filter"]["noImportant"]; ?></option>
 							<option value="arabe"> Arabe</option>
 							<option value="bulgare"> Bulgare</option>
 							<option value="allemand"> Allemand</option>
@@ -158,18 +158,18 @@
 				</div>
 			</div>
 			<div class="input-container">
-				<div>Formation :</div>
+				<div><?php echo $lang["filter"]["education"]["title"]; ?> :</div>
 				<div class="no-input">
 					<input type="checkbox" name="education" id="lycee" value="lycee" checked>
-					<label for="lycee">Lycéen</label>
+					<label for="lycee"><?php echo $lang["filter"]["education"]["highSchool"]; ?></label>
 					<input type="checkbox" name="education" id="etudiant" value="etudiant" checked>
-					<label for="etudiant">Étudiant</label>
+					<label for="etudiant"><?php echo $lang["filter"]["education"]["student"]; ?></label>
 					<input type="checkbox" name="education" id="doctorant" value="doctorant" checked>
-					<label for="doctorant">Doctorant</label>
+					<label for="doctorant"><?php echo $lang["filter"]["education"]["PhD"]; ?></label>
 					<input type="checkbox" name="education" id="docteur" value="docteur_science" checked>
-					<label for="docteur">Docteur en sciences</label>
+					<label for="docteur"><?php echo $lang["filter"]["education"]["sciencePhD"]; ?></label>
 					<input type="checkbox" name="education" id="hdr" value="hdr" checked>
-					<label for="hdr">HDR</label>
+					<label for="hdr"><?php echo $lang["filter"]["education"]["researchDirector"]; ?></label>
 				</div>
 			</div>
 		</form>

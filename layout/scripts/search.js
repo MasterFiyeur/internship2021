@@ -152,8 +152,8 @@ function printByReact(){
 }
 
 /* Sort by Frequency (invert dic) */
-function printByFreq(){
-    console.log("Sort by Frequence");
+function printByFreq(frequency){
+    console.log("Sort by Frequence from "+frequency+"% to "+(frequency+20)+"%");
     printRes("a");
 }
 

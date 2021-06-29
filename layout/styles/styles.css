@@ -210,11 +210,14 @@
 }
 
     /* Alphabet direct */
-#alpha_search{
+#alpha_search,
+#freq_search,
+#stimulus_search,
+#reaction_search{
     display: block;
 }
 
-#alpha_search .letter_container{
+.letter_container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,16 +295,11 @@
     cursor: pointer;
     transition: 0.3s linear;
 }
-#freq_search .btn-search:hover,
-#stimulus_search .btn-search:hover,
-#reaction_search .btn-search:hover,
+
 #word_search .btn-search:hover{
     background-color: var(--primary-color);
 }
 
-#freq_search .btn-search:active,
-#stimulus_search .btn-search:active,
-#reaction_search .btn-search:active,
 #word_search .btn-search:active{
     background-color: #000;
 }
@@ -326,14 +324,6 @@
 
 #word_search .input_container input:focus{
     border: 2px solid var(--primary-color);
-}
-
-#freq_search,
-#stimulus_search,
-#reaction_search{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Filter section */

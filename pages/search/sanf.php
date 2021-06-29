@@ -8,7 +8,7 @@
 		<div id="breadcrumb" class="hoc clear">
 			<ul>
 				<li><a href="../../index.php"><?php echo $lang["path"]["home"]; ?></a></li>
-				<li><a href="../dict_fas.php"><?php echo $lang["dict"]["fas"]; ?></a></li>
+				<li><a href="../dict_sanf.php"><?php echo $lang["dict"]["sanf"]; ?></a></li>
 				<?php
 					/* Path depending of the search method used */
 					if(isset($_GET["method"]) && isset($_GET["num"])){
@@ -39,12 +39,6 @@
 										<?php
 										break;
 								}
-								break;
-							case 'que':
-								?>
-								<li><a><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a></li>
-								<li><a><?php echo $lang["dict"]["search_method"]["questionnaires"]; ?></a></li>
-								<?php
 								break;
 							default:
 								?> 
@@ -81,8 +75,8 @@
 			<div class="sidebar one_quarter first">
 				<nav class="sdb_holder">
 					<ul>
-						<li><a href="../dict_fas.php#about"><?php echo $lang["dict"]["about_title"]; ?></a></li>
-						<li><a href="../dict_fas.php#stim"><?php echo $lang["dict"]["stim_title"]; ?></a></li>
+						<li><a href="../dict_sanf.php#about"><?php echo $lang["dict"]["about_title"]; ?></a></li>
+						<li><a href="../dict_sanf.php#stim"><?php echo $lang["dict"]["stim_title"]; ?></a></li>
 						<li><a class="sdb_section"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a>
 							<ul>
 								<li><a href="?method=dir&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
@@ -94,12 +88,7 @@
 								<li><a href="?method=inv&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
 								<li><a href="?method=inv&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
 								<li><a href="?method=inv&num=2"><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>
-								<li><a href="?method=inv&num=3"><?php echo $lang["dict"]["search_method"]["react"]; ?></a></li>
-							</ul>
-						</li>
-						<li><a class="sdb_section"><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a>
-							<ul>
-								<li><a href="?method=que&num=0"><?php echo $lang["dict"]["search_method"]["questionnaires"]; ?></a></li>
+								<li><a href="?method=inv&num=3"><?php echo $lang["dict"]["search_method"]["frequency"]; ?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -133,7 +122,7 @@
 												<button class="btn-search"
 												onclick="printRes(document.getElementById('input_searchDirect').value)"><?php echo $lang["search"]["search"]; ?></button>
 											</div>
-											<?php 
+											<?php
 											break;
 										case '2':
 											?>
@@ -151,16 +140,14 @@
 											break;
 										case '3':
 											?>
-											<div id="reaction_search">
+											<div id="freq_search">
 												<div class="letter_container">
-													<span onclick="printByReact();"><?php echo $lang["search"]["all"]; ?></span>
-													<span onclick="printByReact();">3000-2000</span>
-													<span onclick="printByReact();">1999-1500</span>
-													<span onclick="printByReact();">1499-1000</span>
-													<span onclick="printByReact();">999-750</span>
-													<span onclick="printByReact();">749-500</span>
-													<span onclick="printByReact();">499-250</span>
-													<span onclick="printByReact();">249-1</span>
+													
+													<span onclick="printByFreq(80);">100%-80%</span>
+													<span onclick="printByFreq(60);">80%-60%</span>
+													<span onclick="printByFreq(40);">60%-40%</span>
+													<span onclick="printByFreq(20);">40%-20%</span>
+													<span onclick="printByFreq(0);">20%-0%</span>
 												</div>
 											</div>
 											<?php
@@ -174,21 +161,6 @@
 											<?php											
 											break;
 									}
-									break;
-								case 'que':
-									?>
-									<div class="search_nav">
-										<div onclick="printQuestionnaire('first')"><span><?php echo $lang["search"]["first"]; ?></span></div>
-										<div onclick="printQuestionnaire('less10')"><span><i class="fas fa-angle-double-left"></i></span></div>
-										<div onclick="printQuestionnaire('less')"><span><i class="fas fa-angle-left"></i></span></div>
-										<div>1/12800</div>
-										<div onclick="printQuestionnaire('add')"><span><i class="fas fa-angle-right"></i></span></div>
-										<div onclick="printQuestionnaire('add10')"><span><i class="fas fa-angle-double-right"></i></span></div>
-										<div onclick="printQuestionnaire('last')"><span><?php echo $lang["search"]["last"]; ?></span></div>
-										<input type="hidden" id="quest-number-current" value="1">
-										<input type="hidden" id="quest-number-max" value="1">
-									</div>
-									<?php
 									break;
 								default:
 									switch ($_GET["num"]) {
@@ -229,7 +201,7 @@
 						}
 					?>
 					<div class="result"></div>
-					<input type="hidden" id="dictionary" value="fas">
+					<input type="hidden" id="dictionary" value="sanf">
 				</div>
 			</div>
 			<!-- / main body -->
@@ -247,8 +219,6 @@
 				echo "letterGen();";
 			}elseif($_GET["method"]=="inv" && !in_array($_GET["num"],array('1','2','3'))){
 				echo "letterExtendGen();";
-			}elseif($_GET["method"]=="que"){
-				echo "initQuestionnaires();";
 			}
 		}else{
 			echo "letterGen();";

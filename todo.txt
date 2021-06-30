@@ -1,0 +1,3 @@
+- Search file for sanf dic and other dics
+- Translate RU language and put it in lang.fr.php for search page
+- Merge with blue scheme

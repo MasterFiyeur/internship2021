@@ -122,7 +122,7 @@ function printResDirectSanf(letter){
 function printRes(letter){
     let url_string = window.location.href;
     let url = new URL(url_string);
-    if($('#method').val()=="inv"){
+    if(url.searchParams.get("method")=="inv"){
         printResInvertFas(letter);
     }else{
         switch ($('#dictionary').val()) {
@@ -134,6 +134,7 @@ function printRes(letter){
                 break;
         
             default:
+                printResDirectFas(letter);
                 break;
         }
     }
@@ -152,8 +153,8 @@ function printByReact(){
 }
 
 /* Sort by Frequency (invert dic) */
-function printByFreq(){
-    console.log("Sort by Frequence");
+function printByFreq(frequency){
+    console.log("Sort by Frequence from "+frequency+"% to "+(frequency+20)+"%");
     printRes("a");
 }
 

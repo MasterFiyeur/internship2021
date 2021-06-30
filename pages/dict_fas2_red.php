@@ -30,13 +30,13 @@
 						</li>
 						<li><a class="sdb_section"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a>
 						<ul>
-								<li><a href="./search/fas2_red.php?method=inv&num=2"><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>
-								<li><a href="./search/fas2_red.php?method=inv&num=3"><?php echo $lang["dict"]["search_method"]["react"]; ?></a></li>
 								<li><a href="./search/fas2_red.php?method=inv&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
 								<li><a href="./search/fas2_red.php?method=inv&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
+								<li><a href="./search/fas2_red.php?method=inv&num=2"><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>
+								<li><a href="./search/fas2_red.php?method=inv&num=3"><?php echo $lang["dict"]["search_method"]["react"]; ?></a></li>
 							</ul>
 						</li>
-						<li><a class="sdb_section">А<?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a>
+						<li><a class="sdb_section"><?php echo $lang["dict"]["search_questionnaire"]["title"]; ?></a>
 							<ul>
 								<li><a href="./search/fas2_red.php?method=que&num=0"><?php echo $lang["dict"]["search_method"]["questionnaires"]; ?></a></li>
 							</ul>

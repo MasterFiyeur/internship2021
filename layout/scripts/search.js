@@ -134,6 +134,7 @@ function printRes(letter){
                 break;
         
             default:
+                printResDirectFas(letter);
                 break;
         }
     }

@@ -8,7 +8,7 @@
 		<div id="breadcrumb" class="hoc clear">
 			<ul>
 				<li><a href="../../index.php"><?php echo $lang["path"]["home"]; ?></a></li>
-				<li><a href="../dict_sanf.php"><?php echo $lang["dict"]["sanfn"]; ?></a></li>
+				<li><a href="../dict_sanfn.php"><?php echo $lang["dict"]["sanfn"]; ?></a></li>
 				<?php
 					/* Path depending of the search method used */
 					if(isset($_GET["method"]) && isset($_GET["num"])){
@@ -199,6 +199,7 @@
 							<?php
 						}
 					?>
+					<div id="res_loader">CHARGEMENT...</div>
 					<div class="result"></div>
 					<input type="hidden" id="dictionary" value="sanfn">
 				</div>
@@ -211,6 +212,7 @@
 	<?php include "../includes/footer.php"; ?>
 	<script src="../../layout/scripts/search.js"></script>
 	<script>
+		init_loader();
 		<?php
 		/* initialization of search method */
 		if(isset($_GET["method"]) && isset($_GET["num"])){

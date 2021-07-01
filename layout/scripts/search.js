@@ -24,8 +24,6 @@ function toggleFilter(){
 /* Print result of direct dictionary fas in an element with a 'result' class*/
 function printResDirectFas(letter){
     console.log("Research : "+letter);
-    $('.result').empty();
-    $('<div class="result-table"><table><thead><tr><th>#</th><th>Stimulus</th><th>Reaction</th></tr></thead><tbody></tbody></table></div>').appendTo(".result");
     var data = [
         {
             id:1,
@@ -53,6 +51,8 @@ function printResDirectFas(letter){
             reactions:"loi 95; droit 80; balance 70; tribunal 40; égalité 26; juge 19; avocat 18; équité 17; lois 13;palais 11; paix 10; injustice 8; peine 5; aveugle, cour, sociale 4; équitable, magistrat, musique,ordre, procès 3; épée, état, honneur, idéal, jurisprudence, juste, légalité, mensonge, parlement,police, prison, social, tous, tribunaux, utopie, vengeance, vertu, voleur 2; armée, aucune,Batman, belle, bêtise, bien, blason, chaos, ciel, civilisation, commune, conflit, court, croix,d.a.n.c.e, Dati, de classe, devoir, doute, Droit, droits, droiture, électron, équilibre, erreur judiciaire, faire, fonction, française, glaive, gouvernement, Hadopi, héros, hommes, honnête,humanité, impartiale, inégalité, inexistante, inique, injuste, interprétation, introuvable,jamais, jugement, jury, jus naturalisme, justice, laquelle, légale, lente, lenteur, liberté,lourde, magistrature, marteau, Metallica, métier, morale, norme, organisation, parquet, pénale,pouvoir, punition, règles, réinsertion, rigidité, rigueur, robe, Saint Louis, sceaux, Simian,simulacre, système, valeur, vérité, violence, vrai 1<br/>(543, 143, 13, 84)"
         }
     ];
+    show_loader(false);
+    $('<div class="result-table"><table><thead><tr><th>#</th><th>Stimulus</th><th>Reaction</th></tr></thead><tbody></tbody></table></div>').appendTo(".result");
     for (let index = 0; index < data.length; index++) {
         $('<tr><td>'+data[index].id+'</td><td>'+data[index].stimulus+'</td><td>'+data[index].reactions+'</td></tr>').appendTo(".result-table table tbody");
     }
@@ -61,8 +61,6 @@ function printResDirectFas(letter){
 /* Print result of invert dictionary fas in an element with a 'result' class*/
 function printResInvertFas(letter){
     console.log("Research : "+letter);
-    $('.result').empty();
-    $('<div class="result-table"><table><thead><tr><th>#</th><th>Reaction</th><th>Stimulus</th></tr></thead><tbody></tbody></table></div>').appendTo(".result");
     var data = [
         {
             id:1,
@@ -90,6 +88,8 @@ function printResInvertFas(letter){
             stimulus:"banque 308; or 294; budget 255; salaire 199; profit 194; fonds 192; économie 181; dollar 168; investissement 158; payer 151; financier 140; revenu 134; somme 119; économique 112; couter 99; prix 97; capital 91; valeur 87; cout 85; crédit 84; riche 83; million 74; milliard 68; emprunter 65; acheter, valoir 63; cher 59; compte 57; pièce 56; gagner, mise 50; prêt, travail 46; retirer 44; vendre 43; commission 42; intérêt 41; temps 40; ressource 38; espèce 36; commerce, travailler 34; vente 33; estimer 28; pauvre 27; compter 25; avance 24; client, moyen 23; négociation 22; profiter 21; frais, placer 20; franc 19; affaire 18; emploi 17; entreprise, pouvoir 16; commercial, perte, retraite, succès 15; besoin, échange, gestion, prêter 13; dépendre 12; acquérir, crise, régler 11; manque, posséder, vif 10; millier, règlement, rendre 9; donner, entretenir, fond, rapporter, taux 8; chance, contribuer, déposer 7; assurer, autant, contrat, intéresser, jeu, manquer, réussir 6; agent, avoir, libéral, mériter, obtenir 5; chaine, charge, demande, deuxième, distribuer, indépendant, situation 4; augmenter, cacher, difficulté, disposer, engager, guerre, marché, matériel, perdre, professionnel, puissance, ramener, réserve, suffire 3; appartenir, avantage, bien, carte, chiffre, croissance, entreprendre, étudiant, faveur, maximum, prévoir, problème, production, produire, proposition, recevoir, remettre, réunir, société, total 2; accepter, aider, ajouter, américain, application, argent, armée, association, attendre, battre, cadre, camp, chef, concerner, conseil, conseiller, conserver, contenter, coup, déclarer, découvrir, demander, député, dernier, différence, directeur, droit, école, éducation, employer, emporter, étude, européen, facile, famille, fils, fournir, gouvernement, heure, heureux, honorable, importance, important, importer, industrie, influence, jouer, main, matière, ministère, ministre, mission, mode, mondial, nécessité, neuf, organisation, papier, partager, partenaire, préférer, prison, progrès, projet, refuser, responsabilité, reste, résultat, risquer, scientifique, second, sens, service, soutenir, tirer, tour, trouver, utile, vouloir, voyage 1;<br/>(5164, 217)"
         }
     ];
+    show_loader(false);
+    $('<div class="result-table"><table><thead><tr><th>#</th><th>Reaction</th><th>Stimulus</th></tr></thead><tbody></tbody></table></div>').appendTo(".result");
     for (let index = 0; index < data.length; index++) {
         $('<tr><td>'+data[index].id+'</td><td>'+data[index].reaction+'</td><td>'+data[index].stimulus+'</td></tr>').appendTo(".result div table tbody");
     }
@@ -98,10 +98,6 @@ function printResInvertFas(letter){
 /* Print result of direct dictionary sanf in an element with a 'result' class*/
 function printResDirectSanf(letter){
     console.log("Research : "+letter);
-    $('.result').empty();
-    /* Legend for sanf dictionary */
-    $('<div><table><thead><tr><th colspan="5" class="text-center">Legend</th></tr></thead><tbody class="res-legend"><tr><td class="differents-countries canada">Canada</td><td class="differents-countries suisse">Suisse</td><td class="differents-countries suisse-canada">Suisse, Canada</td><td class="differents-countries belgique">Belgique</td><td class="differents-countries belgique-canada">Belgique, Canada</td></tr><tr><td class="belgique-suisse">Belgique, Suisse</td><td class="belgique-suisse-canada">Belgique, Suisse, Canada</td><td class="france">France</td><td class="france-canada">France, Canada</td><td class="france-suisse">France, Suisse</td></tr><tr><td class="france-suisse-canada">France, Suisse, Canada</td><td class="france-belgique">France, Belgique</td><td class="france-belgique-canada">France, Belgique, Canada</td><td class="france-belgique-suisse">France, Belgique, Suisse</td><td class="france-belgique-suisse-canada">All</td></tr></tbody></table></div>').appendTo('.result');
-    $('<div class="result-table"><table><thead><tr><th>#</th><th>Stimulus</th><th class="differents-countries">Joint</th><th class="differents-countries">France</th><th class="differents-countries">Belgique</th><th class="differents-countries">Suisse</th><th class="differents-countries">Canada</th></tr></thead><tbody></tbody></table></div>').appendTo(".result");
     var data = [
         {
             id:1,
@@ -113,6 +109,10 @@ function printResDirectSanf(letter){
             canada:"amour 65; adorer 36; haïr 23; cœur 20; détester, vie 15; son prochain 14; bonheur 12; famille 11; vivre 8; beaucoup, chérir, partager 7; amoureux, d'amour, donner, enfants, femme, quelqu'un, toujours 6; à la folie, apprécier, autre 4; affection, agréable, embrasser, homme, joie, jouir, mourir, tendresse, tout 3; aimer, amant, amitié, animaux, à perdre la raison, difficile, faire, fils, fort, haine, important, inconditionnellement, love, parler, pas, prendre, rose, sans limite, ton prochain, tout le monde, vouloir 2; altruisme, âme sœur, ami, amoureuse, à mourir, amour universel, appréciation, autres, bisou, blessure, cadeau, câlin, câlins, calme, chaleur, chaud, chocolat, comme un fou, compliqué, conjoint, contrainte, couple, danger, d'avantage, déchirure, désir, de tout cœur, donner p, dormir, échec, écrire, Égée, en amour, ensemble, épouse, essence, être, être bien, flou, folie, follement, Frederick, frères, générosité, grâce, inconditionnel, intensément, intensité, jouer, la vie, les uns les autres, longtemps, maman, manger, mari, mariage, marier, mère, mon chien, monde, oser, partage, passion, passionnément, plaisir, prochain, recevoir, réciprocité, respecter, rêve, rire, sa famille, sa femme, s'aimer, s'aimer les uns les autres, sa mère, sans attente, sans limites, sans partage, sans raison, sauver, sa vie, savourer, s'effriter, sensation, ses enfants, sexe, soi-meme, son amoureux/amoureuse, souffrir, sourire, toi, toucher, vertus, youpi 1 (458, 148 [32.31%], 0, 95)"
         }
     ];
+    show_loader(false);
+    /* Legend for sanf dictionary */
+    $('<div><table><thead><tr><th colspan="5" class="text-center">Legend</th></tr></thead><tbody class="res-legend"><tr><td class="differents-countries canada">Canada</td><td class="differents-countries suisse">Suisse</td><td class="differents-countries suisse-canada">Suisse, Canada</td><td class="differents-countries belgique">Belgique</td><td class="differents-countries belgique-canada">Belgique, Canada</td></tr><tr><td class="belgique-suisse">Belgique, Suisse</td><td class="belgique-suisse-canada">Belgique, Suisse, Canada</td><td class="france">France</td><td class="france-canada">France, Canada</td><td class="france-suisse">France, Suisse</td></tr><tr><td class="france-suisse-canada">France, Suisse, Canada</td><td class="france-belgique">France, Belgique</td><td class="france-belgique-canada">France, Belgique, Canada</td><td class="france-belgique-suisse">France, Belgique, Suisse</td><td class="france-belgique-suisse-canada">All</td></tr></tbody></table></div>').appendTo('.result');
+    $('<div class="result-table"><table><thead><tr><th>#</th><th>Stimulus</th><th class="differents-countries">Joint</th><th class="differents-countries">France</th><th class="differents-countries">Belgique</th><th class="differents-countries">Suisse</th><th class="differents-countries">Canada</th></tr></thead><tbody></tbody></table></div>').appendTo(".result");
     for (let index = 0; index < data.length; index++) {
         $('<tr><td>'+data[index].id+'</td><td>'+data[index].stimulus+'<button>Courbe</button></td><td>'+data[index].joint+'</td><td>'+data[index].france+'</td><td>'+data[index].belgique+'</td><td>'+data[index].suisse+'</td><td>'+data[index].canada+'</td></tr>').appendTo(".result-table table tbody");
     }
@@ -120,6 +120,8 @@ function printResDirectSanf(letter){
 
 /* Organize function's call thanks to url params */
 function printRes(letter){
+    $('.result').empty();
+    show_loader(true);
     let url_string = window.location.href;
     let url = new URL(url_string);
     if(url.searchParams.get("method")=="inv"){
@@ -160,6 +162,8 @@ function printByFreq(frequency){
 
 /* Initialize the first questionnaire and the maximum of questionnaires */
 function initQuestionnaires(){
+    $('.result').empty();
+    show_loader(true);
     /* Var initializing */
     let max = 2;
     let sex = "female";
@@ -178,7 +182,7 @@ function initQuestionnaires(){
     $('.search_nav')[0].children[3].innerText = "1/"+ max;
 
     /* Element creation */
-    $('.result').empty();
+    show_loader(false);
     $('<div class="result-indiv-quest"><div class="indiv-info"><div class="line"><img src="'+firstQuest.sex+'" alt="sexe"><div>Age : '+firstQuest.age+' years old</div><div>From : '+firstQuest.from+'</div></div><div class="line"><div>Language : '+firstQuest.language+'</div><div>Field of specialization : '+firstQuest.specialization+'</div><div>Formation : '+firstQuest.formation+'</div> </div></div></div>').appendTo(".result");
     $('<table><thead><tr><th>#</th><th>Stimulus</th><th>Reaction</th><th>Frequency</th></tr></thead><tbody>').appendTo(".result .result-indiv-quest");
     firstQuest.response.forEach(element => {
@@ -187,6 +191,8 @@ function initQuestionnaires(){
 }
 
 function printQuestionnaire(diff){
+    $('.result .result-indiv-quest').empty();
+    show_loader(true);
     /* Define the new value */
     let actualValue = parseInt(document.getElementById("quest-number-current").value);
     let maxValue = parseInt(document.getElementById("quest-number-max").value)
@@ -233,10 +239,34 @@ function printQuestionnaire(diff){
     };
 
     /* Creation of element */
-    $('.result .result-indiv-quest').empty();
+    show_loader(false);
     $('<div class="indiv-info"><div class="line"><img src="'+data.sex+'" alt="sexe"><div>Age : '+data.age+' years old</div><div>From : '+data.from+'</div></div><div class="line"><div>Language : '+data.language+'</div><div>Field of specialization : '+data.specialization+'</div><div>Formation : '+data.formation+'</div> </div></div>').appendTo(".result .result-indiv-quest");
     $('<table><thead><tr><th>#</th><th>Stimulus</th><th>Reaction</th><th>Frequency</th></tr></thead><tbody>').appendTo(".result .result-indiv-quest");
     data.response.forEach(element => {
         $("<tr><td>"+element.id+"</td><td>"+element.stimulus+"</td><td>"+element.reaction+"</td><td>"+element.frequence+"</td></tr>").appendTo(".result .result-indiv-quest table tbody");
     });
+}
+
+/* Animation for loading */
+function init_loader(){
+    let base = document.getElementById("res_loader");
+    let letters = base.textContent.split("");
+    base.textContent="";
+    letters.forEach((letter, i) => {
+        let span = document.createElement("span");
+        span.textContent = letter;
+        span.style.animationDelay = `${i / 20}s`;
+        base.append(span);
+    });
+}
+
+/* Show/hide res_loader */
+function show_loader(show){
+    if(show){
+        let base = document.getElementById("res_loader");
+        base.style.display = "flex";
+    }else{
+        let base = document.getElementById("res_loader");
+        base.style.display = "none";
+    }
 }

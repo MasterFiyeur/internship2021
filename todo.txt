@@ -1,3 +1,2 @@
-- Search file for sanf dic and other dics
-- Translate RU language and put it in lang.fr.php for search page
-- Merge with blue scheme
+- Make a loader for waiting db informations : https://codepen.io/ALMcinnis/pen/VwpeMWj (font : 2em, translate:-20px)
+- Use the current website to use database

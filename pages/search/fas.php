@@ -228,6 +228,7 @@
 							<?php
 						}
 					?>
+					<div id="res_loader">CHARGEMENT...</div>
 					<div class="result"></div>
 					<input type="hidden" id="dictionary" value="fas">
 				</div>
@@ -240,6 +241,7 @@
 	<?php include "../includes/footer.php"; ?>
 	<script src="../../layout/scripts/search.js"></script>
 	<script>
+		init_loader();
 		<?php
 		/* initialization of search method */
 		if(isset($_GET["method"]) && isset($_GET["num"])){

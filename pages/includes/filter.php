@@ -9,16 +9,16 @@
 					<div class="input-container age">
 						<div><?php echo $lang["filter"]["age"]; ?> :</div>
 						<div>
-							<label for=""><?php echo $lang["filter"]["from"]; ?></label>
+							<label for="agemin"><?php echo $lang["filter"]["from"]; ?></label>
 							<input type="number" name="agemin" id="agemin" value="18">
-							<label for=""><?php echo $lang["filter"]["to"]; ?></label>
+							<label for="agemax"><?php echo $lang["filter"]["to"]; ?></label>
 							<input type="number" name="agemax" id="agemax" value="25">
 						</div>
 					</div>
 					<div class="input-container">
 						<label for="region"><?php echo $lang["filter"]["region"]; ?> :</label>
 						<select name="region" id="region">
-							<option value="" selected><?php echo $lang["filter"]["noImportant"]; ?></option>
+							<option value="0" selected><?php echo $lang["filter"]["noImportant"]; ?></option>
 							<option value="1"> Alsace </option>
 							<option value="2"> Aquitaine </option>
 							<option value="3"> Auvergne </option>

@@ -1,2 +1,2 @@
-- Make a loader for waiting db informations : https://codepen.io/ALMcinnis/pen/VwpeMWj (font : 2em, translate:-20px)
+- Language using JSON format
 - Use the current website to use database

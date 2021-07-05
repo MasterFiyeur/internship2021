@@ -53,7 +53,7 @@
 				</div>
 				<div id="stim">
 					<h2><?php echo $lang["dict"]["stim_title"]; ?></h2>
-					<?php echo $lang["fas1_red"]["stim"]; ?>
+					<p><?php echo $lang["fas1_red"]["stim"]; ?></p>
 					<p>abandonner, absence, accepter, accompagner, accord, accorder, acheter, acte, action, adresser, affaire,
 						affirmer, âge, agir, aide, aider, aimer, air, ajouter, aller, amener, ami, amour, ancien, animal, année,
 						annoncer, apparaitre, appartenir, appel, appeler, apporter, apprendre, appuyer, argent, arme, armée,

@@ -66,7 +66,7 @@
 			<!-- ################################################################################################ -->
 			<div class="content three_quarter">
 				<h1><?php echo $lang["pages"]["title"]; ?></h1>
-				<?php echo $lang["help"]["intro"]; ?>
+				<p><?php echo $lang["help"]["intro"]; ?></p>
 				<div id="fas">
 					<h2><b><?php echo $lang["navbar"]["fas"]; ?></b></h2>
 					<div id="fas_direct">

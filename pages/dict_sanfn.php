@@ -48,7 +48,7 @@
 				</div>
 				<div id="stim">
 					<h2><?php echo $lang["dict"]["stim_title"]; ?></h2>
-					<?php echo $lang["sanfn"]["stim"]; ?>
+					<p><?php echo $lang["sanfn"]["stim"]; ?></p>
 					<p>être, avoir, faire, dire, pouvoir, aller, voir, bien, homme, mari, vouloir, femme,
 						venir, grand, devoir, jour, prendre, petit, mer, trouver, donner, temps, parler,
 						main, chose, vie, savoir, yeux, passer, regarder, aimer, heure, croire, monde,

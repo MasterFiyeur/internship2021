@@ -54,7 +54,7 @@
 				</div>
 				<div id="stim">
 					<h2><?php echo $lang["dict"]["stim_title"]; ?></h2>
-					<?php echo $lang["fasn"]["stim"]; ?>
+					<p><?php echo $lang["fasn"]["stim"]; ?></p>
 					<p>abandonner, absence, absolument, accepter, accès, accompagner, accord, accorder, accueillir,
 						accuser, acheter, acquérir, acte, action, activité, actuel, admettre, administration, adopter,
 						adresser, affaire, affirmer, âge, agent, agir, aide, aider, aimer, air, ajouter, allemand,

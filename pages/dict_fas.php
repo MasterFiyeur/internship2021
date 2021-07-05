@@ -53,7 +53,7 @@
 				</div>
 				<div id="stim">
 					<h2><?php echo $lang["dict"]["stim_title"]; ?></h2>
-					<?php echo $lang["fas"]["stim"]; ?>
+					<p><?php echo $lang["fas"]["stim"]; ?></p>
 					<p>être, avoir, faire, dire, pouvoir, tout, aller, voir, bien, homme,
 						mari, vouloir, grand, femme, venir, devoir, petit, jour, prendre, mer, trouver,
 						donner, temps, même, falloir, parler, main, chose, mettre, vie, savoir, yeux,

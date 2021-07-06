@@ -9,8 +9,8 @@ if(count($filter->getErrors())>0){
 }else{
 	http_response_code(200);
     header('Content-Type: application/json');
-	echo $filter->toJSON();
+	print json_encode(array("status" => 400, 'status_message' =>'OK.', "data" => $filter->getObject()));
 }
 exit;
-/* print array with status (coe) & status_message & data */
+/* print array with status (code) & status_message & data */
 ?>

@@ -79,18 +79,8 @@ class Filter {
 		return true;
 	}
 
-	function toJSON(){
-		return(json_encode(
-			array(
-				"error" => $this->error_msg,
-				"age" => array($this->age[0],$this->age[1]),
-				"region" => $this->region,
-				"city" => $this->city,
-				"specialization" => $this->specialization,
-				"sex" => $this->sex,
-				"lang" => $this->lang,
-			)
-		));
+	function getObject(){
+		return (array("age" => $this->age,"region" => $this->region,"city"=>$this->city,"specialization"=>$this->specialization,"sex"=>$this->sex,"lang"=>$this->lang));
 	} 
 
 	function getErrors(){

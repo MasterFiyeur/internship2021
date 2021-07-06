@@ -12,9 +12,9 @@ A little intro about the installation.
 $ git clone https://github.com/MasterFiyeur/internship2021.git
 $ cd internship2021
 ```
-> Launch a PHP server
-> Modify pages/includes/config.php (change the variable $BASE_PATH)
-> Enjoy
+Launch a PHP server.
+Modify pages/includes/config.php (change the variable $BASE_PATH).
+Enjoy.
 ## Technologies
 ***
 A list of technologies used within the project:

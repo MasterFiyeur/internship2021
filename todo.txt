@@ -1,2 +1,1 @@
-- Language using JSON format
 - Use the current website to use database

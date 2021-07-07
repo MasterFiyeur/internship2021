@@ -11,6 +11,15 @@ if(count($filter->getErrors())>0){
     header('Content-Type: application/json');
 	print json_encode(array("status" => 400, 'status_message' =>'OK.', "data" => $filter->getObject()));
 }
-exit;
+
+switch ($_POST["dict"]) {
+	case 'fas':
+		
+		break;
+	
+	default:
+		# code...
+		break;
+}
 /* print array with status (code) & status_message & data */
 ?>

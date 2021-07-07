@@ -60,7 +60,7 @@
 					<div class="input-container">
 						<label for="specialization"><?php echo $lang->filter->specialization->{$_SESSION["lang"]}; ?></label>
 						<select name="specialization" id="specialization">
-							<option value="" selected><?php echo $lang->filter->noImportant->{$_SESSION["lang"]}; ?></option>
+							<option value="noImportant" selected><?php echo $lang->filter->noImportant->{$_SESSION["lang"]}; ?></option>
 							<option value="aucun"> Aucun </option>
 							<option value="autre"> Autre </option>
 							<option value="droit"> Droit </option>
@@ -124,7 +124,7 @@
 					<div class="input-container">
 						<label for="language"><?php echo $lang->filter->language->{$_SESSION["lang"]}; ?> :</label>
 						<select name="language" id="language">
-							<option value="" selected><?php echo $lang->filter->noImportant->{$_SESSION["lang"]}; ?></option>
+							<option value="noImportant" selected><?php echo $lang->filter->noImportant->{$_SESSION["lang"]}; ?></option>
 							<option value="arabe"> Arabe</option>
 							<option value="bulgare"> Bulgare</option>
 							<option value="allemand"> Allemand</option>

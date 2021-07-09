@@ -36,6 +36,7 @@ function printResDirectFas(letter){
 	/* POST arguments (add the letter of research) */
 	var options = {
 		"dict":"fas",
+		"method":"letter",
 		"agemin":$("#agemin").val(),
 		"agemax":$("#agemax").val(),
 		"region":$("#region").val(),

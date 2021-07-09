@@ -12,6 +12,7 @@ class Filter {
 	/* array with differents educations */
 	private $education;
 	private $dict;
+	private $method;
 	/* If one or more variables are not correct */
 	private $error_msg;
 
@@ -85,6 +86,8 @@ class Filter {
 	}
 
 	function dict_check(){
+		
+		/* Dictionary check */
 		if(!isset($_POST["dict"])){
 			array_push($this->error_msg,"The request must contain a 'dict' variable.");
 			return false;
@@ -93,6 +96,16 @@ class Filter {
 			return false;
 		}
 		$this->dict=$_POST["dict"];
+
+		/* Method check */
+		if(!isset($_POST["method"])){
+			array_push($this->error_msg,"The request must contain a 'method' variable.");
+			return false;
+		}elseif (!in_array($_POST["method"],array("letter","stim","react","frequency","questionnaires"))) {
+			array_push($this->error_msg,"The specified method doesn't exist.");
+			return false;
+		}
+		$this->method=$_POST["method"];
 		return true;
 	}
 

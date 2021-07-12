@@ -33,23 +33,23 @@ class Filter {
 
 		/* Need the database structure for check region, specialization, lang, education and sex*/
 		/* region check */
-		$this->region = $_POST["region"];
-		$this->lang = $_POST["lang"];
-		$this->specialization = $_POST["specialization"];
-		$this->sex = $_POST["sex"];
-		$this->education = $_POST["education"];
+		$this->region = $_POST["filter"]["region"];
+		$this->lang = $_POST["filter"]["lang"];
+		$this->specialization = $_POST["filter"]["specialization"];
+		$this->sex = $_POST["filter"]["sex"];
+		$this->education = $_POST["filter"]["education"];
 	}
 
 	/* check that all variables are present  */
 	function var_check(){
-		if(!isset($_POST["agemin"])
-		|| !isset($_POST["agemax"])
-		|| !isset($_POST["region"])
-		|| !isset($_POST["city"])
-		|| !isset($_POST["specialization"])
-		|| !isset($_POST["education"])
-		|| !isset($_POST["sex"])
-		|| !isset($_POST["lang"])){
+		if(!isset($_POST["filter"]["agemin"])
+		|| !isset($_POST["filter"]["agemax"])
+		|| !isset($_POST["filter"]["region"])
+		|| !isset($_POST["filter"]["city"])
+		|| !isset($_POST["filter"]["specialization"])
+		|| !isset($_POST["filter"]["education"])
+		|| !isset($_POST["filter"]["sex"])
+		|| !isset($_POST["filter"]["lang"])){
 			array_push($this->error_msg,"One or more POST variables are missing.");
 			return false;
 		}
@@ -58,30 +58,30 @@ class Filter {
 
 	/* age check*/
 	function age_check(){
-		if(!is_numeric($_POST["agemin"]) || !is_numeric($_POST["agemax"])){
+		if(!is_numeric($_POST["filter"]["agemin"]) || !is_numeric($_POST["filter"]["agemax"])){
 			array_push($this->error_msg,"Age is not a numeric value.");
 			return false;
 		}
-		$min_age = intval($_POST["agemin"]);
-		$max_age = intval($_POST["agemax"]);
+		$min_age = intval($_POST["filter"]["agemin"]);
+		$max_age = intval($_POST["filter"]["agemax"]);
 		if($min_age < 1 || $min_age > 99 || $max_age < 1 || $max_age > 99 || $min_age>$max_age){
 			array_push($this->error_msg,"Age must be between 1 and 99.");
 			return false;
 		}
-		$this->age[0] = intval($_POST["agemin"]);
-		$this->age[1] = intval($_POST["agemax"]);
+		$this->age[0] = intval($_POST["filter"]["agemin"]);
+		$this->age[1] = intval($_POST["filter"]["agemax"]);
 		return true;
 	}
 
 	function city_check(){
 		$alphabet = "abcdefghijklmnopqrstuvwxyz- ";
-		for ($i=0; $i < strlen($_POST["city"]); $i++) { 
-			if(!strrpos($alphabet, strtolower($_POST["city"][$i])) && strtolower($_POST["city"][$i])!='a'){
+		for ($i=0; $i < strlen($_POST["filter"]["city"]); $i++) { 
+			if(!strrpos($alphabet, strtolower($_POST["filter"]["city"][$i])) && strtolower($_POST["filter"]["city"][$i])!='a'){
 				array_push($this->error_msg,"The city must contain only characters of the alphabet.");
 				return false;
 			}
 		}
-		$this->city = $_POST["city"];
+		$this->city = $_POST["filter"]["city"];
 		return true;
 	}
 

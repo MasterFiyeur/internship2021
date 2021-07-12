@@ -22,31 +22,21 @@ function toggleFilter(){
 }
 
 /* Print result of direct dictionary fas in an element with a 'result' class*/
-function printResDirectFas(letter){
+function printResDirectFas(letter,filter,isDefault){
 	console.log("Research : "+letter);
-
-	/* education array */
-	let education = [];
-	var education_checkbox = document.getElementsByName('education');
-	for (let index = 0; index < education_checkbox.length; index++) {
-		if(education_checkbox[index].checked){education.push(education_checkbox[index].value);}
+	if(isDefault){
+		var options = {
+			"dict":"fas",
+			"method":"letter",
+			filter
+		};
+	}else{
+		var options = {
+			"dict":$('#dictionary').val(),
+			"method":"letter",
+			filter
+		};
 	}
-	if(education.length==0){education=["lycee","etudiant","doctorant","docteur_science","hdr"];}
-
-	/* POST arguments (add the letter of research) */
-	var options = {
-		"dict":"fas",
-		"method":"letter",
-		"agemin":$("#agemin").val(),
-		"agemax":$("#agemax").val(),
-		"region":$("#region").val(),
-		"city":$("#city").val()==""?"noImportant":$("#city").val(),
-		"specialization":$("#specialization").val()==""?"noImportant":$("#specialization").val(),
-		"sex":document.querySelector('input[name="sexe"]:checked').value,
-		"lang":$("#language").val(),
-		"education":education
-	};
-
 	/* Ajax request */
 	var jqxhr = $.post("../../api/direct_search.php", options)
 		.done(function(response){
@@ -76,7 +66,7 @@ function printResDirectFas(letter){
 }
 
 /* Print result of invert dictionary fas in an element with a 'result' class*/
-function printResInvertFas(letter){
+function printResInvertFas(letter,filter){
 	console.log("Research : "+letter);
 	var data = [
 		{
@@ -113,7 +103,7 @@ function printResInvertFas(letter){
 }
 
 /* Print result of direct dictionary sanf in an element with a 'result' class*/
-function printResDirectSanf(letter){
+function printResDirectSanf(letter, filter){
 	console.log("Research : "+letter);
 	var data = [
 		{
@@ -139,6 +129,26 @@ function printResDirectSanf(letter){
 function printRes(letter){
 	$('.result').empty();
 	show_loader(true);
+
+	/* POST parameters creation */
+	let education = [];
+	var education_checkbox = document.getElementsByName('education');
+	for (let index = 0; index < education_checkbox.length; index++) {
+		if(education_checkbox[index].checked){education.push(education_checkbox[index].value);}
+	}
+	if(education.length==0){education=["lycee","etudiant","doctorant","docteur_science","hdr"];}
+	var filter = {
+		"agemin":$("#agemin").val(),
+		"agemax":$("#agemax").val(),
+		"region":$("#region").val(),
+		"city":$("#city").val()==""?"noImportant":$("#city").val(),
+		"specialization":$("#specialization").val()==""?"noImportant":$("#specialization").val(),
+		"sex":document.querySelector('input[name="sexe"]:checked').value,
+		"lang":$("#language").val(),
+		"education":education
+	};
+
+	/* Redirect to the correct function */
 	let url_string = window.location.href;
 	let url = new URL(url_string);
 	if(url.searchParams.get("method")=="inv"){
@@ -146,14 +156,17 @@ function printRes(letter){
 	}else{
 		switch ($('#dictionary').val()) {
 			case "fas":
-				printResDirectFas(letter);
+			case "fasn":
+			case "fas1_red":
+			case "fas2_red":
+				printResDirectFas(letter,filter,false);
 				break;
 			case "sanf":
-				printResDirectSanf(letter);
+			case "sanfn":
+				printResDirectSanf(letter,filter);
 				break;
-		
 			default:
-				printResDirectFas(letter);
+				printResDirectFas(letter,filter,true);
 				break;
 		}
 	}

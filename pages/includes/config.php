@@ -1,6 +1,6 @@
 <?php
 //Edit this for production
-$BASE_PATH = "/Prototypes/";
+$BASE_PATH = "/internship2021/";
 
 /* Start session */
 session_start();

@@ -32,22 +32,22 @@
 			<div class="content three_quarter">
 				<h1><?php echo $lang->pages->title->{$_SESSION["lang"]}; ?></h1>
 				<div id="dict1">
-					<?php include __DIR__."\lang\\".$_SESSION["lang"]."\\".$lang->about->fas->link; ?>
+					<?php include __DIR__."/lang/".$_SESSION["lang"]."/".$lang->about->fas->link; ?>
 				</div>
 				<div id="dict2">
-					<?php include __DIR__."\lang\\".$_SESSION["lang"]."\\".$lang->about->sanf->link; ?>
+					<?php include __DIR__."/lang/".$_SESSION["lang"]."/".$lang->about->sanf->link; ?>
 				</div>
 				<div id="dict3">
-					<?php include __DIR__."\lang\\".$_SESSION["lang"]."\\".$lang->about->sanfn->link; ?>
+					<?php include __DIR__."/lang/".$_SESSION["lang"]."/".$lang->about->sanfn->link; ?>
 				</div>
 				<div id="dict4">
-					<?php include __DIR__."\lang\\".$_SESSION["lang"]."\\".$lang->about->fasn->link; ?>
+					<?php include __DIR__."/lang/".$_SESSION["lang"]."/".$lang->about->fasn->link; ?>
 				</div>
 				<div id="dict5">
-					<?php include __DIR__."\lang\\".$_SESSION["lang"]."\\".$lang->about->fas1_red->link; ?>
+					<?php include __DIR__."/lang/".$_SESSION["lang"]."/".$lang->about->fas1_red->link; ?>
 				</div>
 				<div id="dict6">
-					<?php include __DIR__."\lang\\".$_SESSION["lang"]."\\".$lang->about->fas2_red->link; ?>
+					<?php include __DIR__."/lang/".$_SESSION["lang"]."/".$lang->about->fas2_red->link; ?>
 				</div>
 			</div>
 			<!-- / main body -->

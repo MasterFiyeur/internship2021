@@ -14,7 +14,7 @@ function connect(){
 
 function test(){
     $conn = connect();
-    $req = $conn -> prepare('SELECT * FROM dict limit 2;');
+    $req = $conn -> prepare("select resp.word as rw, dict.word, count(resp.word) as cnt from resp inner join dict on dict.id=resp.id_w inner join users_jsonb on users_jsonb.id=resp.id_u where lower(dict.word) similar to '((un|une|le|la|les) )*a%' group by dict.word, rw order by dict.word, cnt desc, rw;");
     $req -> execute();
     $res = array();
     foreach ($req as $row) {

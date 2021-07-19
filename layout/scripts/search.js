@@ -28,12 +28,14 @@ function printResDirectFas(letter,filter,isDefault){
 		var options = {
 			"dict":"fas",
 			"method":"letter",
+			letter,
 			filter
 		};
 	}else{
 		var options = {
 			"dict":$('#dictionary').val(),
 			"method":"letter",
+			letter,
 			filter
 		};
 	}

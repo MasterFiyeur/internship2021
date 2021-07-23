@@ -22,7 +22,7 @@ switch ($filter->getDict()) {
 		$data = array();
 		for ($i=0; $i < count($res); $i++) { 
 			array_push($data,array(
-				"id"=>$i,
+				"id"=>$i+1,
 				"stimulus"=>$res[$i][0],
 				"reactions"=>$res[$i][2]
 			));

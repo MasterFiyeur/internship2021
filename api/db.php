@@ -97,7 +97,7 @@ function db_right_dict($chr){
 				if($word == $arr[1]){
 					if($arr[0] != '-'){
 						if(($num != $arr[2]) && ($str !="")){
-							$str .= " \\{$num}\\; ";
+							$str .= " <b>{$num}</b>; ";
 						}
 						$str .= ", $arr[0]";
 						$cnt[0] += $arr[2];
@@ -107,19 +107,18 @@ function db_right_dict($chr){
 					}else{
 						$cnt[0] += $arr[2];
 						$cnt[3] += $arr[2];
-//						$num = $arr[2];
 					}
 				}else{
 					$str = preg_replace("/^, /", "", $str);
 					$str = preg_replace("/; , /", "; ", $str);
-					$str .= " \\{$num}\\";
+					$str .= " <b>{$num}</b>";
 					array_push($res, Array($word, "{$cnt[0]}", "{$str}<br>({$cnt[0]}, {$cnt[1]}, {$cnt[3]}, {$cnt[2]})"));
 					$num = -1;
 					$word = $arr[1];
 					$str = "";
 					if($arr[0] != '-'){
 						if(($num != $arr[2]) && ($str !="")){
-							$str .= " \\{$num}\\; ";
+							$str .= " <b>{$num}</b>; ";
 						}
 						$str .= ", $arr[0]";
 						$cnt[0] = $arr[2];
@@ -135,14 +134,42 @@ function db_right_dict($chr){
 				}
 			}
 		}
-		$str = preg_replace("/^, /", "", $str);
-		$str = preg_replace("/; , /", "; ", $str);
-		$str .= " \\{$num}\\";
+		$str .= " {$num}";
 		if($word != "") array_push($res, Array($word, "{$cnt[0]}", "{$str}<br>({$cnt[0]}, {$cnt[1]}, {$cnt[3]}, {$cnt[2]})"));
+		usort($res, "numberCompare");
 		return $res;
 	}else{
 		return Array();
 	}
 	return Array();
+}
+
+function alphabetCompare($aa, $bb){
+	preg_match("/((un|une|le|la|les) )?(.*)$/i", $aa[0], $a);
+	preg_match("/((un|une|le|la|les) )?(.*)$/i", $bb[0], $b);
+
+	$patterns = array();
+	$patterns[0] = '/(é|è|ê)/';
+	$patterns[1] = '/(à|â)/';
+	$patterns[2] = '/ô/';
+	$patterns[3] = '/(î|ï)/';
+	$patterns[4] = '/û/';
+	$replacements = array();
+	$replacements[0] = 'e';
+	$replacements[1] = 'a';
+	$replacements[2] = 'o';
+	$replacements[3] = 'i';
+	$replacements[4] = 'u';
+	$aaa =  preg_replace($patterns, $replacements, $a[3]);
+	$bbb =  preg_replace($patterns, $replacements, $b[3]);
+
+		
+	$res = strcasecmp($aaa, $bbb);
+	return $res;
+}
+
+function numberCompare($aa, $bb){
+	if($aa[1] == $bb[1]) return 0;
+	return ($aa[1] < $bb[1])? 1: -1;
 }
 ?>

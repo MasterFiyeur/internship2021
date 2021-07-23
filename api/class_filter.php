@@ -105,6 +105,20 @@ class Filter {
 			array_push($this->error_msg,"The specified method doesn't exist.");
 			return false;
 		}
+		/* Méthode letter check */
+		if($_POST["method"]=="letter"){
+			if(!isset($_POST["letter"])){
+				array_push($this->error_msg,"You must specify a letter or word for this method.");
+				return false;
+			}else{
+				if((strpos($_POST["letter"], "\"") !== false) || 
+				(strpos($_POST["letter"], "'") !== false) || 
+				(strpos($_POST["letter"], ";") !== false)){
+					array_push($this->error_msg,"You must specify a word that does not contains one of these characters (\" ' ;).");
+					return false;
+				}
+			}
+		}
 		$this->method=$_POST["method"];
 		return true;
 	}

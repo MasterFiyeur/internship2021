@@ -140,6 +140,10 @@ class Filter {
 		return $this->dict;
 	}
 
+	function getMethod(){
+		return $this->method;
+	}
+
 	function getErrors(){
 		return $this->error_msg;
 	}

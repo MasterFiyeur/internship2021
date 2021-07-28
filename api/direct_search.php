@@ -17,7 +17,6 @@ if(count($filter->getErrors())>0){
 switch ($filter->getDict()) {
 	case 'fas':
 		/* get data from database and send them */
-		/* Don't forget to test letter POST argument */
 		$res = db_right_dict($_POST["letter"]);
 		$data = array();
 		for ($i=0; $i < count($res); $i++) { 

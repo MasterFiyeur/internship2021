@@ -464,7 +464,7 @@
 	}
 }
 
-.result .result-table table tr td{
+.result .result-table table tr td:nth-last-child(){
     word-break: break-word;
     text-align: justify;
 }

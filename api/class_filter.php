@@ -118,7 +118,22 @@ class Filter {
 					return false;
 				}
 			}
+		}else if($_POST["method"]=="stim"){
+			if(!isset($_POST["range"])){
+				array_push($this->error_msg,"You must specify a letter or word for this method.");
+				return false;
+			}else{
+				$rangeTab = explode("-", $_POST["range"]);
+				if(!is_numeric($rangeTab[0]) || !is_numeric($rangeTab[1])){
+					array_push($this->error_msg,"Range not contains numeric numbers.");
+					return false;
+				}else if(!count($rangeTab)==2){
+					array_push($this->error_msg,"Range not contains only 2 values.");
+					return false;
+				}
+			}
 		}
+
 		$this->method=$_POST["method"];
 		return true;
 	}

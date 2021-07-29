@@ -130,13 +130,13 @@ function db_right_dict($chr){
 	return Array();
 }
 
-function db_back_dict($chr) {
+function db_back_dict($chr,$filter) {
 	$res = Array();
 	$conn = connect();
 	if ($conn) {
 		//$search = searchRequest($json);
 		$search_char = "";
-		if (strlen($chr) > 0) {
+		if ($filter->getMethod()=="letter" && strlen($chr) > 0) {
 			$rest = substr(strtolower($chr), 1);
 			if (strtolower($chr[0]) == 'e') {
 				$search_char .= "AND  lower(resp.word_inv) SIMILAR  TO '((un|une|le|la|les) )*(e|é|è|ê){$rest}%' ";
@@ -170,10 +170,10 @@ function db_back_dict($chr) {
 			}
 		}
 		$result = $conn -> prepare("SELECT dict.word, resp.word_inv AS rw, count(dict.word) AS cnt, resp.checked AS ch 
-										FROM resp INNER JOIN dict ON dict.id = resp.id_w WHERE resp.id_u in (SELECT 
-										users_jsonb.id FROM users_jsonb WHERE users_jsonb.id_t = 12) 
-										AND resp.word_inv <> '-' $search_char GROUP BY rw, dict.word, ch ORDER BY rw, 
-										cnt desc, dict.word;");
+			FROM resp INNER JOIN dict ON dict.id = resp.id_w WHERE resp.id_u in (SELECT 
+			users_jsonb.id FROM users_jsonb WHERE users_jsonb.id_t = 12) 
+			AND resp.word_inv <> '-' $search_char GROUP BY rw, dict.word, ch ORDER BY rw, 
+			cnt desc, dict.word;");
 		$result -> execute();
 		if (!$result) {
 			$conn = null;
@@ -200,7 +200,9 @@ function db_back_dict($chr) {
 				} else {
 					$str .= " {$num}; ";
 					$str = preg_replace("/; , /", "; ", $str);
-					array_push($res, Array($word, $cnt[0], "{$str}<br>({$cnt[0]}, {$cnt[1]})", $chk));
+					if($filter->getMethod()=="stim" && $cnt[1]>=$chr[0] && $cnt[1]<=$chr[1]){
+						array_push($res, Array($word, $cnt[0], "{$str}<br>({$cnt[0]}, {$cnt[1]})", $chk));
+					}
 					$word = $arr[1];
 					$chk = $arr[3];
 					$str = $arr[0];
@@ -242,7 +244,6 @@ function alphabetCompare($aa, $bb){
 	$aaa =  preg_replace($patterns, $replacements, $a[3]);
 	$bbb =  preg_replace($patterns, $replacements, $b[3]);
 
-		
 	$res = strcasecmp($aaa, $bbb);
 	return $res;
 }

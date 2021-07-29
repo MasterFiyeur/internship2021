@@ -195,7 +195,7 @@ function printRes(range){
 			case "sanfn":
 			case "fas":
 				switch (url.searchParams.get("num")) {
-					case "3":
+					case "2":
 						printResInvertFas(range,filter,"stim");
 						break;
 					default:

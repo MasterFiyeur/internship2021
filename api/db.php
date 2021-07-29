@@ -200,8 +200,9 @@ function db_back_dict($chr,$filter) {
 				} else {
 					$str .= " {$num}; ";
 					$str = preg_replace("/; , /", "; ", $str);
+					/* Stimulus method keep only $cnt[1] in range*/
 					if($filter->getMethod()=="stim" && $cnt[1]>=$chr[0] && $cnt[1]<=$chr[1]){
-						array_push($res, Array($word, $cnt[0], "{$str}<br>({$cnt[0]}, {$cnt[1]})", $chk));
+						array_push($res, Array($word, $cnt[0], "{$str}<br>({$cnt[0]}, {$cnt[1]})", $chk, $cnt[1]));
 					}
 					$word = $arr[1];
 					$chk = $arr[3];
@@ -214,9 +215,13 @@ function db_back_dict($chr,$filter) {
 		}
 		$str .= " {$num}; "; $str = preg_replace("/; , /", "; ", $str);
 		if ($word != "") {
-			array_push($res, Array($word, $cnt[0], "{$str}<br>({$cnt[0]}, {$cnt[1]})", $chk));
+			array_push($res, Array($word, $cnt[0], "{$str}<br>({$cnt[0]}, {$cnt[1]})", $chk, $cnt[1]));
 		}
-		usort($res, "numberCompare");
+		if($filter->getMethod()=="letter"){
+			usort($res, "numberCompare");
+		}else if($filter->getMethod()=="stim"){
+			usort($res, "stimCompare");
+		}
 		return $res;
 	}
 	else {
@@ -248,8 +253,13 @@ function alphabetCompare($aa, $bb){
 	return $res;
 }
 
-function numberCompare($aa, $bb){
-	if($aa[1] == $bb[1]) return 0;
-	return ($aa[1] < $bb[1])? 1: -1;
+function numberCompare($a, $b){
+	if($a[1] == $b[1]) return 0;
+	return ($a[1] < $b[1])? 1: -1;
+}
+
+function stimCompare($a,$b){
+	if($a[4] == $b[4]) return 0;
+	return ($a[4] < $b[4])? 1: -1;
 }
 ?>

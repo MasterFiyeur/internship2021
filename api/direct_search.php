@@ -17,7 +17,7 @@ if(count($filter->getErrors())>0){
 switch ($filter->getDict()) {
 	case 'fas':
 		/* get data from database and send them */
-		$res = db_right_dict($_POST["letter"]);
+		$res = db_right_dict($_POST["range"]);
 		$data = array();
 		for ($i=0; $i < count($res); $i++) { 
 			array_push($data,array(

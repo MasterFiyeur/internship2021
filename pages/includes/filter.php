@@ -1,6 +1,6 @@
 <div class="filter-section">
 	<div class="icon-container">
-		<span onclick="toggleFilter()"><i class="fas fa-sliders-h"></i> <?php echo $lang->filter->title->{$_SESSION["lang"]}; ?></span>
+		<span onclick="toggleFilter()"><i class="fas fa-sliders-h"></i> <?php echo $lang->filter->title->{$_SESSION["lang"]}." not implemented"; ?></span>
 	</div>
 	<div>
 		<form action="" class="form-hidden" id="filter-form">

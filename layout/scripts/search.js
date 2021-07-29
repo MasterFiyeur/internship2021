@@ -22,20 +22,20 @@ function toggleFilter(){
 }
 
 /* Print result of direct dictionary fas in an element with a 'result' class*/
-function printResDirectFas(letter,filter,isDefault){
-	console.log("Research : "+letter);
+function printResDirectFas(range,filter,isDefault){
+	console.log("Research : "+range);
 	if(isDefault){
 		var options = {
 			"dict":"fas",
 			"method":"letter",
-			letter,
+			range,
 			filter
 		};
 	}else{
 		var options = {
 			"dict":$('#dictionary').val(),
 			"method":"letter",
-			letter,
+			range,
 			filter
 		};
 	}
@@ -68,20 +68,27 @@ function printResDirectFas(letter,filter,isDefault){
 }
 
 /* Print result of invert dictionary fas in an element with a 'result' class*/
-function printResInvertFas(letter,filter,isDefault){
-	console.log("Research : "+letter);
-	if(isDefault){
+function printResInvertFas(range,filter,method){
+	console.log("Research : "+range);
+	if(method=="letter"){
 		var options = {
 			"dict":"fas",
 			"method":"letter",
-			letter,
+			range,
+			filter
+		};
+	}else if(method=="stim"){
+		var options = {
+			"dict":"fas",
+			"method":"stim",
+			range,
 			filter
 		};
 	}else{
 		var options = {
 			"dict":$('#dictionary').val(),
 			"method":"letter",
-			letter,
+			range,
 			filter
 		};
 	}
@@ -153,7 +160,7 @@ function printResDirectSanf(letter, filter){
 }
 
 /* Organize function's call thanks to url params */
-function printRes(letter){
+function printRes(range){
 	$('.result').empty();
 	show_loader(true);
 
@@ -187,10 +194,17 @@ function printRes(letter){
 			case "sanf":
 			case "sanfn":
 			case "fas":
-				printResInvertFas(letter,filter,false);
+				switch (url.searchParams.get("num")) {
+					case "3":
+						printResInvertFas(range,filter,"stim");
+						break;
+					default:
+						printResInvertFas(range,filter,"letter");
+						break;
+				}
 				break;
 			default:
-				printResInvertFas(letter,filter,true);
+				printResInvertFas(range,filter,"defaultLetter");
 				break;
 			}
 	}else{
@@ -200,23 +214,17 @@ function printRes(letter){
 			case "fasn":
 			case "fas1_red":
 			case "fas2_red":
-				printResDirectFas(letter,filter,false);
+				printResDirectFas(range,filter,false);
 				break;
 			case "sanf":
 			case "sanfn":
-				printResDirectSanf(letter,filter);
+				printResDirectSanf(range,filter);
 				break;
 			default:
-				printResDirectFas(letter,filter,true);
+				printResDirectFas(range,filter,true);
 				break;
 		}
 	}
-}
-
-/* Sort by Stimulus (invert dic) */
-function printByStimulus(){
-	console.log("Sort by Stimulus");
-	printRes("a");
 }
 
 /* Sort by Reaction (invert dic) */

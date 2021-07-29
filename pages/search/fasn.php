@@ -139,12 +139,12 @@
 											?>
 											<div id="stimulus_search">
 												<div class="letter_container">
-												<span onclick="printByStimulus();"><?php echo $lang->search->all->{$_SESSION["lang"]}; ?></span>
-												<span onclick="printByStimulus();">350-200</span>
-												<span onclick="printByStimulus();">199-150</span>
-												<span onclick="printByStimulus();">149-100</span>
-												<span onclick="printByStimulus();">99-50</span>
-												<span onclick="printByStimulus();">49-1</span>
+												<span onclick="printRes('1-350');"><?php echo $lang->search->all->{$_SESSION["lang"]}; ?></span>
+												<span onclick="printRes('200-350');">350-200</span>
+												<span onclick="printRes('150-199');">199-150</span>
+												<span onclick="printRes('100-149');">149-100</span>
+												<span onclick="printRes('50-99');">99-50</span>
+												<span onclick="printRes('1-49');">49-1</span>
 												</div>
 											</div>
 											<?php

@@ -39,7 +39,7 @@ switch ($filter->getDict()) {
 				break;
 			default:
 				/* Letter/word method */
-				$res = db_back_dict($_POST["letter"]);
+				$res = db_back_dict($_POST["range"]);
 				for ($i=0; $i < count($res); $i++) { 
 					array_push($data,array(
 						"id"=>$i+1,

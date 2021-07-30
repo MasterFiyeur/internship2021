@@ -14,6 +14,7 @@ $ cd internship2021
 ```
 Launch a PHP server.\
 Modify pages/includes/config.php (change the variable $BASE_PATH).\
+Copy api/db_config.php.example, remove the 'example' extension and edit the file with your own settings.\
 Enjoy.
 ## Technologies
 ***

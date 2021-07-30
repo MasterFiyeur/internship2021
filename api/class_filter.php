@@ -118,7 +118,7 @@ class Filter {
 					return false;
 				}
 			}
-		}else if($_POST["method"]=="stim"){
+		}else if($_POST["method"]=="stim" || $_POST["method"]=="react"){
 			if(!isset($_POST["range"])){
 				array_push($this->error_msg,"You must specify a letter or word for this method.");
 				return false;
@@ -129,6 +129,9 @@ class Filter {
 					return false;
 				}else if(!count($rangeTab)==2){
 					array_push($this->error_msg,"Range not contains only 2 values.");
+					return false;
+				}else if(intval($rangeTab[0]) > intval($rangeTab[1])){
+					array_push($this->error_msg,"The first number must be lower than the second number.".intval($rangeTab[0])."-".intval($rangeTab[1]));
 					return false;
 				}
 			}

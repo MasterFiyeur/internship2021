@@ -70,17 +70,11 @@ function printResDirectFas(range,filter,isDefault){
 /* Print result of invert dictionary fas in an element with a 'result' class*/
 function printResInvertFas(range,filter,method){
 	console.log("Research : "+range);
-	if(method=="letter"){
+	const methods = ["letter","stim","react"];
+	if(methods.includes(method)){
 		var options = {
 			"dict":"fas",
-			"method":"letter",
-			range,
-			filter
-		};
-	}else if(method=="stim"){
-		var options = {
-			"dict":"fas",
-			"method":"stim",
+			method,
 			range,
 			filter
 		};
@@ -195,6 +189,9 @@ function printRes(range){
 			case "sanfn":
 			case "fas":
 				switch (url.searchParams.get("num")) {
+					case "3":
+						printResInvertFas(range,filter,"react");
+						break;
 					case "2":
 						printResInvertFas(range,filter,"stim");
 						break;

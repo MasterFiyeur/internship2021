@@ -130,42 +130,42 @@ function db_right_dict($chr){
 	return Array();
 }
 
-function db_back_dict($chr,$filter) {
+function db_back_dict($methodParam,$filter) {
 	$res = Array();
 	$conn = connect();
 	if ($conn) {
 		//$search = searchRequest($json);
 		$search_char = "";
-		if ($filter->getMethod()=="letter" && strlen($chr) > 0) {
-			$rest = substr(strtolower($chr), 1);
-			if (strtolower($chr[0]) == 'e') {
+		if ($filter->getMethod()=="letter" && strlen($methodParam) > 0) {
+			$rest = substr(strtolower($methodParam), 1);
+			if (strtolower($methodParam[0]) == 'e') {
 				$search_char .= "AND  lower(resp.word_inv) SIMILAR  TO '((un|une|le|la|les) )*(e|é|è|ê){$rest}%' ";
 			} else
-			if (strtolower($chr[0]) == 'a') {
+			if (strtolower($methodParam[0]) == 'a') {
 				$search_char .= "AND  lower(resp.word_inv) SIMILAR  TO '((un|une|le|la|les) )*(a|à|â){$rest}%' ";
 			} else
-			if (strtolower($chr[0]) == 'o') {
+			if (strtolower($methodParam[0]) == 'o') {
 				$search_char .= "AND  lower(resp.word_inv) SIMILAR  TO '((un|une|le|la|les) )*(o|œ|ô){$rest}%' ";
 			} else
-			if (strtolower($chr[0]) == 'c') {
+			if (strtolower($methodParam[0]) == 'c') {
 				$search_char .= "AND  lower(resp.word_inv) SIMILAR  TO '((un|une|le|la|les) )*(c|ç){$rest}%' ";
 			} else
-			if (strtolower($chr[0]) == 'i') {
+			if (strtolower($methodParam[0]) == 'i') {
 				$search_char .= "AND  lower(resp.word_inv)  SIMILAR  TO '((un|une|le|la|les) )*(i|î){$rest}%' ";
 			} else
-			if (strtolower($chr[0]) == 'u') {
+			if (strtolower($methodParam[0]) == 'u') {
 				$search_char .= "AND  (lower(resp.word_inv) SIMILAR TO '((un|une|le|la|les) )*(u|û){$rest}%'  AND ".
 				"lower(resp.word) not similar to '(un|une) (1|2|3|4|5|6|7|8|9|0|a|à|â|b|c|ç|d|e|é|è|ê|f|g|h|i|î|j|k|l|m|n|o|ô|p|q|r|s|t|v|w|x|y|z)%') ";
 			} else
-			if (strtolower($chr[0]) == 'l') {
+			if (strtolower($methodParam[0]) == 'l') {
 				$search_char .= "AND  (lower(resp.word_inv) similar to '((un|une|le|la|les) )*l{$rest}%' AND ".
 				"lower(resp.word) not similar to '(la|le|les) (1|2|3|4|5|6|7|8|9|0|a|à|â|b|c|ç|d|e|é|è|ê|f|g|h|i|î|j|k|m|n|o|ô|p|q|r|s|t|u|û|v|w|x|y|z)%') ";
 			} else
-			if (strtolower($chr[0]) == '?') {
+			if (strtolower($methodParam[0]) == '?') {
 				$search_char .= "AND  lower(resp.word_inv)  NOT SIMILAR  TO ".
 				"'(1|2|3|4|5|6|7|8|9|0|a|à|â|b|c|ç|d|e|é|è|ê|f|g|h|i|î|j|k|l|m|n|o|œ|ô|p|q|r|s|t|u|û|v|w|x|y|z)%' ";
 			} else {
-				$search_char .= "AND lower(resp.word_inv) similar to '((un|une|le|la|les) )*".strtolower($chr).
+				$search_char .= "AND lower(resp.word_inv) similar to '((un|une|le|la|les) )*".strtolower($methodParam).
 				"%' ";
 			}
 		}
@@ -201,7 +201,9 @@ function db_back_dict($chr,$filter) {
 					$str .= " {$num}; ";
 					$str = preg_replace("/; , /", "; ", $str);
 					/* Stimulus method keep only $cnt[1] in range*/
-					if($filter->getMethod()=="stim" && $cnt[1]>=$chr[0] && $cnt[1]<=$chr[1]){
+					if(($filter->getMethod()=="stim" && $cnt[1]>=$methodParam[0] && $cnt[1]<=$methodParam[1])
+						|| $filter->getMethod()=="react" && $cnt[0]>=$methodParam[0] && $cnt[0]<=$methodParam[1]
+						|| $filter->getMethod()=="letter"){
 						array_push($res, Array($word, $cnt[0], "{$str}<br>({$cnt[0]}, {$cnt[1]})", $chk, $cnt[1]));
 					}
 					$word = $arr[1];
@@ -215,12 +217,16 @@ function db_back_dict($chr,$filter) {
 		}
 		$str .= " {$num}; "; $str = preg_replace("/; , /", "; ", $str);
 		if ($word != "") {
-			array_push($res, Array($word, $cnt[0], "{$str}<br>({$cnt[0]}, {$cnt[1]})", $chk, $cnt[1]));
+			if(($filter->getMethod()=="stim" && $cnt[1]>=$methodParam[0] && $cnt[1]<=$methodParam[1])
+				|| $filter->getMethod()=="react" && $cnt[0]>=$methodParam[0] && $cnt[0]<=$methodParam[1]
+				|| $filter->getMethod()=="letter"){
+				array_push($res, Array($word, $cnt[0], "{$str}<br>({$cnt[0]}, {$cnt[1]})", $chk, $cnt[1]));
+			}
 		}
-		if($filter->getMethod()=="letter"){
-			usort($res, "numberCompare");
-		}else if($filter->getMethod()=="stim"){
+		if($filter->getMethod()=="stim"){
 			usort($res, "stimCompare");
+		}else{
+			usort($res, "numberCompare");
 		}
 		return $res;
 	}

@@ -1,3 +1,11 @@
+<?php 
+/**
+*\file filter.php
+*\brief Form with the filter data to send to the api
+*\	(maybe change it because parameters are not the same for each dictionary)
+*\date Summer 2021
+*/
+?>
 <div class="filter-section">
 	<div class="icon-container">
 		<span onclick="toggleFilter()"><i class="fas fa-sliders-h"></i> <?php echo $lang->filter->title->{$_SESSION["lang"]}." not implemented"; ?></span>

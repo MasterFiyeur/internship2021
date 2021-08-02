@@ -1,4 +1,10 @@
 <?php
+/**
+*\file config.php
+*\brief Language and configuration of the project
+*\date Summer 2021
+*/
+
 /* Edit this for production */
 $BASE_PATH = "/internship2021/";
 

@@ -1,3 +1,10 @@
+<?php
+/**
+*\file footer.php
+*\brief Link of javascript files
+*\date Summer 2021
+*/
+?>
 <div class="wrapper row5">
 	<div id="copyright" class="hoc clear"> 
 		<!-- ################################################################################################ -->

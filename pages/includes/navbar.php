@@ -1,3 +1,10 @@
+<?php
+/**
+*\file navbar.php
+*\brief Navigation bar
+*\date Summer 2021
+*/
+?>
 <div class="wrapper row1">
 	<header id="header" class="hoc clear">
 	<div id="logo" class="fl_left">

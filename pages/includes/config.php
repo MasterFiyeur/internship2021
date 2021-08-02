@@ -1,5 +1,5 @@
 <?php
-//Edit this for production
+/* Edit this for production */
 $BASE_PATH = "/internship2021/";
 
 /* Start session */

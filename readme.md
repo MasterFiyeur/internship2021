@@ -1,10 +1,15 @@
 ## Table of Contents
 1. [General Info](#general-info)
-2. [Installation](#installation)
-3. [Technologies](#technologies)
+2. [Progress](#progress)
+3. [Installation](#installation)
+4. [Technologies](#technologies)
 ### General Info
 ***
 A PHP site that aims to show stimuli and reactions with different dictionaries. There are 6 dictionaries.
+### Progress
+***
+Currently the html and css part is finished, the direct and invert search of the FAS dictionary is finished too.\
+We have to add the data filtering for all the dictionaries and do the direct and invert search and the questionnaires for the other dictionaries.
 ## Installation
 ***
 A little intro about the installation. 

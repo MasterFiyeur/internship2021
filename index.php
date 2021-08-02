@@ -18,6 +18,7 @@
 		<section id="introblocks">
 			<ul class="nospace group btmspace-80 elements elements-four">
 				<li class="one_third">
+					<!-- These links must be changed to a post/person (currently is for share the website) -->
 					<article><a href="http://www.facebook.com/sharer.php?u=http://dictaverf.nsu.ru"><i class="fab fa-facebook-f"></i></a>
 						<h6 class="heading"><?php echo $lang->home->fb->{$_SESSION["lang"]}; ?></h6>
 					</article>

@@ -15,6 +15,7 @@ Once it is finished, complete the help page.
 ### Architecture
 ***
 /api/ -> Configurations/functions for the database, files to use as an API for get data from database.\
+/doc/ -> Project documentation (index.html).\
 /images/ -> Centralisation of images and icon used for the website.\
 /layout/ -> CSS and Javascript files.\
 /pages/includes/ -> Language configuration and part of code used in several pages.\

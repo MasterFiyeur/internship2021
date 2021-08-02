@@ -1,3 +1,5 @@
+/* Custom css stylesheet */
+
 /* ----- Variable ----- */
 :root{
     --primary-color : #282E39;
@@ -165,7 +167,6 @@
     flex-wrap: wrap;
 }
 
-    /* RadioButton search method */
 .search_by input{
     display: none;
 }

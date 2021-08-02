@@ -1,4 +1,12 @@
-/* Generate letter for direct dictionary */
+/**
+*\file search.js
+*\brief Linked to pages/includes/{dict}.php (letters generation and ajax)
+*\date Summer 2021
+*/
+
+/**
+ * Generation of letters for the direct search method (by letter)
+ */
 function letterGen(){
 	const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	for (let index = 0; index < alphabet.length; index++) {
@@ -7,7 +15,9 @@ function letterGen(){
 	}
 }
 
-/* Generate letter for invert dictionary */
+/*
+ * Generation of letters for the invert search method (by letter)
+ */
 function letterExtendGen(){
 	const alphabet = "?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	for (let index = 0; index < alphabet.length; index++) {
@@ -16,14 +26,21 @@ function letterExtendGen(){
 	}
 }
 
-/* Show and hide filter */
+/**
+ * Hide and show filter options
+ */
 function toggleFilter(){
 	$("#filter-form").toggleClass("form-hidden");
 }
 
-/* Print result of direct dictionary fas in an element with a 'result' class*/
+/**
+ * Send an ajax request to get database data about fas dictionary (direct search)
+ * @param {string} range The letter or part of word that the word begin
+ * @param {object} filter An object with every data which is complete in the filter
+ * @param {boolean} isDefault If the hidden input "dict" is removed or doesn't exist
+ */
 function printResDirectFas(range,filter,isDefault){
-	console.log("Research : "+range);
+	/* Configuration */
 	if(isDefault){
 		var options = {
 			"dict":"fas",
@@ -39,6 +56,7 @@ function printResDirectFas(range,filter,isDefault){
 			filter
 		};
 	}
+
 	/* Ajax request */
 	var jqxhr = $.post("../../api/direct_search.php", options)
 		.done(function(response){
@@ -67,9 +85,14 @@ function printResDirectFas(range,filter,isDefault){
 		});
 }
 
-/* Print result of invert dictionary fas in an element with a 'result' class*/
+/**
+ * Send an ajax request to get database data about fas dictionary (invert search)
+ * @param {string} range The letter, part of word, range of stimulus or range of reaction to sort results
+ * @param {object} filter An object with every data which is complete in the filter
+ * @param {string} method Search method : letter, stim or react
+ */
 function printResInvertFas(range,filter,method){
-	console.log("Research : "+range);
+	/* Configuration */
 	const methods = ["letter","stim","react"];
 	if(methods.includes(method)){
 		var options = {
@@ -115,10 +138,13 @@ function printResInvertFas(range,filter,method){
 	});
 }
 
-/* Print result of direct dictionary sanf in an element with a 'result' class*/
+/**
+ * Send an ajax request to get database data about sanf dictionary (direct search)
+ * @param {string} range The letter or part of word that the word begin
+ * @param {object} filter An object with every data which is complete in the filter
+ */
 function printResDirectSanf(letter, filter){
-	console.log("Research : "+letter);
-	/* POST params */
+	/* Configuration */
 	var options = {
 		"dict":$('#dictionary').val(),
 		"method":"letter",
@@ -153,12 +179,15 @@ function printResDirectSanf(letter, filter){
 		});
 }
 
-/* Organize function's call thanks to url params */
+/**
+ * Organize function's call thanks to url params
+ * @param {string} range Parameter for the research (letter, range of stimulus, range of reactions)
+ */
 function printRes(range){
 	$('.result').empty();
 	show_loader(true);
 
-	/* POST parameters creation */
+	/* POST parameters creation (filter data) */
 	let education = [];
 	var education_checkbox = document.getElementsByName('education');
 	for (let index = 0; index < education_checkbox.length; index++) {
@@ -224,19 +253,29 @@ function printRes(range){
 	}
 }
 
-/* Sort by Reaction (invert dic) */
+/**
+ * Sort by Reaction (invert search)
+ * This function must be deleted and replaced by function "printRes(range)"
+ * 	for the centralisation
+ */
 function printByReact(){
 	console.log("Sort by Reaction");
 	printRes("a");
 }
 
-/* Sort by Frequency (invert dic) */
+/**
+ * Sort by Frequency (invert search)
+ * This function must be deleted and replaced by function "printRes(range)"
+ * 	for the centralisation
+ */
 function printByFreq(frequency){
 	console.log("Sort by Frequence from "+frequency+"% to "+(frequency+20)+"%");
 	printRes("a");
 }
 
-/* Initialize the first questionnaire and the maximum of questionnaires */
+/**
+ * Initialize the first questionnaire and the maximum (number) of questionnaires
+ */
 function initQuestionnaires(){
 	$('.result').empty();
 	show_loader(true);
@@ -266,6 +305,10 @@ function initQuestionnaires(){
 	});
 }
 
+/**
+ * Calculate which questionnaire to display and display it
+ * @param {string} diff The number of the questionnaire compared to the current one
+ */
 function printQuestionnaire(diff){
 	$('.result .result-indiv-quest').empty();
 	show_loader(true);
@@ -323,7 +366,9 @@ function printQuestionnaire(diff){
 	});
 }
 
-/* Animation for loading */
+/**
+ * Creation of the loading animation (when the client wait to receive data from database)
+ */
 function init_loader(){
 	let base = document.getElementById("res_loader");
 	let letters = base.textContent.split("");
@@ -336,7 +381,10 @@ function init_loader(){
 	});
 }
 
-/* Show/hide res_loader */
+/**
+ * Hide or show the loader to wait data from database
+ * @param {boolean} show If the loader is to be shown
+ */
 function show_loader(show){
 	if(show){
 		let base = document.getElementById("res_loader");

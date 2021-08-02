@@ -10,7 +10,8 @@ A PHP site that aims to show stimuli and reactions with different dictionaries. 
 ### Progress
 ***
 Currently the html and css part is finished, the direct and invert search of the FAS dictionary is finished too.\
-We have to add the data filtering for all the dictionaries and do the direct and invert search and the questionnaires for the other dictionaries.
+We have to add the data filtering for all the dictionaries and do the direct and invert search and the questionnaires for the other dictionaries.\
+Once it is finished, complete the help page.
 ### Architecture
 ***
 /api/ -> Configurations/functions for the database, files to use as an API for get data from database.\

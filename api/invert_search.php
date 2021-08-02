@@ -1,9 +1,15 @@
 <?php
+/**
+*\file invert_search.php
+*\brief Management of returned data according to the method and dictionary specified (invert search)
+*\date Summer 2021
+*/
 
 include "class_filter.php";
 include "db.php";
 
 $filter = new Filter;
+/* Check errors during the creation of the Filter */
 if(count($filter->getErrors())>0){
 	/* Error in creation of the Filter */
     header('Content-Type: application/json');
@@ -14,6 +20,7 @@ if(count($filter->getErrors())>0){
     header('Content-Type: application/json');
 }
 
+/* Use the good fonction for each dictionary and each method then send data */
 switch ($filter->getDict()) {
 	case 'fas':
 		/* get data from database and send them */
@@ -233,5 +240,4 @@ switch ($filter->getDict()) {
 		print json_encode(array("status" => 400, 'status_message' =>'Incorrect syntax of parameters.',"error"=>array("Dictionary not found.")));
 		break;
 }
-/* print array with status (code) & status_message & data */
 ?>

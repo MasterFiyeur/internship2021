@@ -1,4 +1,9 @@
 <?php
+/**
+*\file db_config.php
+*\brief Database configuration
+*\date Summer 2021
+*/
 
 $db_host = 'localhost';
 $db_port = '5432';

@@ -1,6 +1,16 @@
 <?php
+/**
+*\file db.php
+*\brief Functions related to the database
+*\date Summer 2021
+*/
 
-
+/**
+*\fn function connect()
+*\brief Connection to the database
+*\return Connection with the database
+*\return null if an error was encountered
+*/
 function connect(){
 	include 'db_config.php';
 	try{
@@ -12,6 +22,15 @@ function connect(){
 	}
 }
 
+/**
+*\fn function db_right_dict($chr)
+*\brief Get data about direct search on a dictionary (currently FAS)
+*\param $chr Letter or part of word that results words must begin
+*\return Array with that for each word :
+*\return 	Index 1 : The word
+*\return 	Index 2 : The total number of responses obtained for this stimulus
+*\return 	Index 3 : The string to display on the website
+*/
 function db_right_dict($chr){
 	$res = Array();
 	$conn = connect();
@@ -130,7 +149,19 @@ function db_right_dict($chr){
 	return Array();
 }
 
-function db_back_dict($methodParam,$filter) {
+/**
+*\fn function db_back_dict($methodParam,$filter)
+*\brief Get data about invert search on a dictionary (currently FAS)
+*\param $methodParam Letter, part of word or range according to the method, that results words must begin
+*\param $filter Filter options (actually used there for get method)
+*\return Array with that for each word :
+*\return 	Index 1 : The word
+*\return 	Index 2 : The absolute number of occurrences of this reaction.
+*\return 	Index 3 : The string to display on the website
+*\return 	Index 4 : Word counter (unused here)
+*\return 	Index 5 : The number of stimuli that triggered it.
+*/
+function db_back_dict($methodParam,$filter){
 	$res = Array();
 	$conn = connect();
 	if ($conn) {
@@ -236,34 +267,29 @@ function db_back_dict($methodParam,$filter) {
 	return Array();
 }
 
-function alphabetCompare($aa, $bb){
-	preg_match("/((un|une|le|la|les) )?(.*)$/i", $aa[0], $a);
-	preg_match("/((un|une|le|la|les) )?(.*)$/i", $bb[0], $b);
-
-	$patterns = array();
-	$patterns[0] = '/(é|è|ê)/';
-	$patterns[1] = '/(à|â)/';
-	$patterns[2] = '/ô/';
-	$patterns[3] = '/(î|ï)/';
-	$patterns[4] = '/û/';
-	$replacements = array();
-	$replacements[0] = 'e';
-	$replacements[1] = 'a';
-	$replacements[2] = 'o';
-	$replacements[3] = 'i';
-	$replacements[4] = 'u';
-	$aaa =  preg_replace($patterns, $replacements, $a[3]);
-	$bbb =  preg_replace($patterns, $replacements, $b[3]);
-
-	$res = strcasecmp($aaa, $bbb);
-	return $res;
-}
-
+/**
+*\fn function numberCompare($a, $b)
+*\brief Compare 2 numbers (based on index 1 of result array).
+*\param $a first line of array to compare
+*\param $b second line of array to compare
+*\return 0 if $a and $b are equal.
+*\return 1 if $b[1] is bigger
+*\return -1 if $a[1] is bigger
+*/
 function numberCompare($a, $b){
 	if($a[1] == $b[1]) return 0;
 	return ($a[1] < $b[1])? 1: -1;
 }
 
+/**
+*\fn stimCompare($a,$b)
+*\brief Compare 2 numbers (based on index 4 of result array).
+*\param $a first line of array to compare
+*\param $b second line of array to compare
+*\return 0 if $a and $b are equal.
+*\return 1 if $b[4] is bigger
+*\return -1 if $a[4] is bigger
+*/
 function stimCompare($a,$b){
 	if($a[4] == $b[4]) return 0;
 	return ($a[4] < $b[4])? 1: -1;

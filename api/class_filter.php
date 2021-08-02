@@ -1,25 +1,34 @@
 <?php
+/**
+*\file class_filter.php
+*\brief Class to centralize filter options
+*\date Summer 2021
+*/
 class Filter {
-
+	/* Filter options */
+	private $age; /*!< Array with minimum and maximum age numbeer */
 	/* age[0] => age minimum
 	   age[1] => age maximum */
-	private $age;
-	private $region;
-	private $city;
-	private $specialization;
-	private $sex;
-	private $lang; 
+	private $region;/*!< Region of the person */
+	private $city;/*!< City of the person */
+	private $specialization;/*!< Specialization's field of the person */
+	private $sex;/*!< Sex of the person */
+	private $lang; /*!< Language of the person */
 	/* array with differents educations */
-	private $education;
-	private $dict;
-	private $method;
+	private $education;/*!< Studies of the person */
+	private $dict;/*!< Dictionary wanted */
+	private $method;/*!< Method wanted */
 	/* If one or more variables are not correct */
-	private $error_msg;
+	private $error_msg;/*!< Array of error messages */
 
+	/**
+	*\fn function __construct()
+	*\brief Filter constructor, include POST parameters verifications
+	*/
 	function __construct(){
 		$this->error_msg=[];
 
-		/* dictionary defined */
+		/* dictionary verification*/
 		if(!$this->dict_check()){return;}
 
 		/* all variables present */
@@ -40,7 +49,12 @@ class Filter {
 		$this->education = $_POST["filter"]["education"];
 	}
 
-	/* check that all variables are present  */
+	/**
+	*\fn function var_check()
+	*\brief Check that all variables are present
+	*\return True if variables are corrects
+	*\return False if there is an error
+	*/
 	function var_check(){
 		if(!isset($_POST["filter"]["agemin"])
 		|| !isset($_POST["filter"]["agemax"])
@@ -56,7 +70,12 @@ class Filter {
 		return true;
 	}
 
-	/* age check*/
+	/**
+	*\fn function age_check()
+	*\brief Check that the age range is correct
+	*\return True if age range is correct
+	*\return False if there is an error
+	*/
 	function age_check(){
 		if(!is_numeric($_POST["filter"]["agemin"]) || !is_numeric($_POST["filter"]["agemax"])){
 			array_push($this->error_msg,"Age is not a numeric value.");
@@ -73,6 +92,12 @@ class Filter {
 		return true;
 	}
 
+	/**
+	*\fn function city_check()
+	*\brief Check that the city input is correct
+	*\return True if city is correct
+	*\return False if there is an error
+	*/
 	function city_check(){
 		$alphabet = "abcdefghijklmnopqrstuvwxyz- ";
 		for ($i=0; $i < strlen($_POST["filter"]["city"]); $i++) { 
@@ -85,6 +110,12 @@ class Filter {
 		return true;
 	}
 
+	/**
+	*\fn function dict_check()
+	*\brief Check that the dictionary exist and is correct, chech also the method and method parameters
+	*\return True if the dictionary exist
+	*\return False if there is an error
+	*/
 	function dict_check(){
 		
 		/* Dictionary check */
@@ -141,6 +172,11 @@ class Filter {
 		return true;
 	}
 
+	/**
+	*\fn function getObject()
+	*\brief Convert the object to an array
+	*\return The array with the necessary data
+	*/
 	function getObject(){
 		return (array(
 			"dict"=>$this->dict,
@@ -154,18 +190,32 @@ class Filter {
 		));
 	}
 
+	/**
+	*\fn function getDict()
+	*\brief To know the dictionary
+	*\return Dictionary initialized in this object
+	*/
 	function getDict(){
 		return $this->dict;
 	}
 
+	/**
+	*\fn function getMethod()
+	*\brief To know the method
+	*\return Method initialized in this object
+	*/
 	function getMethod(){
 		return $this->method;
 	}
 
+	/**
+	*\fn function getErrors()
+	*\brief To know the errors
+	*\return Errors registered during verification phases
+	*/
 	function getErrors(){
 		return $this->error_msg;
 	}
 }
-
 
 ?>

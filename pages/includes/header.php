@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
 *\file header.php
 *\brief Header of each pages

@@ -1,3 +1,2 @@
-- Search file for sanf dic and other dics
-- Translate RU language and put it in lang.fr.php for search page
-- Merge with blue scheme
+- Make a PHP file for each search method
+- Modify search.js to connect the invert search with the API

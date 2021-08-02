@@ -1,4 +1,9 @@
-<?php 
+<?php
+/**
+*\file header.php
+*\brief Header of each pages
+*\date Summer 2021
+*/
 include "config.php";
 ?>
 <!--

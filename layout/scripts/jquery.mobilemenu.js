@@ -31,7 +31,6 @@ $("#mainav a").each(function () {
             text: "- - " + e.text()
         }).appendTo("#mainav select")
     } else if ($(e).parents("ul").length >= 1) {
-        /* This condition is added */
         if(e[0].classList.value.split(' ').includes('drop')){
             $("<option />", {
                 disabled: true,

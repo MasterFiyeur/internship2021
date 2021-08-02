@@ -1,3 +1,5 @@
+/* Custom css stylesheet */
+
 /* ----- Variable ----- */
 :root{
     --primary-color : rgb(3, 50, 200);
@@ -165,7 +167,6 @@
     flex-wrap: wrap;
 }
 
-    /* RadioButton search method */
 .search_by input{
     display: none;
 }
@@ -209,7 +210,6 @@
     background-color: var(--primary-color-light);
 }
 
-    /* Alphabet direct */
 #alpha_search,
 #freq_search,
 #stimulus_search,
@@ -433,17 +433,42 @@
     display: none!important;
 }
 
-/* Reaction search */
 .result{
     margin-top: 10px;
 }
 
+#res_loader{
+	width:100%;
+	height:100%;
+	display:none;
+	align-items: center;
+	justify-content:center;
+	font-size:2em;
+	color:var(--primary-color); 
+	text-align: center;
+	margin:0 auto;
+}
 
-.result .result-table table tr td{
+#res_loader span{
+	padding:0 .1em; 
+	line-height:5em;
+	animation:spin 1s cubic-bezier(0,0.1,0,1.33) infinite;
+}
+
+@keyframes spin{
+	5%{
+		transform:translateY(5px);
+	}
+	20%{
+		transform:translateY(-20px);
+		COLOR:var(--primary-color-light);
+	}
+}
+
+.result .result-table table tr td:nth-last-child(){
     word-break: break-word;
     text-align: justify;
 }
-
 
 .result .result-table tr td{
     cursor: pointer;

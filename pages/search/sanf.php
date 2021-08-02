@@ -7,52 +7,52 @@
 	<div class="bgded overlay" style="background-image:url('../../images/associativnoe-myshlenie.jpg');">
 		<div id="breadcrumb" class="hoc clear">
 			<ul>
-				<li><a href="../../index.php"><?php echo $lang["path"]["home"]; ?></a></li>
-				<li><a href="../dict_sanf.php"><?php echo $lang["dict"]["sanf"]; ?></a></li>
+				<li><a href="../../index.php"><?php echo $lang->path->home->{$_SESSION["lang"]}; ?></a></li>
+				<li><a href="../dict_sanf.php"><?php echo $lang->dict->sanf->{$_SESSION["lang"]}; ?></a></li>
 				<?php
 					/* Path depending of the search method used */
 					if(isset($_GET["method"]) && isset($_GET["num"])){
 						switch ($_GET["method"]) {
 							case 'inv':
 								?> 
-								<li><a><?php echo $lang["dict"]["search_invert"]["title"]; ?></a></li>
+								<li><a><?php echo $lang->dict->search_invert->title->{$_SESSION["lang"]}; ?></a></li>
 								<?php
 								switch ($_GET["num"]) {
 									case '1':
 										?>
-										<li><a><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
+										<li><a><?php echo $lang->dict->search_method->word->{$_SESSION["lang"]}; ?></a></li>
 										<?php
 										break;
 									case '2':
 										?>
-										<li><a><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>							
+										<li><a><?php echo $lang->dict->search_method->stim->{$_SESSION["lang"]}; ?></a></li>							
 										<?php
 										break;
 									case '3':
 										?>
-										<li><a><?php echo $lang["dict"]["search_method"]["react"]; ?></a></li>							
+										<li><a><?php echo $lang->dict->search_method->react->{$_SESSION["lang"]}; ?></a></li>							
 										<?php
 										break;
 									default:
 										?>
-										<li><a><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>							
+										<li><a><?php echo $lang->dict->search_method->letter->{$_SESSION["lang"]}; ?></a></li>							
 										<?php
 										break;
 								}
 								break;
 							default:
 								?> 
-								<li><a><?php echo $lang["dict"]["search_direct"]["title"]; ?></a></li>
+								<li><a><?php echo $lang->dict->search_direct->title->{$_SESSION["lang"]}; ?></a></li>
 								<?php
 								switch ($_GET["num"]) {
 									case '1':
 										?>
-										<li><a><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>							
+										<li><a><?php echo $lang->dict->search_method->word->{$_SESSION["lang"]}; ?></a></li>							
 										<?php
 										break;
 									default:
 										?>
-										<li><a><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>							
+										<li><a><?php echo $lang->dict->search_method->letter->{$_SESSION["lang"]}; ?></a></li>							
 										<?php
 										break;
 								}
@@ -60,8 +60,8 @@
 						}
 					}else{
 					?>
-						<li><a><?php echo $lang["dict"]["search_direct"]["title"]; ?></a></li>
-						<li><a><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
+						<li><a><?php echo $lang->dict->search_direct->title->{$_SESSION["lang"]}; ?></a></li>
+						<li><a><?php echo $lang->dict->search_method->letter->{$_SESSION["lang"]}; ?></a></li>
 					<?php
 					}
 				?>
@@ -75,20 +75,20 @@
 			<div class="sidebar one_quarter first">
 				<nav class="sdb_holder">
 					<ul>
-						<li><a href="../dict_sanf.php#about"><?php echo $lang["dict"]["about_title"]; ?></a></li>
-						<li><a href="../dict_sanf.php#stim"><?php echo $lang["dict"]["stim_title"]; ?></a></li>
-						<li><a class="sdb_section"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a>
+						<li><a href="../dict_sanf.php#about"><?php echo $lang->dict->about_title->{$_SESSION["lang"]}; ?></a></li>
+						<li><a href="../dict_sanf.php#stim"><?php echo $lang->dict->stim_title->{$_SESSION["lang"]}; ?></a></li>
+						<li><a class="sdb_section"><?php echo $lang->dict->search_direct->title->{$_SESSION["lang"]}; ?></a>
 							<ul>
-								<li><a href="?method=dir&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
-								<li><a href="?method=dir&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
+								<li><a href="?method=dir&num=0"><?php echo $lang->dict->search_method->letter->{$_SESSION["lang"]}; ?></a></li>
+								<li><a href="?method=dir&num=1"><?php echo $lang->dict->search_method->word->{$_SESSION["lang"]}; ?></a></li>
 							</ul>
 						</li>
-						<li><a class="sdb_section"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a>
+						<li><a class="sdb_section"><?php echo $lang->dict->search_invert->title->{$_SESSION["lang"]}; ?></a>
 							<ul>
-								<li><a href="?method=inv&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
-								<li><a href="?method=inv&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
-								<li><a href="?method=inv&num=2"><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>
-								<li><a href="?method=inv&num=3"><?php echo $lang["dict"]["search_method"]["frequency"]; ?></a></li>
+								<li><a href="?method=inv&num=0"><?php echo $lang->dict->search_method->letter->{$_SESSION["lang"]}; ?></a></li>
+								<li><a href="?method=inv&num=1"><?php echo $lang->dict->search_method->word->{$_SESSION["lang"]}; ?></a></li>
+								<li><a href="?method=inv&num=2"><?php echo $lang->dict->search_method->stim->{$_SESSION["lang"]}; ?></a></li>
+								<li><a href="?method=inv&num=3"><?php echo $lang->dict->search_method->frequency->{$_SESSION["lang"]}; ?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -96,9 +96,9 @@
 			</div>
 			<!-- ################################################################################################ -->
 			<div class="content three_quarter">
-				<h1><?php echo $lang["pages"]["title"]; ?></h1>
+				<h1><?php echo $lang->pages->title->{$_SESSION["lang"]}; ?></h1>
 				<div id="result">
-					<h2><?php echo $lang["search"]["search"]; ?></h2>
+					<h2><?php echo $lang->search->search->{$_SESSION["lang"]}; ?></h2>
 					<!-- Filter -->
 					<?php
 						/* Show filter for direct or invert search */
@@ -117,10 +117,10 @@
 											<div id="word_search">
 												<div class="input_container">
 												<input type="text" class="input_search" id="input_searchDirect" placeholder=" ">
-												<label for=""><?php echo $lang["dict"]["stim_title"]; ?></label>
+												<label for=""><?php echo $lang->dict->stim_title->{$_SESSION["lang"]}; ?></label>
 												</div>
 												<button class="btn-search"
-												onclick="printRes(document.getElementById('input_searchDirect').value)"><?php echo $lang["search"]["search"]; ?></button>
+												onclick="printRes(document.getElementById('input_searchDirect').value)"><?php echo $lang->search->search->{$_SESSION["lang"]}; ?></button>
 											</div>
 											<?php
 											break;
@@ -128,12 +128,12 @@
 											?>
 											<div id="stimulus_search">
 												<div class="letter_container">
-												<span onclick="printByStimulus();"><?php echo $lang["search"]["all"]; ?></span>
-												<span onclick="printByStimulus();">350-200</span>
-												<span onclick="printByStimulus();">199-150</span>
-												<span onclick="printByStimulus();">149-100</span>
-												<span onclick="printByStimulus();">99-50</span>
-												<span onclick="printByStimulus();">49-1</span>
+												<span onclick="printRes('1-350');"><?php echo $lang->search->all->{$_SESSION["lang"]}; ?></span>
+												<span onclick="printRes('200-350');">350-200</span>
+												<span onclick="printRes('150-199');">199-150</span>
+												<span onclick="printRes('100-149');">149-100</span>
+												<span onclick="printRes('50-99');">99-50</span>
+												<span onclick="printRes('1-49');">49-1</span>
 												</div>
 											</div>
 											<?php
@@ -169,10 +169,10 @@
 											<div id="word_search">
 												<div class="input_container">
 												<input type="text" class="input_search" id="input_searchDirect" placeholder=" ">
-												<label for=""><?php echo $lang["dict"]["stim_title"]; ?></label>
+												<label for=""><?php echo $lang->dict->stim_title->{$_SESSION["lang"]}; ?></label>
 												</div>
 												<button class="btn-search"
-												onclick="printRes(document.getElementById('input_searchDirect').value)"><?php echo $lang["search"]["search"]; ?></button>
+												onclick="printRes(document.getElementById('input_searchDirect').value)"><?php echo $lang->search->search->{$_SESSION["lang"]}; ?></button>
 											</div>
 											<?php
 											break;
@@ -200,6 +200,7 @@
 							<?php
 						}
 					?>
+					<div id="res_loader">CHARGEMENT...</div>
 					<div class="result"></div>
 					<input type="hidden" id="dictionary" value="sanf">
 				</div>
@@ -212,6 +213,7 @@
 	<?php include "../includes/footer.php"; ?>
 	<script src="../../layout/scripts/search.js"></script>
 	<script>
+		init_loader();
 		<?php
 		/* initialization of search method */
 		if(isset($_GET["method"]) && isset($_GET["num"])){

@@ -8,8 +8,8 @@
 	<div class="bgded overlay" style="background-image:url('../images/associativnoe-myshlenie.jpg');">
 		<div id="breadcrumb" class="hoc clear">
 			<ul>
-				<li><a href="../index.php"><?php echo $lang["path"]["home"]; ?></a></li>
-				<li><a href="#"><?php echo $lang["dict"]["sanf"]; ?></a></li>
+				<li><a href="../index.php"><?php echo $lang->path->home->{$_SESSION["lang"]}; ?></a></li>
+				<li><a href="#"><?php echo $lang->dict->sanf->{$_SESSION["lang"]}; ?></a></li>
 			</ul>
 		</div>
 	</div>
@@ -20,20 +20,20 @@
 			<div class="sidebar one_quarter first">
 				<nav class="sdb_holder">
 					<ul>
-						<li><a href="#about"><?php echo $lang["dict"]["about_title"]; ?></a></li>
-						<li><a href="#stim"><?php echo $lang["dict"]["stim_title"]; ?></a></li>
-						<li><a class="sdb_section"><?php echo $lang["dict"]["search_direct"]["title"]; ?></a>
+						<li><a href="#about"><?php echo $lang->dict->about_title->{$_SESSION["lang"]}; ?></a></li>
+						<li><a href="#stim"><?php echo $lang->dict->stim_title->{$_SESSION["lang"]}; ?></a></li>
+						<li><a class="sdb_section"><?php echo $lang->dict->search_direct->title->{$_SESSION["lang"]}; ?></a>
 							<ul>
-								<li><a href="./search/sanf.php?method=dir&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
-								<li><a href="./search/sanf.php?method=dir&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
+								<li><a href="./search/sanf.php?method=dir&num=0"><?php echo $lang->dict->search_method->letter->{$_SESSION["lang"]}; ?></a></li>
+								<li><a href="./search/sanf.php?method=dir&num=1"><?php echo $lang->dict->search_method->word->{$_SESSION["lang"]}; ?></a></li>
 							</ul>
 						</li>
-						<li><a class="sdb_section"><?php echo $lang["dict"]["search_invert"]["title"]; ?></a>
+						<li><a class="sdb_section"><?php echo $lang->dict->search_invert->title->{$_SESSION["lang"]}; ?></a>
 						<ul>
-								<li><a href="./search/sanf.php?method=inv&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
-								<li><a href="./search/sanf.php?method=inv&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
-								<li><a href="./search/sanf.php?method=inv&num=2"><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>
-								<li><a href="./search/sanf.php?method=inv&num=3"><?php echo $lang["dict"]["search_method"]["frequency"]; ?></a></li>
+								<li><a href="./search/sanf.php?method=inv&num=0"><?php echo $lang->dict->search_method->letter->{$_SESSION["lang"]}; ?></a></li>
+								<li><a href="./search/sanf.php?method=inv&num=1"><?php echo $lang->dict->search_method->word->{$_SESSION["lang"]}; ?></a></li>
+								<li><a href="./search/sanf.php?method=inv&num=2"><?php echo $lang->dict->search_method->stim->{$_SESSION["lang"]}; ?></a></li>
+								<li><a href="./search/sanf.php?method=inv&num=3"><?php echo $lang->dict->search_method->frequency->{$_SESSION["lang"]}; ?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -41,14 +41,14 @@
 			</div>
 			<!-- ################################################################################################ -->
 			<div class="content three_quarter">
-				<h1><?php echo $lang["pages"]["title"]; ?></h1>
+				<h1><?php echo $lang->pages->title->{$_SESSION["lang"]}; ?></h1>
 				<div id=about>
-					<h2><?php echo $lang["dict"]["stim_title"]; ?></h2>
-					<?php echo $lang["sanf"]["about"]; ?>
+					<h2><?php echo $lang->dict->about_title->{$_SESSION["lang"]}; ?></h2>
+					<?php include __DIR__."\lang\\".$_SESSION["lang"]."\\".$lang->sanf->about->link; ?>
 				</div>
 				<div id="stim">
-					<h2><?php echo $lang["dict"]["stim_title"]; ?></h2>
-					<?php echo $lang["sanf"]["stim"]; ?>
+					<h2><?php echo $lang->dict->stim_title->{$_SESSION["lang"]}; ?></h2>
+					<p><?php echo $lang->sanf->stim->{$_SESSION["lang"]}; ?></p>
 					<p>être, avoir, faire, dire, pouvoir, aller, voir, bien, homme, mari, vouloir, femme, venir,
 						grand, devoir, jour, prendre, petit, mer, trouver, donner, temps, parler, main, chose,
 						vie, savoir, yeux, passer, regarder, aimer, heure, croire, monde, enfant, fois, demander,
@@ -60,21 +60,21 @@
 						corps, blanc, mal</p>
 				</div>
 				<div id="dict_direct">
-					<h2><?php echo $lang["dict"]["search_direct"]["title"]; ?></h2>
-					<p><?php echo $lang["dict"]["search_direct"]["description"]; ?></p>
+					<h2><?php echo $lang->dict->search_direct->title->{$_SESSION["lang"]}; ?></h2>
+					<p><?php echo $lang->dict->search_direct->description->{$_SESSION["lang"]}; ?></p>
 					<ul>
-						<li><a href="./search/sanf.php?method=dir&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
-						<li><a href="./search/sanf.php?method=dir&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
+						<li><a href="./search/sanf.php?method=dir&num=0"><?php echo $lang->dict->search_method->letter->{$_SESSION["lang"]}; ?></a></li>
+						<li><a href="./search/sanf.php?method=dir&num=1"><?php echo $lang->dict->search_method->word->{$_SESSION["lang"]}; ?></a></li>
 					</ul>
 				</div>
 				<div id="dict_inv">
-					<h2><?php echo $lang["dict"]["search_invert"]["title"]; ?></h2>
-					<p><?php echo $lang["dict"]["search_invert"]["description"]; ?></p>
+					<h2><?php echo $lang->dict->search_invert->title->{$_SESSION["lang"]}; ?></h2>
+					<p><?php echo $lang->dict->search_invert->description->{$_SESSION["lang"]}; ?></p>
 					<ul>
-						<li><a href="./search/sanf.php?method=inv&num=0"><?php echo $lang["dict"]["search_method"]["letter"]; ?></a></li>
-						<li><a href="./search/sanf.php?method=inv&num=1"><?php echo $lang["dict"]["search_method"]["word"]; ?></a></li>
-						<li><a href="./search/sanf.php?method=inv&num=2"><?php echo $lang["dict"]["search_method"]["stim"]; ?></a></li>
-						<li><a href="./search/sanf.php?method=inv&num=3"><?php echo $lang["dict"]["search_method"]["frequency"]; ?></a></li>
+						<li><a href="./search/sanf.php?method=inv&num=0"><?php echo $lang->dict->search_method->letter->{$_SESSION["lang"]}; ?></a></li>
+						<li><a href="./search/sanf.php?method=inv&num=1"><?php echo $lang->dict->search_method->word->{$_SESSION["lang"]}; ?></a></li>
+						<li><a href="./search/sanf.php?method=inv&num=2"><?php echo $lang->dict->search_method->stim->{$_SESSION["lang"]}; ?></a></li>
+						<li><a href="./search/sanf.php?method=inv&num=3"><?php echo $lang->dict->search_method->frequency->{$_SESSION["lang"]}; ?></a></li>
 					</ul>
 				</div>
 				<!-- / main body -->
@@ -86,27 +86,27 @@
 			<div class="counter-card">
 				<span><i class="fas fa-users"></i></span>
 				<div class="number">3500</div>
-				<div class="desc"><?php echo $lang["dict"]["card"][0]; ?></div>
+				<div class="desc"><?php echo $lang->dict->card[0]->{$_SESSION["lang"]}; ?></div>
 			</div>
 			<div class="counter-card">
 				<span><i class="fas fa-history"></i></span>
 				<div class="number">25 лет</div>
-				<div class="desc"><?php echo $lang["dict"]["card"][1]; ?></div>
+				<div class="desc"><?php echo $lang->dict->card[1]->{$_SESSION["lang"]}; ?></div>
 			</div>
 			<div class="counter-card">
 				<span><i class="fas fa-venus-mars"></i></span>
 				<div class="number">45%/55%</div>
-				<div class="desc"><?php echo $lang["dict"]["card"][2]; ?><br />&nbsp;</div>
+				<div class="desc"><?php echo $lang->dict->card[2]->{$_SESSION["lang"]}; ?><br />&nbsp;</div>
 			</div>
 			<div class="counter-card">
 				<span><i class="fas fa-pencil-alt"></i></span>
 				<div class="number">65432</div>
-				<div class="desc"><?php echo $lang["dict"]["card"][3]; ?></div>
+				<div class="desc"><?php echo $lang->dict->card[3]->{$_SESSION["lang"]}; ?></div>
 			</div>
 			<div class="counter-card">
 				<span><i class="fas fa-book"></i></span>
 				<div class="number">1500</div>
-				<div class="desc"><?php echo $lang["dict"]["card"][4]; ?></div>
+				<div class="desc"><?php echo $lang->dict->card[4]->{$_SESSION["lang"]}; ?></div>
 			</div>
 		</section>
 	</div>

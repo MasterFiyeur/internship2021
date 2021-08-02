@@ -1,6 +1,12 @@
 <?php
-//Edit this for production
-$BASE_PATH = "/Prototypes/";
+/**
+*\file config.php
+*\brief Language and configuration of the project
+*\date Summer 2021
+*/
+
+/* Edit this for production */
+$BASE_PATH = "/internship2021/";
 
 /* Start session */
 session_start();
@@ -11,16 +17,8 @@ if(!isset($_SESSION["lang"])){
 }
 if(isset($_GET["lang"]) && in_array($_GET["lang"],array("fr","ru"))){
 	$_SESSION["lang"] = $_GET["lang"];
-}	
-
-switch ($_SESSION["lang"]) {
-	case 'ru':
-		include "lang.ru.php";
-		break;
-		
-	default:
-		include "lang.fr.php";
-		break;
 }
+
+$lang = json_decode(file_get_contents(__DIR__."/../lang/data.json"));
 
 ?>

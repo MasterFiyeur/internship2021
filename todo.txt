@@ -1,2 +1,0 @@
-- Make a PHP file for each search method
-- Modify search.js to connect the invert search with the API
